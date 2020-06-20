@@ -99,3 +99,30 @@ li{
     color:white;
 }
 
+.makeGreenBack{
+    background-color:green;
+    color:white;
+}
+
+.messageButtons{
+    margin:10px;
+}
+
+.inboxPadding{
+    padding-left:20px;
+}
+
+tr th td{
+    font-family: "Source Sans Pro", "Quicksand", sans-serif;
+
+}
+
+a:hover{
+    color:black;
+}
+
+.restrictViewOptions{
+    width:170px;
+    display:inline-block;
+    margin-left:9px;
+}

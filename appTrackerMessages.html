@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Nubug Project Manager and Bug Tracker</title>
+
+
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+<link rel="stylesheet" href="css/tracker.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Source+Sans+Pro|Noto+Sans+TC" />
+
+</head>
+<body>
+
+        <header class="jumbotron jumbotron-fluid">
+            <div class="container-fluid">
+
+                <div class="col-4 col-sm-3 cold-md-2 align-self-right">
+
+                    <a href="indexTrackerSite.html"> <img class="logo" src="images/nubugLogo2.png"  alt="nubug logo"/></a>
+                </div>
+            </div>  
+        </header> 
+    
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top navGradient">
+
+        <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#nubugNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--<div class="collapse navbar-collapse" id="nubugNavbar">-->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="createAccountTrackerSite.html">Create Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="loginTrackerSite.html"> Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="downloadTrackerSite.html"> Download</a></li>
+                </ul>
+           
+        </div>
+    
+</nav>
+    
+    
+<div class="container background">
+    <!-- Example row of columns -->
+    <div class="row header">
+        <div class="col">
+            Messages        
+        </div>
+        <div class="col">
+            <button class="btn btn-md btn makeGreenBack" type="button"><a href="appTrackerPCentral.html" alt="back to Project Central">Go Back To Project Central</a></button>
+        </div>
+    </div>
+    
+    <div class="row">
+      <div class="col hWindow2">
+        <h3 class="heading makeWhite inboxPadding">Inbox</h2>
+            <div class="col">
+                <button type="button" class="btn btn-lg buttonPC messageButtons">View Sent Messages</button>
+                <button type="button" class="btn btn-lg buttonPC messageButtons">Send A Message</button>
+                <button type="button" class="btn btn-lg buttonPC messageButtons">Sent Messages</button>
+                <button type="button" class="btn btn-lg buttonPCM messageButtons">Trash</button>
+                <label for="showOptions" placeholder="View Options"><strong class="makeWhite">View options</strong></label>
+                <div class="form-group restrictViewOptions">
+                    
+                   <select class="form-control" id="showOptions">
+                       <option>All Messages</option>
+                       <option>Unread Messages</option>
+                       <option> Urgent Messages</option>
+                       <option>Just Build Nav Bar</option>
+                       <option>Just Build Home Page</option>
+                       <option>Just Logo</option>
+
+
+                   </select>
+                </div>
+            </div>
+
+         </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col col-md-10  col-xl-10 hWindowa auto">
+            <table class="table table-hover table-light table-bordered table-responsive">
+                <thead class="table-light">
+                    <th scope colspan="5"><h5>Build the Nav Bar</h5></th>
+                </thead>
+                <tbody>
+                   <tr>
+                       <td>From:</td>
+                       <td>6/16/2020</td>
+                       <td>Subject:</td>
+                       <td>Nathan</td>
+                       <td>Not Urgent</td>
+                   </tr>
+                    <tr>
+                        <td colspan="5"> Hey want to give you heads up about the Nav Bar. It's going great. We think we have a great design. We are waiting for your approval.</td>
+                    </tr> 
+                </tbody>
+            </table> 
+        </div>
+
+    </div>
+    
+</div>
+
+    
+
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/appTracker.js"></script>
+   
+</body>
+
+   
+</html>
