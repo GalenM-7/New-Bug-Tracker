@@ -88,6 +88,7 @@ li{
 
 .makeWhite{
     color:white;
+    font-family: "Source Sans Pro", "Quicksand", sans-serif;
 }
 
 .makeRed{
@@ -114,12 +115,12 @@ li{
 
 tr th td{
     font-family: "Source Sans Pro", "Quicksand", sans-serif;
-
 }
 
 a:hover{
     color:black;
 }
+
 
 .restrictViewOptions{
     width:170px;

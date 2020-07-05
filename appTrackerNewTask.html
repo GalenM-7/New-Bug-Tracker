@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Nubug Project Manager and Bug Tracker</title>
+
+
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+<link rel="stylesheet" href="css/tracker.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand|Source+Sans+Pro|Noto+Sans+TC" />
+
+</head>
+<body>
+
+        <header class="jumbotron jumbotron-fluid">
+            <div class="container-fluid">
+
+                <div class="col-4 col-sm-3 cold-md-2 align-self-right">
+
+                    <a href="indexTrackerSite.html"> <img class="logo" src="images/nubugLogo2.png"  alt="nubug logo"/></a>
+                </div>
+            </div>  
+        </header> 
+    
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top navGradient">
+
+        <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#nubugNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--<div class="collapse navbar-collapse" id="nubugNavbar">-->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="createAccountTrackerSite.html">Create Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="loginTrackerSite.html"> Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="downloadTrackerSite.html"> Download</a></li>
+                </ul>
+           
+        </div>
+    
+</nav>
+    
+    
+<div class="container background">
+    <!-- Example row of columns -->
+    <div class="row header">
+        <div class="col">
+            New Task        
+        </div>
+        <div class="col">
+            <button class="btn btn-md btn makeGreenBack" type="button"><a href="appTrackerNProject.html" alt="back to Project Central">Go Back To New Project</a></button>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center hWindow2">
+                   <div class="col col-md-6">
+                        <label for="taskName" class="makeWhite"><strong>What is your Task's Name</strong></label>
+                        <input type="text" id="taskName" name="taskName" placeholder="Task Name" ></input></br>
+                        <label for="taskAssignment" class="makeWhite"><strong>Who will be assigned to this task?</strong></label>
+                        <input type="text" id="taskAssignment" name="taskAssignment" placeholder="Task Assignment" ></input></br>
+                        <label for="deadline" class="makeWhite"><strong>When will this project be due?</strong></label>
+                        <input type="text" id="deadline" name="deadline" placeholder="Deadline" ></input>
+                        <label for="additonalDates" class="makeWhite"><strong>Any other relevant dates?</strong></label></br>
+                        <textarea name="additonalDates"  rows="3" cols="45" id="additonalDates" placeholder="Additional relevant dates to mention"></textarea>
+                   </div>
+                   <div class="col col-md-6">
+                        <label for="taskDescription" class="makeWhite"> <strong>Please include a description of what this task entails.</strong></label>
+                        <textarea name="taskDescription"  rows="7" cols="50" id="taskDescription" placeholder="Project Description"></textarea></br>
+                        <label for="submitTask" class="makeWhite"><strong>Save Your Task</strong></label>
+                        <button class="btn btn-md makeGreenBack">Submit Task</button>
+                   </div>
+
+      </div>
+    
+</div>
+
+    
+
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/appTracker.js"></script>
+   
+</body>
+
+   
+</html>
