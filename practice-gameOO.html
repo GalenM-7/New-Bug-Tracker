@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Card Game</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="cardGameCSS/practiceGame3.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 bg-dark banner"><div class="card1"><img src="cardGameImages/cardCounters.png"/></div>
+            <div id="round"></div>
+        </div>
+    </div>
+      
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 bg-dark">
+                <div class="buttonControls"><button class="btn btn sm" onclick="hideall()">Hide Excess</button></div>
+
+                <div class="buttonControls"><button id="getBtn1" class="btn btn sm" onclick="showHand1()">Get Hand 1</button></div>
+                <div class="buttonControls"><button class="btn btn sm bg-danger text-white" onclick="clearHand1()">Clear Hand 1</button></div>
+                
+                <div class="buttonControls"><button id="getBtn2" class="btn sm buttonControls"   onclick="showHand2()">Get Hand 2</button></div>
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand2()">Clear Hand 2</button></div>
+            
+                <div class="buttonControls"><button id="getBtn3" class="btn sm buttonControls"  onclick="showHand3()">Get Hand 3</button></div>
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand3()">Clear Hand 3</button></div>
+
+                <div class="buttonControls"><button id="getBtn4" class="btn sm buttonControls" onclick="showHand4 ()">Get Hand 4</button></div>
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand4()">Clear Hand 4</button></div>
+                
+                <div class="buttonControls"><button id="getBtn5" class="btn sm buttonControls" onclick="showHand5()">Get Hand 5</button></div>
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand5()">Clear Hand 5</button></div>
+                
+                <div class="buttonControls"><button id="getBtn6" class="btn sm buttonControls" onclick="showHand6()">Get Hand 6</button></div>
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand6()">Clear Hand 6</button></div>
+                
+                <div class="buttonControls"><button id="getBtn7" class="btn sm buttonControls" onclick="showHand7()">Get Hand 7</button></div>                
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand7()">Clear Hand 7</button></div>
+                
+                <div class="buttonControls"><button id="getBtn8" class="btn sm buttonControls" onclick="showHand8()">Get Hand 8</button></div>
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand8()">Clear Hand 8</button> </div>
+
+                <div class="buttonControls"><button id="getBtn9" class="btn sm buttonControls" onclick="showHand9()">Get Hand 9</button></div>
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand9()">Clear Hand 9</button></div>
+                
+                <div class="buttonControls"><button id="getBtn10" class="btn sm buttonControls" onclick="showHand10()">Get Hand 10</button></div>
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand10()">Clear Hand 10</button></div>
+               
+                <div class="buttonControls"><button id="getBtn11" class="btn sm buttonControls" onclick="showHand11()">Get Hand 11</button></div>
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand11()">Clear Hand 11</button></div>
+
+                <div class="buttonControls"><button id="getBtn12" class="btn sm buttonControls" onclick="showHand12()">Get Hand 12</button></div>
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand12()">Clear Hand 12</button></div>
+               
+                <div class="buttonControls"><button id="getBtn13" class="btn sm buttonControls" onclick="showHand13()">Get Hand 13</button></div>
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand13();">Clear Hand 13</button></div>
+                
+                <div class="buttonControls"><button id="getBtn14" class="btn sm buttonControls" onclick="showHand14()">Get Hand 14</button></div>
+                
+                <div class="buttonControls"><button class="btn sm buttonControls bg-danger text-white" onclick="clearHand14();">Go To Hand Evaluation</button></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 bg-success"><br/>
+                        <div id="handAnchor" class="table-row mx-auto">
+                            <!--<td><img class="card" src="cardGameImages/playingCardBlank.svg"/></td>
+                            <td><img class="card" src="cardGameImages/playingCardBlank.svg"/></td>
+                            <td><img class="card" src="cardGameImages/playingCardBlank.svg"/></td>
+                            <td><img class="card" src="cardGameImages/playingCardBlank.svg"/></td>
+                            <td><img class="card" src="cardGameImages/playingCardBlank.svg"/></td>
+                            <td><img class="card" src="cardGameImages/playingCardBlank.svg"/></td>-->
+                        </div>
+                    
+            </div>
+        </div>
+                <div class="row">
+                    <div class="col col-md-12 bg bg-success">
+                        <div id="buttonsAnchor" class="col col-md-12">
+                            <div class="buttonControls"><button id="btn1" class="btn btn md" onclick="Onehand1Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="btn2" class="btn btn md" onclick="Onehand1Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="btn3"class="btn btn md" onclick="Onehand1Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="btn4"class="btn btn md" onclick="Onehand1Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="btn5"class="btn btn md" onclick="Onehand1Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="2btn1" class="btn btn md" onclick="Twohand2Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="2btn2" class="btn btn md" onclick="Twohand2Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="2btn3"class="btn btn md" onclick="Twohand2Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="2btn4"class="btn btn md" onclick="Twohand2Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="2btn5"class="btn btn md" onclick="Twohand2Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="3btn1" class="btn btn md" onclick="Threehand3Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="3btn2" class="btn btn md" onclick="Threehand3Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="3btn3"class="btn btn md" onclick="Threehand3Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="3btn4"class="btn btn md" onclick="Threehand3Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="3btn5"class="btn btn md" onclick="Threehand3Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="4btn1" class="btn btn md" onclick="Fourhand4Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="4btn2" class="btn btn md" onclick="Fourhand4Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="4btn3"class="btn btn md" onclick="Fourhand4Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="4btn4"class="btn btn md" onclick="Fourhand4Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="4btn5"class="btn btn md" onclick="Fourhand4Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="5btn1" class="btn btn md" onclick="Fivehand5Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="5btn2" class="btn btn md" onclick="Fivehand5Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="5btn3"class="btn btn md" onclick="Fivehand5Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="5btn4"class="btn btn md" onclick="Fivehand5Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="5btn5"class="btn btn md" onclick="Fivehand5Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="6btn1" class="btn btn md" onclick="Sixhand6Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="6btn2" class="btn btn md" onclick="Sixhand6Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="6btn3"class="btn btn md" onclick="Sixhand6Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="6btn4"class="btn btn md" onclick="Sixhand6Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="6btn5"class="btn btn md" onclick="Sixhand6Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="7btn1" class="btn btn md" onclick="Sevenhand7Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="7btn2" class="btn btn md" onclick="Sevenhand7Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="7btn3" class="btn btn md" onclick="Sevenhand7Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="7btn4" class="btn btn md" onclick="Sevenhand7Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="7btn5" class="btn btn md" onclick="Sevenhand7Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="8btn1" class="btn btn md" onclick="Eighthand8Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="8btn2" class="btn btn md" onclick="Eighthand8Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="8btn3" class="btn btn md" onclick="Eighthand8Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="8btn4" class="btn btn md" onclick="Eighthand8Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="8btn5" class="btn btn md" onclick="Eighthand8Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="9btn1" class="btn btn md" onclick="Ninehand9Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="9btn2" class="btn btn md" onclick="Ninehand9Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="9btn3" class="btn btn md" onclick="Ninehand9Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="9btn4" class="btn btn md" onclick="Ninehand9Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="9btn5" class="btn btn md" onclick="Ninehand9Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="10btn1" class="btn btn md" onclick="Tenhand10Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="10btn2" class="btn btn md" onclick="Tenhand10Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="10btn3" class="btn btn md" onclick="Tenhand10Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="10btn4" class="btn btn md" onclick="Tenhand10Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="10btn5" class="btn btn md" onclick="Tenhand10Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="11btn1" class="btn btn md" onclick="Elevenhand11Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="11btn2" class="btn btn md" onclick="Elevenhand11Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="11btn3" class="btn btn md" onclick="Elevenhand11Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="11btn4" class="btn btn md" onclick="Elevenhand11Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="11btn5" class="btn btn md" onclick="Elevenhand11Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="12btn1" class="btn btn md" onclick="Twelvehand12Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="12btn2" class="btn btn md" onclick="Twelvehand12Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="12btn3" class="btn btn md" onclick="Twelvehand12Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="12btn4" class="btn btn md" onclick="Twelvehand12Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="12btn5" class="btn btn md" onclick="Twelvehand12Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="13btn1" class="btn btn md" onclick="Thirteenhand13Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="13btn2" class="btn btn md" onclick="Thirteenhand13Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="13btn3" class="btn btn md" onclick="Thirteenhand13Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="13btn4" class="btn btn md" onclick="Thirteenhand13Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="13btn5" class="btn btn md" onclick="Thirteenhand13Choose2C5()">Pick Fifth Card</button></div>
+
+                            <div class="buttonControls"><button id="14btn1" class="btn btn md" onclick="Fourteenhand14Choose2C1()">Pick First Card</button></div>
+                            <div class="buttonControls"><button id="14btn2" class="btn btn md" onclick="Fourteenhand14Choose2C2()">Pick Second Card</button></div>
+                            <div class="buttonControls"><button id="14btn3" class="btn btn md" onclick="Fourteenhand14Choose2C3()">Pick Third Card</button></div>
+                            <div class="buttonControls"><button id="14btn4" class="btn btn md" onclick="Fourteenhand14Choose2C4()">Pick Fourth Card</button></div>
+                            <div class="buttonControls"><button id="14btn5" class="btn btn md" onclick="Fourteenhand14Choose2C5()">Pick Fifth Card</button></div>
+                        </div>
+
+                    </div>
+                </div>
+        
+        <div class="row">
+                <div id="collectionAnchor" class="col-md-12 bg-success">
+
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 bg-danger">
+            </div>
+        </div>
+    </div>
+
+    <script src="cardGameJavascript/practiceGameOO.js"></script>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>
