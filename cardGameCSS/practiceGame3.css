@@ -1,8 +1,9 @@
 .buttonControls{
-    padding:9px;
+    padding:30px;
     display:inline-block;
     margin:auto;
 }
+
 
 #graphic1{
     top: 50px;
@@ -13,7 +14,15 @@
     display:inline-block;
     padding:20px;
     margin:auto;
+   
+   
     
+}
+
+
+
+.cardWrapperO{
+    display:inline-block;
 }
 
 .top{
