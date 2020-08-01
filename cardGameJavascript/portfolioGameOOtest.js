@@ -16,13 +16,17 @@ let hand11= [];
 let hand12= [];
 let hand13= [];
 let hand14= [];
+let collection=[];
+let collectionRevised=[];
 let collection1=[];
 let collection2=[];
 let collection3=[];
 let collection4=[];
 let collection5=[];
 let collection6=[];
-let values1=[];
+let valuesTest1=[];
+let valuesTest2=[];
+
 
 
 
@@ -185,148 +189,7 @@ deck.deal14();
 
 //show first hand,
 function hideall(){
-    /*let TwoHideBtn1=document.getElementById("2btn1");
-    TwoHideBtn1.style.display="none";
-    let TwoHideBtn2=document.getElementById("2btn2");
-    TwoHideBtn2.style.display="none";
-    let TwoHideBtn3=document.getElementById("2btn3");
-    TwoHideBtn3.style.display="none";
-    let TwoHideBtn4=document.getElementById("2btn4");
-    TwoHideBtn4.style.display="none";
-    let TwoHideBtn5=document.getElementById("2btn5");
-    TwoHideBtn5.style.display="none";
-    
-    let ThreeHideBtn1=document.getElementById("3btn1");
-    ThreeHideBtn1.style.display="none";
-    let ThreeHideBtn2=document.getElementById("3btn2");
-    ThreeHideBtn2.style.display="none";
-    let ThreeHideBtn3=document.getElementById("3btn3");
-    ThreeHideBtn3.style.display="none";
-    let ThreeHideBtn4=document.getElementById("3btn4");
-    ThreeHideBtn4.style.display="none";
-    let ThreeHideBtn5=document.getElementById("3btn5");
-    ThreeHideBtn5.style.display="none";
-
-    let FourHideBtn1=document.getElementById("4btn1");
-    FourHideBtn1.style.display="none";
-    let FourHideBtn2=document.getElementById("4btn2");
-    FourHideBtn2.style.display="none";
-    let FourHideBtn3=document.getElementById("4btn3");
-    FourHideBtn3.style.display="none";
-    let FourHideBtn4=document.getElementById("4btn4");
-    FourHideBtn4.style.display="none";
-    let FourHideBtn5=document.getElementById("4btn5");
-    FourHideBtn5.style.display="none";
-
-    let FiveHideBtn1=document.getElementById("5btn1");
-    FiveHideBtn1.style.display="none";
-    let FiveHideBtn2=document.getElementById("5btn2");
-    FiveHideBtn2.style.display="none";
-    let FiveHideBtn3=document.getElementById("5btn3");
-    FiveHideBtn3.style.display="none";
-    let FiveHideBtn4=document.getElementById("5btn4");
-    FiveHideBtn4.style.display="none";
-    let FiveHideBtn5=document.getElementById("5btn5");
-    FiveHideBtn5.style.display="none";
-
-    let SixHideBtn1=document.getElementById("6btn1");
-    SixHideBtn1.style.display="none";
-    let SixHideBtn2=document.getElementById("6btn2");
-    SixHideBtn2.style.display="none";
-    let SixHideBtn3=document.getElementById("6btn3");
-    SixHideBtn3.style.display="none";
-    let SixHideBtn4=document.getElementById("6btn4");
-    SixHideBtn4.style.display="none";
-    let SixHideBtn5=document.getElementById("6btn5");
-    SixHideBtn5.style.display="none";
-
-    let SevenHideBtn1=document.getElementById("7btn1");
-    SevenHideBtn1.style.display="none";
-    let SevenHideBtn2=document.getElementById("7btn2");
-    SevenHideBtn2.style.display="none";
-    let SevenHideBtn3=document.getElementById("7btn3");
-    SevenHideBtn3.style.display="none";
-    let SevenHideBtn4=document.getElementById("7btn4");
-    SevenHideBtn4.style.display="none";
-    let SevenHideBtn5=document.getElementById("7btn5");
-    SevenHideBtn5.style.display="none";
-
-    let EightHideBtn1=document.getElementById("8btn1");
-    EightHideBtn1.style.display="none";
-    let EightHideBtn2=document.getElementById("8btn2");
-    EightHideBtn2.style.display="none";
-    let EightHideBtn3=document.getElementById("8btn3");
-    EightHideBtn3.style.display="none";
-    let EightHideBtn4=document.getElementById("8btn4");
-    EightHideBtn4.style.display="none";
-    let EightHideBtn5=document.getElementById("8btn5");
-    EightHideBtn5.style.display="none";
-
-    let NineHideBtn1=document.getElementById("9btn1");
-    NineHideBtn1.style.display="none";
-    let NineHideBtn2=document.getElementById("9btn2");
-    NineHideBtn2.style.display="none";
-    let NineHideBtn3=document.getElementById("9btn3");
-    NineHideBtn3.style.display="none";
-    let NineHideBtn4=document.getElementById("9btn4");
-    NineHideBtn4.style.display="none";
-    let NineHideBtn5=document.getElementById("9btn5");
-    NineHideBtn5.style.display="none";
-
-    let TenHideBtn1=document.getElementById("10btn1");
-    TenHideBtn1.style.display="none";
-    let TenHideBtn2=document.getElementById("10btn2");
-    TenHideBtn2.style.display="none";
-    let TenHideBtn3=document.getElementById("10btn3");
-    TenHideBtn3.style.display="none";
-    let TenHideBtn4=document.getElementById("10btn4");
-    TenHideBtn4.style.display="none";
-    let TenHideBtn5=document.getElementById("10btn5");
-    TenHideBtn5.style.display="none";
-
-    let ElevenHideBtn1=document.getElementById("11btn1");
-    ElevenHideBtn1.style.display="none";
-    let ElevenHideBtn2=document.getElementById("11btn2");
-    ElevenHideBtn2.style.display="none";
-    let ElevenHideBtn3=document.getElementById("11btn3");
-    ElevenHideBtn3.style.display="none";
-    let ElevenHideBtn4=document.getElementById("11btn4");
-    ElevenHideBtn4.style.display="none";
-    let ElevenHideBtn5=document.getElementById("11btn5");
-    ElevenHideBtn5.style.display="none";
-
-    let TwelveHideBtn1=document.getElementById("12btn1");
-    TwelveHideBtn1.style.display="none";
-    let TwelveHideBtn2=document.getElementById("12btn2");
-    TwelveHideBtn2.style.display="none";
-    let TwelveHideBtn3=document.getElementById("12btn3");
-    TwelveHideBtn3.style.display="none";
-    let TwelveHideBtn4=document.getElementById("12btn4");
-    TwelveHideBtn4.style.display="none";
-    let TwelveHideBtn5=document.getElementById("12btn5");
-    TwelveHideBtn5.style.display="none";
    
-    let ThirteenHideBtn1=document.getElementById("13btn1");
-    ThirteenHideBtn1.style.display="none";
-    let ThirteenHideBtn2=document.getElementById("13btn2");
-    ThirteenHideBtn2.style.display="none";
-    let ThirteenHideBtn3=document.getElementById("13btn3");
-    ThirteenHideBtn3.style.display="none";
-    let ThirteenHideBtn4=document.getElementById("13btn4");
-    ThirteenHideBtn4.style.display="none";
-    let ThirteenHideBtn5=document.getElementById("13btn5");
-    ThirteenHideBtn5.style.display="none";
-
-    let FourteenHideBtn1=document.getElementById("14btn1");
-    FourteenHideBtn1.style.display="none";
-    let FourteenHideBtn2=document.getElementById("14btn2");
-    FourteenHideBtn2.style.display="none";
-    let FourteenHideBtn3=document.getElementById("14btn3");
-    FourteenHideBtn3.style.display="none";
-    let FourteenHideBtn4=document.getElementById("14btn4");
-    FourteenHideBtn4.style.display="none";
-    let FourteenHideBtn5=document.getElementById("14btn5");
-    FourteenHideBtn5.style.display="none";*/
 
     document.getElementById("btn1").addEventListener("click",Onehand1Choose2C1);
     document.getElementById("btn2").addEventListener("click",Onehand1Choose2C2);
@@ -416,6 +279,34 @@ function hideall(){
     let GetHideBtn15C=document.getElementById("getBtn15C");
     GetHideBtn15C.style.display="none";
 
+    let hideGetEval=document.getElementById("confirm");
+    hideGetEval.style.display="none";
+
+    let makeSwitch1=document.getElementById("makeSwitch");
+    makeSwitch1.style.display="none";
+
+    let reset1=document.getElementById("reset");
+    reset1.style.display="none";
+
+    let scoreHideLabel=document.getElementById("scoreLabel");
+    scoreHideLabel.style.display="none";
+
+    let scoreHide=document.getElementById("score");
+    scoreHide.style.display="none";
+
+    //let eval=document.getElementById("evaluation");
+    //eval.style.display="none";
+
+    
+
+    let evalHand=document.getElementById("handEvaluation");
+    evalHand.style.display="none";
+    
+    let evalBonuses=document.getElementById("bonusEvaluation");
+    evalBonuses.style.display="none";
+
+
+
     document.getElementById("round");
     let roundCounter=document.createElement("p");
     round.appendChild(roundCounter);
@@ -479,130 +370,11 @@ function showHand1 () {
 
 
 //pick 2 and add to collection
-function getValue1(){
-    window.alert("it worked");
-}
-
-function getValue2(){
-    window.alert("it worked");
-}
-
-function getValue3(){
-    window.alert("it worked");
-}
-
-function getValue4(){
-    window.alert("it worked");
-}
-
-function getValue5(){
-    window.alert("it worked");
-}
-
-function getValue6(){
-    window.alert("it worked");
-}
-
-function getValue7(){
-    window.alert("it worked");
-}
-
-function getValue8(){
-    window.alert("it worked");
-}
-
-function getValue9(){
-    window.alert("it worked");
-}
-
-function getValue10(){
-    window.alert("it worked");
-}
-
-function getValue11(){
-    window.alert("it worked");
-}
-
-function getValue12(){
-    window.alert("it worked");
-}
-
-function getValue13(){
-    window.alert("it worked");
-}
-
-function getValue14(){
-    window.alert("it worked");
-}
-
-function getValue15(){
-    window.alert("it worked");
-}
-
-function getValue16(){
-    window.alert("it worked");
-}
-
-function getValue17(){
-    window.alert("it worked");
-}
-
-function getValue18(){
-    window.alert("it worked");
-}
-
-function getValue19(){
-    window.alert("it worked");
-}
-function getValue20(){
-    window.alert("it worked");
-}
-function getValue21(){
-    window.alert("it worked");
-}
-function getValue22(){
-    window.alert("it worked");
-}
-function getValue23(){
-    window.alert("it worked");
-}
-function getValue24(){
-    window.alert("it worked");
-}
-function getValue25(){
-    window.alert("it worked");
-}
-function getValue26(){
-    window.alert("it worked");
-}
-function getValue27(){
-    window.alert("it worked");
-}
-
-function getValue27(){
-    window.alert("it worked");
-}
-
-function getValue28(){
-    window.alert("it worked");
-}
-
-/*function makeSwitch(currentArray,currentPosition){
-if (values1.1ength<4){
-values1.push(currentArray[0]) [currentPosition]);
-}
-}*/
-
-function resetSwapButtons(){
-
-}
-
-
-
 
 function Onehand1Choose2C1() {
     if(collection1.length<1){
     collection1.push(hand1[0]);
+    collection.push(hand1[0]);
     document.getElementById("collectionAnchor1");
     let ah1c1=document.createElement("img");
     ah1c1.src= `cardGameImages/${hand1[0].suit}${hand1[0].value}.png`;
@@ -610,7 +382,6 @@ function Onehand1Choose2C1() {
     ah1c1.setAttribute("style","width:180px;");
     ah1c1.setAttribute("style","height:240px;");
     ah1c1.setAttribute("style","padding:10px");
-    round.setAttribute("style","font-size: 50px");
         document.getElementById("btn1").removeEventListener("click",Onehand1Choose2C1);
             let GetHideBtn1=document.getElementById("getBtn1");
             GetHideBtn1.style.display="none";
@@ -619,6 +390,7 @@ function Onehand1Choose2C1() {
             
     } else if (collection1.length<2){
                 collection1.push(hand1[0]);
+                collection.push(hand1[0]);
                 document.getElementById("collectionAnchor2");
                 let ah1c1=document.createElement("img");
                 ah1c1.src= `cardGameImages/${hand1[0].suit}${hand1[0].value}.png`;
@@ -626,7 +398,6 @@ function Onehand1Choose2C1() {
                 ah1c1.setAttribute("style","width:180px;");
                 ah1c1.setAttribute("style","height:240px;");
                 ah1c1.setAttribute("style","padding:10px");
-                round.setAttribute("style","font-size: 50px");
                     document.getElementById("btn1").removeEventListener("click",Onehand1Choose2C1);
                         let GetHideBtn1=document.getElementById("getBtn1");
                         GetHideBtn1.style.display="none";
@@ -641,6 +412,7 @@ function Onehand1Choose2C1() {
 function Onehand1Choose2C2() {
     if(collection1.length<1){
     collection1.push(hand1[1]);
+    collection.push(hand1[1]);
     document.getElementById("collectionAnchor1");
     let ah1c2=document.createElement("img");
     ah1c2.src= `cardGameImages/${hand1[1].suit}${hand1[1].value}.png`;
@@ -656,6 +428,7 @@ function Onehand1Choose2C2() {
             
         } else if (collection1.length<2){
             collection1.push(hand1[1]);
+            collection.push(hand1[1]);
             document.getElementById("collectionAnchor2");
             let ah1c1=document.createElement("img");
             ah1c1.src= `cardGameImages/${hand1[1].suit}${hand1[1].value}.png`;
@@ -663,7 +436,6 @@ function Onehand1Choose2C2() {
             ah1c1.setAttribute("style","width:180px;");
             ah1c1.setAttribute("style","height:240px;");
             ah1c1.setAttribute("style","padding:10px");
-            round.setAttribute("style","font-size: 50px");
                 document.getElementById("btn1").removeEventListener("click",Onehand1Choose2C1);
                     let GetHideBtn1=document.getElementById("getBtn1");
                     GetHideBtn1.style.display="none";
@@ -677,6 +449,8 @@ function Onehand1Choose2C2() {
 function Onehand1Choose2C3() {
     if(collection1.length<1){
     collection1.push(hand1[2]);
+    collection.push(hand1[2]);
+
     document.getElementById("collectionAnchor1");
     let ah1c3=document.createElement("img");
     ah1c3.src= `cardGameImages/${hand1[2].suit}${hand1[2].value}.png`;
@@ -692,6 +466,8 @@ function Onehand1Choose2C3() {
 
         } else if (collection1.length<2){
             collection1.push(hand1[2]);
+            collection.push(hand1[2]);
+
             document.getElementById("collectionAnchor2");
             let ah1c1=document.createElement("img");
             ah1c1.src= `cardGameImages/${hand1[2].suit}${hand1[2].value}.png`;
@@ -699,7 +475,6 @@ function Onehand1Choose2C3() {
             ah1c1.setAttribute("style","width:180px;");
             ah1c1.setAttribute("style","height:240px;");
             ah1c1.setAttribute("style","padding:10px");
-            round.setAttribute("style","font-size: 50px");
                 document.getElementById("btn1").removeEventListener("click",Onehand1Choose2C1);
                     let GetHideBtn1=document.getElementById("getBtn1");
                     GetHideBtn1.style.display="none";
@@ -713,6 +488,8 @@ function Onehand1Choose2C3() {
 function Onehand1Choose2C4() {
     if(collection1.length<1){
     collection1.push(hand1[3]);
+    collection.push(hand1[3]);
+
     document.getElementById("collectionAnchor1");
     let ah1c4=document.createElement("img");
     ah1c4.src= `cardGameImages/${hand1[3].suit}${hand1[3].value}.png`;
@@ -728,6 +505,8 @@ function Onehand1Choose2C4() {
 
         } else if (collection1.length<2){
             collection1.push(hand1[3]);
+            collection.push(hand1[3]);
+
             document.getElementById("collectionAnchor2");
             let ah1c1=document.createElement("img");
             ah1c1.src= `cardGameImages/${hand1[3].suit}${hand1[3].value}.png`;
@@ -735,7 +514,6 @@ function Onehand1Choose2C4() {
             ah1c1.setAttribute("style","width:180px;");
             ah1c1.setAttribute("style","height:240px;");
             ah1c1.setAttribute("style","padding:10px");
-            round.setAttribute("style","font-size: 50px");
                 document.getElementById("btn1").removeEventListener("click",Onehand1Choose2C1);
                     let GetHideBtn1=document.getElementById("getBtn1");
                     GetHideBtn1.style.display="none";
@@ -749,6 +527,8 @@ function Onehand1Choose2C4() {
 function Onehand1Choose2C5() {
     if(collection1.length<1){
     collection1.push(hand1[4]);
+    collection.push(hand1[4]);
+
     document.getElementById("collectionAnchor1");
     let ah1c5=document.createElement("img");
     ah1c5.src= `cardGameImages/${hand1[4].suit}${hand1[4].value}.png`;
@@ -764,6 +544,8 @@ function Onehand1Choose2C5() {
 
         } else if (collection1.length<2){
             collection1.push(hand1[4]);
+            collection.push(hand1[4]);
+
             document.getElementById("collectionAnchor2");
             let ah1c1=document.createElement("img");
             ah1c1.src= `cardGameImages/${hand1[4].suit}${hand1[4].value}.png`;
@@ -771,7 +553,6 @@ function Onehand1Choose2C5() {
             ah1c1.setAttribute("style","width:180px;");
             ah1c1.setAttribute("style","height:240px;");
             ah1c1.setAttribute("style","padding:10px");
-            round.setAttribute("style","font-size: 50px");
                 document.getElementById("btn1").removeEventListener("click",Onehand1Choose2C1);
                     let GetHideBtn1=document.getElementById("getBtn1");
                     GetHideBtn1.style.display="none";
@@ -786,6 +567,8 @@ function Onehand1Choose2C5() {
 function Twohand2Choose2C1() {
     if(collection1.length<3){
     collection1.push(hand2[0]);
+    collection.push(hand2[0]);
+
     document.getElementById("collectionAnchor3");
     let ah1c1=document.createElement("img");
     ah1c1.src= `cardGameImages/${hand2[0].suit}${hand2[0].value}.png`;
@@ -800,6 +583,8 @@ function Twohand2Choose2C1() {
             GetHideBtn3C.style.display="inline-block";
 } else if (collection1.length<4){
     collection1.push(hand2[0]);
+    collection.push(hand2[0]);
+
     document.getElementById("collectionAnchor4");
     let ah1c1=document.createElement("img");
     ah1c1.src= `cardGameImages/${hand1[0].suit}${hand1[0].value}.png`;
@@ -807,7 +592,6 @@ function Twohand2Choose2C1() {
     ah1c1.setAttribute("style","width:180px;");
     ah1c1.setAttribute("style","height:240px;");
     ah1c1.setAttribute("style","padding:10px");
-    round.setAttribute("style","font-size: 50px");
         document.getElementById("btn1").removeEventListener("click",Onehand1Choose2C1);
             let GetHideBtn2=document.getElementById("getBtn2");
             GetHideBtn2.style.display="none";
@@ -820,6 +604,8 @@ function Twohand2Choose2C1() {
 function Twohand2Choose2C2() {
     if(collection1.length<3){
     collection1.push(hand2[1]);
+    collection.push(hand2[1]);
+
     document.getElementById("collectionAnchor3");
     let ah1c2=document.createElement("img");
     ah1c2.src= `cardGameImages/${hand2[1].suit}${hand2[1].value}.png`;
@@ -834,6 +620,8 @@ function Twohand2Choose2C2() {
             GetHideBtn3C.style.display="inline-block";
 } else if (collection1.length<4){
     collection1.push(hand2[1]);
+    collection.push(hand2[1]);
+
     document.getElementById("collectionAnchor4");
     let ah1c1=document.createElement("img");
     ah1c1.src= `cardGameImages/${hand2[1].suit}${hand2[1].value}.png`;
@@ -841,7 +629,6 @@ function Twohand2Choose2C2() {
     ah1c1.setAttribute("style","width:180px;");
     ah1c1.setAttribute("style","height:240px;");
     ah1c1.setAttribute("style","padding:10px");
-    round.setAttribute("style","font-size: 50px");
         document.getElementById("btn1").removeEventListener("click",Onehand1Choose2C1);
             let GetHideBtn2=document.getElementById("getBtn2");
             GetHideBtn2.style.display="none";
@@ -854,6 +641,8 @@ function Twohand2Choose2C2() {
 function Twohand2Choose2C3() {
     if(collection1.length<3){
     collection1.push(hand2[2]);
+    collection.push(hand2[2]);
+
     document.getElementById("collectionAnchor3");
     let ah1c3=document.createElement("img");
     ah1c3.src= `cardGameImages/${hand2[2].suit}${hand2[2].value}.png`;
@@ -868,6 +657,8 @@ function Twohand2Choose2C3() {
             GetHideBtn3C.style.display="inline-block";
 } else if (collection1.length<4){
     collection1.push(hand2[2]);
+    collection.push(hand2[2]);
+
     document.getElementById("collectionAnchor4");
     let ah1c1=document.createElement("img");
     ah1c1.src= `cardGameImages/${hand2[2].suit}${hand2[2].value}.png`;
@@ -875,7 +666,6 @@ function Twohand2Choose2C3() {
     ah1c1.setAttribute("style","width:180px;");
     ah1c1.setAttribute("style","height:240px;");
     ah1c1.setAttribute("style","padding:10px");
-    round.setAttribute("style","font-size: 50px");
         document.getElementById("btn1").removeEventListener("click",Onehand1Choose2C1);
             let GetHideBtn2=document.getElementById("getBtn2");
             GetHideBtn2.style.display="none";
@@ -889,6 +679,8 @@ function Twohand2Choose2C3() {
 function Twohand2Choose2C4() {
     if(collection1.length<3){
     collection1.push(hand2[3]);
+    collection.push(hand2[3]);
+
     document.getElementById("collectionAnchor3");
     let ah1c4=document.createElement("img");
     ah1c4.src= `cardGameImages/${hand2[3].suit}${hand2[3].value}.png`;
@@ -903,6 +695,8 @@ function Twohand2Choose2C4() {
     GetHideBtn3C.style.display="inline-block";
 } else if (collection1.length<4){
     collection1.push(hand2[3]);
+    collection.push(hand2[3]);
+
     document.getElementById("collectionAnchor4");
     let ah1c1=document.createElement("img");
     ah1c1.src= `cardGameImages/${hand2[3].suit}${hand2[3].value}.png`;
@@ -910,7 +704,6 @@ function Twohand2Choose2C4() {
     ah1c1.setAttribute("style","width:180px;");
     ah1c1.setAttribute("style","height:240px;");
     ah1c1.setAttribute("style","padding:10px");
-    round.setAttribute("style","font-size: 50px");
         document.getElementById("btn1").removeEventListener("click",Onehand1Choose2C1);
             let GetHideBtn2=document.getElementById("getBtn2");
             GetHideBtn2.style.display="none";
@@ -924,6 +717,8 @@ function Twohand2Choose2C4() {
 function Twohand2Choose2C5() {
     if(collection1.length<3){
     collection1.push(hand2[4]);
+    collection.push(hand2[4]);
+
     document.getElementById("collectionAnchor3");
     let ah1c5=document.createElement("img");
     ah1c5.src= `cardGameImages/${hand2[4].suit}${hand2[4].value}.png`;
@@ -938,6 +733,8 @@ function Twohand2Choose2C5() {
             GetHideBtn3C.style.display="inline-block";
 } else if (collection1.length<4){
     collection1.push(hand2[4]);
+    collection.push(hand2[4]);
+
     document.getElementById("collectionAnchor4");
     let ah1c1=document.createElement("img");
     ah1c1.src= `cardGameImages/${hand2[4].suit}${hand2[4].value}.png`;
@@ -945,7 +742,6 @@ function Twohand2Choose2C5() {
     ah1c1.setAttribute("style","width:180px;");
     ah1c1.setAttribute("style","height:240px;");
     ah1c1.setAttribute("style","padding:10px");
-    round.setAttribute("style","font-size: 50px");
         document.getElementById("btn1").removeEventListener("click",Onehand1Choose2C1);
             let GetHideBtn2=document.getElementById("getBtn2");
             GetHideBtn2.style.display="none";
@@ -1002,64 +798,7 @@ function showHand2 () {
 
 };
 
-//choose 2 hand 2
 
-/*function Twohand1Choose2C1() {
-    collection.push(hand2[0]);
-    document.getElementById("collectionAnchor");
-    let ah2c1=document.createElement("img");
-    ah2c1.src= `cardGameImages/${hand2[0].suit}${hand2[0].value}.png`;
-    collectionAnchor.appendChild(ah2c1);
-    ah2c1.setAttribute("style","width:180px;");
-    ah2c1.setAttribute("style","height:240px;");
-    ah2c1.setAttribute("style","padding:10px");
-
-};
-
-function Twohand1Choose2C2() {
-    collection.push(hand2[1]);
-    document.getElementById("collectionAnchor");
-    let ah2c2=document.createElement("img");
-    ah2c2.src= `cardGameImages/${hand2[1].suit}${hand2[1].value}.png`;
-    collectionAnchor.appendChild(ah2c2);
-    ah2c2.setAttribute("style","width:180px;");
-    ah2c2.setAttribute("style","height:240px;");
-    ah2c2.setAttribute("style","padding:10px");
-};
-
-function Twohand1Choose2C3() {
-    collection.push(hand2[2]);
-    document.getElementById("collectionAnchor");
-    let ah2c3=document.createElement("img");
-    ah2c3.src= `cardGameImages/${hand2[2].suit}${hand2[2].value}.png`;
-    collectionAnchor.appendChild(ah2c3);
-    ah2c3.setAttribute("style","width:180px;");
-    ah2c3.setAttribute("style","height:240px;");
-    ah2c3.setAttribute("style","padding:10px");
-};
-
-function Twohand1Choose2C4() {
-    collection.push(hand2[3]);
-    document.getElementById("collectionAnchor");
-    let ah2c4=document.createElement("img");
-    ah2c4.src= `cardGameImages/${hand2[3].suit}${hand2[3].value}.png`;
-    collectionAnchor.appendChild(ah2c4);
-    ah2c4.setAttribute("style","width:180px;");
-    ah2c4.setAttribute("style","height:240px;");
-    ah2c4.setAttribute("style","padding:10px");
-};
-
-function Twohand1Choose2C5() {
-    collection.push(hand2[4]);
-    document.getElementById("collectionAnchor");
-    let ah2c5=document.createElement("img");
-    ah2c5.src= `cardGameImages/${hand2[4].suit}${hand2[4].value}.png`;
-    collectionAnchor.appendChild(ah2c5);
-    ah2c5.setAttribute("style","width:180px;");
-    ah2c5.setAttribute("style","height:240px;");
-    ah2c5.setAttribute("style","padding:10px");
-};
-*/
 //clear hand2. get hand3 buttons.
 
 function clearHand2(){
@@ -1068,17 +807,18 @@ function clearHand2(){
         anchor2.removeChild(anchor2.firstChild);
     }
     
+    document.getElementById("round").innerHTML="This is Hand 3";
+    round.setAttribute("style","font-size: 50px");
+    round.style.textAlign="right";
+    round.style.color="white"; 
+
     let GetHideBtn2C=document.getElementById("getBtn3C");
     GetHideBtn2C.style.display="none";
     let GetHideBtn3=document.getElementById("getBtn3");
     GetHideBtn3.style.display="inline-block";
 
-    let roundCounter=document.getElementById("round");
 
-    /*roundCounter.innerHTML="This is Hand 3";
-    roundCounter.setAttribute("style","font-size: 50px");
-    roundCounter.style.textAlign="right";
-    roundCounter.style.color="white";*/
+
 };
 
 // get hand 3
@@ -1114,6 +854,8 @@ function showHand3 () {
 function Threehand3Choose2C1() {
     if(collection1.length<5){
     collection1.push(hand3[0]);
+    collection.push(hand3[0]);
+
     document.getElementById("collectionAnchor5");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand3[0].suit}${hand3[0].value}.png`;
@@ -1129,6 +871,8 @@ function Threehand3Choose2C1() {
         
     } else if(collection2.length<1){
     collection2.push(hand3[0]);
+    collection.push(hand3[0]);
+
     document.getElementById("collectionAnchor6");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand3[0].suit}${hand3[0].value}.png`;
@@ -1150,6 +894,8 @@ function Threehand3Choose2C2() {
     if(collection1.length<5){
 
     collection1.push(hand3[1]);
+    collection.push(hand3[1]);
+
     document.getElementById("collectionAnchor5");
     let ah3c2=document.createElement("img");
     ah3c2.src= `cardGameImages/${hand3[1].suit}${hand3[1].value}.png`;
@@ -1165,6 +911,8 @@ function Threehand3Choose2C2() {
 
 } else if(collection2.length<1){
     collection2.push(hand3[1]);
+    collection.push(hand3[1]);
+
     document.getElementById("collectionAnchor6");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand3[1].suit}${hand3[1].value}.png`;
@@ -1186,6 +934,8 @@ function Threehand3Choose2C3() {
     if(collection1.length<5){
 
     collection1.push(hand3[2]);
+    collection.push(hand3[2]);
+
     document.getElementById("collectionAnchor5");
     let ah3c3=document.createElement("img");
     ah3c3.src= `cardGameImages/${hand3[2].suit}${hand3[2].value}.png`;
@@ -1201,6 +951,8 @@ function Threehand3Choose2C3() {
 
 } else if(collection2.length<1){
     collection2.push(hand3[2]);
+    collection.push(hand3[2]);
+
     document.getElementById("collectionAnchor6");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand3[2].suit}${hand3[2].value}.png`;
@@ -1223,6 +975,8 @@ function Threehand3Choose2C4() {
     if(collection1.length<5){
 
     collection1.push(hand3[3]);
+    collection.push(hand3[3]);
+
     document.getElementById("collectionAnchor5");
     let ah3c4=document.createElement("img");
     ah3c4.src= `cardGameImages/${hand3[3].suit}${hand3[3].value}.png`;
@@ -1238,6 +992,8 @@ function Threehand3Choose2C4() {
 
 } else if(collection2.length<1){
     collection2.push(hand3[3]);
+    collection.push(hand3[3]);
+
     document.getElementById("collectionAnchor6");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand3[3].suit}${hand3[3].value}.png`;
@@ -1259,6 +1015,8 @@ function Threehand3Choose2C5() {
     if(collection1.length<5){
 
     collection1.push(hand3[4]);
+    collection.push(hand3[4]);
+
     document.getElementById("collectionAnchor5");
     let ah3c5=document.createElement("img");
     ah3c5.src= `cardGameImages/${hand3[4].suit}${hand3[4].value}.png`;
@@ -1274,6 +1032,8 @@ function Threehand3Choose2C5() {
 
 } else if(collection2.length<1){
     collection2.push(hand3[4]);
+    collection.push(hand3[4]);
+
     document.getElementById("collectionAnchor6");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand3[4].suit}${hand3[4].value}.png`;
@@ -1342,6 +1102,8 @@ function showHand4 () {
 function Fourhand4Choose2C1() {
     if(collection2.length<2){
         collection2.push(hand4[0]);
+        collection.push(hand4[0]);
+
     document.getElementById("collectionAnchor7");
     let ah4c1=document.createElement("img");
     ah4c1.src= `cardGameImages/${hand4[0].suit}${hand4[0].value}.png`;
@@ -1356,6 +1118,8 @@ function Fourhand4Choose2C1() {
     GetHideBtn45C.style.display="inline-block";
 } else if(collection2.length<3){
     collection2.push(hand4[0]);
+    collection.push(hand4[0]);
+
     document.getElementById("collectionAnchor8");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand4[0].suit}${hand4[0].value}.png`;
@@ -1377,6 +1141,8 @@ function Fourhand4Choose2C2() {
     if(collection2.length<2){
 
         collection2.push(hand4[1]);
+        collection.push(hand4[1]);
+
     document.getElementById("collectionAnchor7");
     let ah4c2=document.createElement("img");
     ah4c2.src= `cardGameImages/${hand4[1].suit}${hand4[1].value}.png`;
@@ -1392,6 +1158,8 @@ function Fourhand4Choose2C2() {
 
         } else if(collection2.length<3){
             collection2.push(hand4[1]);
+            collection.push(hand4[1]);
+
             document.getElementById("collectionAnchor8");
             let ah3c1=document.createElement("img");
             ah3c1.src= `cardGameImages/${hand4[1].suit}${hand4[1].value}.png`;
@@ -1411,6 +1179,8 @@ function Fourhand4Choose2C2() {
 function Fourhand4Choose2C3() {
     if(collection2.length<2){
         collection2.push(hand4[2]);
+        collection.push(hand4[2]);
+
         document.getElementById("collectionAnchor7");
         let ah4c3=document.createElement("img");
         ah4c3.src= `cardGameImages/${hand4[2].suit}${hand4[2].value}.png`;
@@ -1426,6 +1196,8 @@ function Fourhand4Choose2C3() {
     
             } else if(collection2.length<3){
                 collection2.push(hand4[2]);
+                collection.push(hand4[2]);
+
                 document.getElementById("collectionAnchor8");
                 let ah3c1=document.createElement("img");
                 ah3c1.src= `cardGameImages/${hand4[2].suit}${hand4[2].value}.png`;
@@ -1447,6 +1219,8 @@ function Fourhand4Choose2C4() {
     if(collection2.length<2){
 
         collection2.push(hand4[3]);
+        collection.push(hand4[3]);
+
         document.getElementById("collectionAnchor7");
         let ah4c4=document.createElement("img");
         ah4c4.src= `cardGameImages/${hand4[3].suit}${hand4[3].value}.png`;
@@ -1462,6 +1236,8 @@ function Fourhand4Choose2C4() {
     
             } else if(collection2.length<3){
                 collection2.push(hand4[3]);
+                collection.push(hand4[3]);
+
                 document.getElementById("collectionAnchor8");
                 let ah3c1=document.createElement("img");
                 ah3c1.src= `cardGameImages/${hand4[3].suit}${hand4[3].value}.png`;
@@ -1483,6 +1259,8 @@ function Fourhand4Choose2C5() {
     if(collection2.length<2){
 
         collection2.push(hand4[4]);
+        collection.push(hand4[4]);
+
         document.getElementById("collectionAnchor7");
         let ah4c5=document.createElement("img");
         ah4c5.src= `cardGameImages/${hand4[4].suit}${hand4[4].value}.png`;
@@ -1498,6 +1276,8 @@ function Fourhand4Choose2C5() {
     
             } else if(collection2.length<3){
                 collection2.push(hand4[4]);
+                collection.push(hand4[4]);
+
                 document.getElementById("collectionAnchor8");
                 let ah4c52=document.createElement("img");
                 ah4c52.src= `cardGameImages/${hand4[4].suit}${hand4[4].value}.png`;
@@ -1566,6 +1346,8 @@ function Fivehand5Choose2C1() {
     if(collection2.length<4){
 
     collection2.push(hand5[0]);
+    collection.push(hand5[0]);
+
     document.getElementById("collectionAnchor9");
     let ah5c1=document.createElement("img");
     ah5c1.src= `cardGameImages/${hand5[0].suit}${hand5[0].value}.png`;
@@ -1581,6 +1363,8 @@ function Fivehand5Choose2C1() {
 
         } else if(collection2.length<5){
             collection2.push(hand5[0]);
+            collection.push(hand5[0]);
+
             document.getElementById("collectionAnchor10");
             let ah4c52=document.createElement("img");
             ah4c52.src= `cardGameImages/${hand5[0].suit}${hand5[0].value}.png`;
@@ -1601,6 +1385,8 @@ function Fivehand5Choose2C2() {
     if(collection2.length<4){
 
     collection2.push(hand5[1]);
+    collection.push(hand5[1]);
+
     document.getElementById("collectionAnchor9");
     let ah5c2=document.createElement("img");
     ah5c2.src= `cardGameImages/${hand5[1].suit}${hand5[1].value}.png`;
@@ -1616,6 +1402,8 @@ function Fivehand5Choose2C2() {
 
         } else if(collection2.length<5){
             collection2.push(hand5[1]);
+            collection.push(hand5[1]);
+
             document.getElementById("collectionAnchor10");
             let ah4c52=document.createElement("img");
             ah4c52.src= `cardGameImages/${hand5[1].suit}${hand5[1].value}.png`;
@@ -1637,6 +1425,8 @@ function Fivehand5Choose2C3() {
     if(collection2.length<4){
 
     collection2.push(hand5[2]);
+    collection.push(hand5[2]);
+
     document.getElementById("collectionAnchor9");
     let ah5c3=document.createElement("img");
     ah5c3.src= `cardGameImages/${hand5[2].suit}${hand5[2].value}.png`;
@@ -1652,6 +1442,8 @@ function Fivehand5Choose2C3() {
 
         } else if(collection2.length<5){
             collection2.push(hand5[2]);
+            collection.push(hand5[2]);
+
             document.getElementById("collectionAnchor10");
             let ah4c52=document.createElement("img");
             ah4c52.src= `cardGameImages/${hand5[2].suit}${hand5[2].value}.png`;
@@ -1672,6 +1464,8 @@ function Fivehand5Choose2C4() {
     if(collection2.length<4){
 
     collection2.push(hand5[3]);
+    collection.push(hand5[3]);
+
     document.getElementById("collectionAnchor9");
     let ah5c4=document.createElement("img");
     ah5c4.src= `cardGameImages/${hand5[3].suit}${hand5[3].value}.png`;
@@ -1687,6 +1481,8 @@ function Fivehand5Choose2C4() {
 
         } else if(collection2.length<5){
             collection2.push(hand5[3]);
+            collection.push(hand5[3]);
+
             document.getElementById("collectionAnchor10");
             let ah4c52=document.createElement("img");
             ah4c52.src= `cardGameImages/${hand5[3].suit}${hand5[3].value}.png`;
@@ -1707,6 +1503,8 @@ function Fivehand5Choose2C5() {
     if(collection2.length<4){
 
     collection2.push(hand5[4]);
+    collection.push(hand5[4]);
+
     document.getElementById("collectionAnchor9");
     let ah5c5=document.createElement("img");
     ah5c5.src= `cardGameImages/${hand5[4].suit}${hand5[4].value}.png`;
@@ -1722,6 +1520,8 @@ function Fivehand5Choose2C5() {
 
         } else if(collection2.length<5){
             collection2.push(hand5[4]);
+            collection.push(hand5[4]);
+
             document.getElementById("collectionAnchor10");
             let ah4c52=document.createElement("img");
             ah4c52.src= `cardGameImages/${hand5[4].suit}${hand5[4].value}.png`;
@@ -1794,6 +1594,8 @@ function Sixhand6Choose2C1() {
     if(collection3.length<1){
 
         collection3.push(hand6[0]);
+        collection.push(hand6[0]);
+
     document.getElementById("collectionAnchor11");
     let ah6c1=document.createElement("img");
     ah6c1.src= `cardGameImages/${hand6[0].suit}${hand6[0].value}.png`;
@@ -1809,6 +1611,8 @@ function Sixhand6Choose2C1() {
 
         } else if(collection3.length<2){
             collection3.push(hand6[0]);
+            collection.push(hand6[0]);
+
             document.getElementById("collectionAnchor12");
             let ah4c52=document.createElement("img");
             ah4c52.src= `cardGameImages/${hand6[0].suit}${hand6[0].value}.png`;
@@ -1830,6 +1634,8 @@ function Sixhand6Choose2C2() {
     if(collection3.length<1){
 
     collection3.push(hand6[1]);
+    collection.push(hand6[1]);
+
     document.getElementById("collectionAnchor11");
     let ah6c2=document.createElement("img");
     ah6c2.src= `cardGameImages/${hand6[1].suit}${hand6[1].value}.png`;
@@ -1845,6 +1651,8 @@ function Sixhand6Choose2C2() {
 
         } else if(collection3.length<2){
             collection3.push(hand6[1]);
+            collection.push(hand6[1]);
+
             document.getElementById("collectionAnchor12");
             let ah4c52=document.createElement("img");
             ah4c52.src= `cardGameImages/${hand6[1].suit}${hand6[1].value}.png`;
@@ -1866,6 +1674,8 @@ function Sixhand6Choose2C3() {
     if(collection3.length<1){
 
     collection3.push(hand6[2]);
+    collection.push(hand6[2]);
+
     document.getElementById("collectionAnchor11");
     let ah6c3=document.createElement("img");
     ah6c3.src= `cardGameImages/${hand6[2].suit}${hand6[2].value}.png`;
@@ -1881,6 +1691,8 @@ function Sixhand6Choose2C3() {
 
         } else if(collection3.length<2){
             collection3.push(hand6[2]);
+            collection.push(hand6[2]);
+
             document.getElementById("collectionAnchor12");
             let ah4c52=document.createElement("img");
             ah4c52.src= `cardGameImages/${hand6[2].suit}${hand6[2].value}.png`;
@@ -1904,6 +1716,8 @@ function Sixhand6Choose2C4() {
     if(collection3.length<1){
 
     collection3.push(hand6[3]);
+    collection.push(hand6[3]);
+
     document.getElementById("collectionAnchor11");
     let ah6c4=document.createElement("img");
     ah6c4.src= `cardGameImages/${hand6[3].suit}${hand6[3].value}.png`;
@@ -1920,6 +1734,8 @@ function Sixhand6Choose2C4() {
             
         } else if(collection3.length<2){
             collection3.push(hand6[3]);
+            collection.push(hand6[3]);
+
             document.getElementById("collectionAnchor12");
             let ah4c52=document.createElement("img");
             ah4c52.src= `cardGameImages/${hand6[3].suit}${hand6[3].value}.png`;
@@ -1942,6 +1758,8 @@ function Sixhand6Choose2C5() {
     if(collection3.length<1){
 
     collection3.push(hand6[4]);
+    collection.push(hand6[4]);
+
     document.getElementById("collectionAnchor11");
     let ah6c5=document.createElement("img");
     ah6c5.src= `cardGameImages/${hand6[4].suit}${hand6[4].value}.png`;
@@ -1957,6 +1775,8 @@ function Sixhand6Choose2C5() {
 
         } else if(collection3.length<2){
             collection3.push(hand6[4]);
+            collection.push(hand6[4]);
+
             document.getElementById("collectionAnchor12");
             let ah4c52=document.createElement("img");
             ah4c52.src= `cardGameImages/${hand6[4].suit}${hand6[4].value}.png`;
@@ -2027,6 +1847,8 @@ function Sevenhand7Choose2C1() {
     if(collection3.length<3){
 
     collection3.push(hand7[0]);
+    collection.push(hand7[0]);
+
     document.getElementById("collectionAnchor13");
     let ah7c1=document.createElement("img");
     ah7c1.src= `cardGameImages/${hand7[0].suit}${hand7[0].value}.png`;
@@ -2042,6 +1864,8 @@ function Sevenhand7Choose2C1() {
 
         } else if(collection3.length<4){
             collection3.push(hand7[0]);
+            collection.push(hand7[0]);
+
             document.getElementById("collectionAnchor14");
             let ah4c52=document.createElement("img");
             ah4c52.src= `cardGameImages/${hand7[0].suit}${hand7[0].value}.png`;
@@ -2064,6 +1888,8 @@ function Sevenhand7Choose2C2() {
     if(collection3.length<3){
 
     collection3.push(hand7[1]);
+    collection.push(hand7[1]);
+
     document.getElementById("collectionAnchor13");
     let ah7c2=document.createElement("img");
     ah7c2.src= `cardGameImages/${hand7[1].suit}${hand7[1].value}.png`;
@@ -2079,6 +1905,8 @@ function Sevenhand7Choose2C2() {
 
 } else if(collection3.length<4){
     collection3.push(hand7[1]);
+    collection.push(hand7[1]);
+
     document.getElementById("collectionAnchor14");
     let ah4c52=document.createElement("img");
     ah4c52.src= `cardGameImages/${hand7[1].suit}${hand7[1].value}.png`;
@@ -2100,6 +1928,8 @@ function Sevenhand7Choose2C3() {
     if(collection3.length<3){
 
     collection3.push(hand7[2]);
+    collection.push(hand7[2]);
+
     document.getElementById("collectionAnchor13");
     let ah7c3=document.createElement("img");
     ah7c3.src= `cardGameImages/${hand7[2].suit}${hand7[2].value}.png`;
@@ -2115,6 +1945,8 @@ function Sevenhand7Choose2C3() {
 
 } else if(collection3.length<4){
     collection3.push(hand7[2]);
+    collection.push(hand7[2]);
+
     document.getElementById("collectionAnchor14");
     let ah4c52=document.createElement("img");
     ah4c52.src= `cardGameImages/${hand7[2].suit}${hand7[2].value}.png`;
@@ -2136,6 +1968,8 @@ function Sevenhand7Choose2C4() {
     if(collection3.length<3){
 
     collection3.push(hand7[3]);
+    collection.push(hand7[3]);
+
     document.getElementById("collectionAnchor13");
     let ah7c4=document.createElement("img");
     ah7c4.src= `cardGameImages/${hand7[3].suit}${hand7[3].value}.png`;
@@ -2151,6 +1985,8 @@ function Sevenhand7Choose2C4() {
 
 } else if(collection3.length<4){
     collection3.push(hand7[3]);
+    collection.push(hand7[3]);
+
     document.getElementById("collectionAnchor14");
     let ah4c52=document.createElement("img");
     ah4c52.src= `cardGameImages/${hand7[3].suit}${hand7[3].value}.png`;
@@ -2172,6 +2008,8 @@ function Sevenhand7Choose2C5() {
     if(collection3.length<3){
 
     collection3.push(hand7[4]);
+    collection.push(hand7[4]);
+
     document.getElementById("collectionAnchor13");
     let ah7c5=document.createElement("img");
     ah7c5.src= `cardGameImages/${hand7[4].suit}${hand7[4].value}.png`;
@@ -2187,6 +2025,8 @@ function Sevenhand7Choose2C5() {
 
 } else if(collection3.length<4){
     collection3.push(hand7[4]);
+    collection.push(hand7[4]);
+
     document.getElementById("collectionAnchor14");
     let ah4c52=document.createElement("img");
     ah4c52.src= `cardGameImages/${hand7[4].suit}${hand7[4].value}.png`;
@@ -2257,6 +2097,8 @@ function Eighthand8Choose2C1() {
     if(collection3.length<5){
 
     collection3.push(hand8[0]);
+    collection.push(hand8[0]);
+
     document.getElementById("collectionAnchor15");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand8[0].suit}${hand8[0].value}.png`;
@@ -2272,6 +2114,8 @@ function Eighthand8Choose2C1() {
 
     } else if(collection4.length<1){
         collection4.push(hand8[0]);
+        collection.push(hand8[0]);
+
         document.getElementById("collectionAnchor16");
         let ah8c1=document.createElement("img");
         ah8c1.src= `cardGameImages/${hand8[0].suit}${hand8[0].value}.png`;
@@ -2293,6 +2137,8 @@ function Eighthand8Choose2C2() {
     if(collection3.length<5){
 
     collection3.push(hand8[1]);
+    collection.push(hand8[1]);
+
     document.getElementById("collectionAnchor15");
     let ah8c2=document.createElement("img");
     ah8c2.src= `cardGameImages/${hand8[1].suit}${hand8[1].value}.png`;
@@ -2308,6 +2154,8 @@ function Eighthand8Choose2C2() {
 
         } else if(collection4.length<1){
             collection4.push(hand8[1]);
+            collection.push(hand8[1]);
+
             document.getElementById("collectionAnchor16");
             let ah8c1=document.createElement("img");
             ah8c1.src= `cardGameImages/${hand8[1].suit}${hand8[1].value}.png`;
@@ -2329,6 +2177,8 @@ function Eighthand8Choose2C3() {
     if(collection3.length<5){
 
     collection3.push(hand8[2]);
+    collection.push(hand8[2]);
+
     document.getElementById("collectionAnchor15");
     let ah8c3=document.createElement("img");
     ah8c3.src= `cardGameImages/${hand8[2].suit}${hand8[2].value}.png`;
@@ -2344,6 +2194,8 @@ function Eighthand8Choose2C3() {
 
 } else if(collection4.length<1){
     collection4.push(hand8[2]);
+    collection.push(hand8[2]);
+
     document.getElementById("collectionAnchor16");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand8[2].suit}${hand8[2].value}.png`;
@@ -2365,6 +2217,8 @@ function Eighthand8Choose2C4() {
     if(collection3.length<5){
 
     collection3.push(hand8[3]);
+    collection.push(hand8[3]);
+
     document.getElementById("collectionAnchor15");
     let ah8c4=document.createElement("img");
     ah8c4.src= `cardGameImages/${hand8[3].suit}${hand8[3].value}.png`;
@@ -2380,6 +2234,8 @@ function Eighthand8Choose2C4() {
 
 } else if(collection4.length<1){
     collection4.push(hand8[3]);
+    collection.push(hand8[3]);
+
     document.getElementById("collectionAnchor16");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand8[3].suit}${hand8[3].value}.png`;
@@ -2401,6 +2257,8 @@ function Eighthand8Choose2C5() {
     if(collection3.length<5){
 
     collection3.push(hand8[4]);
+    collection.push(hand8[4]);
+
     document.getElementById("collectionAnchor15");
     let ah8c5=document.createElement("img");
     ah8c5.src= `cardGameImages/${hand8[4].suit}${hand8[4].value}.png`;
@@ -2416,6 +2274,8 @@ function Eighthand8Choose2C5() {
 
 } else if(collection4.length<1){
     collection4.push(hand8[4]);
+    collection.push(hand8[4]);
+
     document.getElementById("collectionAnchor16");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand8[4].suit}${hand8[4].value}.png`;
@@ -2484,6 +2344,8 @@ function Ninehand9Choose2C1() {
     if(collection4.length<2){
 
     collection4.push(hand9[0]);
+    collection.push(hand9[0]);
+
     document.getElementById("collectionAnchor17");
     let ah9c1=document.createElement("img");
     ah9c1.src= `cardGameImages/${hand9[0].suit}${hand9[0].value}.png`;
@@ -2499,6 +2361,8 @@ function Ninehand9Choose2C1() {
 
 } else if(collection4.length<3){
     collection4.push(hand9[0]);
+    collection.push(hand9[0]);
+
     document.getElementById("collectionAnchor18");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand9[0].suit}${hand9[0].value}.png`;
@@ -2521,6 +2385,8 @@ function Ninehand9Choose2C2() {
     if(collection4.length<2){
 
     collection4.push(hand9[1]);
+    collection.push(hand9[1]);
+
     document.getElementById("collectionAnchor17");
     let ah9c2=document.createElement("img");
     ah9c2.src= `cardGameImages/${hand9[1].suit}${hand9[1].value}.png`;
@@ -2536,6 +2402,8 @@ function Ninehand9Choose2C2() {
 
 } else if(collection4.length<3){
     collection4.push(hand9[1]);
+    collection.push(hand9[1]);
+
     document.getElementById("collectionAnchor18");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand9[1].suit}${hand9[1].value}.png`;
@@ -2558,6 +2426,8 @@ function Ninehand9Choose2C3() {
     if(collection4.length<2){
 
     collection4.push(hand9[2]);
+    collection.push(hand9[2]);
+
     document.getElementById("collectionAnchor17");
     let ah9c3=document.createElement("img");
     ah9c3.src= `cardGameImages/${hand9[2].suit}${hand9[2].value}.png`;
@@ -2573,6 +2443,8 @@ function Ninehand9Choose2C3() {
 
 } else if(collection4.length<3){
     collection4.push(hand9[2]);
+    collection.push(hand9[2]);
+
     document.getElementById("collectionAnchor18");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand9[2].suit}${hand9[2].value}.png`;
@@ -2595,6 +2467,8 @@ function Ninehand9Choose2C4() {
     if(collection4.length<2){
 
     collection4.push(hand9[3]);
+    collection.push(hand9[3]);
+
     document.getElementById("collectionAnchor17");
     let ah9c4=document.createElement("img");
     ah9c4.src= `cardGameImages/${hand9[3].suit}${hand9[3].value}.png`;
@@ -2610,6 +2484,8 @@ function Ninehand9Choose2C4() {
 
 } else if(collection4.length<3){
     collection4.push(hand9[3]);
+    collection.push(hand9[3]);
+
     document.getElementById("collectionAnchor18");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand9[3].suit}${hand9[3].value}.png`;
@@ -2632,6 +2508,8 @@ function Ninehand9Choose2C5() {
     if(collection4.length<2){
 
     collection4.push(hand9[4]);
+    collection.push(hand9[4]);
+
     document.getElementById("collectionAnchor17");
     let ah9c5=document.createElement("img");
     ah9c5.src= `cardGameImages/${hand9[4].suit}${hand9[4].value}.png`;
@@ -2647,6 +2525,8 @@ function Ninehand9Choose2C5() {
 
 } else if(collection4.length<3){
     collection4.push(hand9[4]);
+    collection.push(hand9[4]);
+
     document.getElementById("collectionAnchor18");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand9[4].suit}${hand9[4].value}.png`;
@@ -2714,6 +2594,8 @@ function Tenhand10Choose2C1() {
     if(collection4.length<4){
 
     collection4.push(hand10[0]);
+    collection.push(hand10[0]);
+
     document.getElementById("collectionAnchor19");
     let ah10c1=document.createElement("img");
     ah10c1.src= `cardGameImages/${hand10[0].suit}${hand10[0].value}.png`;
@@ -2729,6 +2611,8 @@ function Tenhand10Choose2C1() {
 
 } else if(collection4.length<5){
     collection4.push(hand10[0]);
+    collection.push(hand10[0]);
+
     document.getElementById("collectionAnchor20");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand10[0].suit}${hand10[0].value}.png`;
@@ -2751,6 +2635,8 @@ function Tenhand10Choose2C2() {
     if(collection4.length<4){
 
     collection4.push(hand10[1]);
+    collection.push(hand10[1]);
+
     document.getElementById("collectionAnchor19");
     let ah10c2=document.createElement("img");
     ah10c2.src= `cardGameImages/${hand10[1].suit}${hand10[1].value}.png`;
@@ -2766,6 +2652,8 @@ function Tenhand10Choose2C2() {
 
 } else if(collection4.length<5){
     collection4.push(hand10[1]);
+    collection.push(hand10[1]);
+
     document.getElementById("collectionAnchor20");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand10[1].suit}${hand10[1].value}.png`;
@@ -2787,6 +2675,8 @@ function Tenhand10Choose2C3() {
     if(collection4.length<4){
 
     collection4.push(hand10[2]);
+    collection.push(hand10[2]);
+
     document.getElementById("collectionAnchor19");
     let ah10c3=document.createElement("img");
     ah10c3.src= `cardGameImages/${hand10[2].suit}${hand10[2].value}.png`;
@@ -2802,6 +2692,8 @@ function Tenhand10Choose2C3() {
 
 } else if(collection4.length<5){
     collection4.push(hand10[2]);
+    collection.push(hand10[2]);
+
     document.getElementById("collectionAnchor20");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand10[2].suit}${hand10[2].value}.png`;
@@ -2823,6 +2715,8 @@ function Tenhand10Choose2C4() {
     if(collection4.length<4){
 
     collection4.push(hand10[3]);
+    collection.push(hand10[3]);
+
     document.getElementById("collectionAnchor19");
     let ah10c4=document.createElement("img");
     ah10c4.src= `cardGameImages/${hand10[3].suit}${hand10[3].value}.png`;
@@ -2838,6 +2732,8 @@ function Tenhand10Choose2C4() {
 
 } else if(collection4.length<5){
     collection4.push(hand10[3]);
+    collection.push(hand10[3]);
+
     document.getElementById("collectionAnchor20");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand10[3].suit}${hand10[3].value}.png`;
@@ -2859,6 +2755,8 @@ function Tenhand10Choose2C5() {
     if(collection4.length<4){
 
     collection4.push(hand10[4]);
+    collection.push(hand10[4]);
+
     document.getElementById("collectionAnchor19");
     let ah10c5=document.createElement("img");
     ah10c5.src= `cardGameImages/${hand10[4].suit}${hand10[4].value}.png`;
@@ -2874,6 +2772,8 @@ function Tenhand10Choose2C5() {
 
 } else if(collection4.length<5){
     collection4.push(hand10[4]);
+    collection.push(hand10[4]);
+
     document.getElementById("collectionAnchor20");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand10[4].suit}${hand10[4].value}.png`;
@@ -2947,6 +2847,8 @@ function Elevenhand11Choose2C1() {
     if(collection5.length<1){
 
     collection5.push(hand11[0]);
+    collection.push(hand11[0]);
+
     document.getElementById("collectionAnchor21");
     let ah11c1=document.createElement("img");
     ah11c1.src= `cardGameImages/${hand11[0].suit}${hand11[0].value}.png`;
@@ -2963,6 +2865,8 @@ function Elevenhand11Choose2C1() {
     
 } else if(collection5.length<2){
     collection5.push(hand11[0]);
+    collection.push(hand11[0]);
+
     document.getElementById("collectionAnchor22");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand11[0].suit}${hand11[0].value}.png`;
@@ -2982,6 +2886,8 @@ function Elevenhand11Choose2C2() {
     if(collection5.length<1){
 
     collection5.push(hand11[1]);
+    collection.push(hand11[1]);
+
     document.getElementById("collectionAnchor21");
     let ah11c2=document.createElement("img");
     ah11c2.src= `cardGameImages/${hand11[1].suit}${hand11[1].value}.png`;
@@ -2997,6 +2903,8 @@ function Elevenhand11Choose2C2() {
 
 } else if(collection5.length<2){
     collection5.push(hand11[1]);
+    collection.push(hand11[1]);
+
     document.getElementById("collectionAnchor22");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand11[1].suit}${hand11[1].value}.png`;
@@ -3018,6 +2926,8 @@ function Elevenhand11Choose2C3() {
     if(collection5.length<1){
 
     collection5.push(hand10[2]);
+    collection.push(hand10[2]);
+
     document.getElementById("collectionAnchor21");
     let ah11c3=document.createElement("img");
     ah11c3.src= `cardGameImages/${hand11[2].suit}${hand11[2].value}.png`;
@@ -3033,6 +2943,8 @@ function Elevenhand11Choose2C3() {
 
 } else if(collection5.length<2){
     collection5.push(hand11[2]);
+    collection.push(hand11[2]);
+
     document.getElementById("collectionAnchor22");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand11[2].suit}${hand11[2].value}.png`;
@@ -3054,6 +2966,8 @@ function Elevenhand11Choose2C4() {
     if(collection5.length<1){
 
     collection5.push(hand11[3]);
+    collection.push(hand11[3]);
+
     document.getElementById("collectionAnchor21");
     let ah11c4=document.createElement("img");
     ah11c4.src= `cardGameImages/${hand11[3].suit}${hand11[3].value}.png`;
@@ -3069,6 +2983,8 @@ function Elevenhand11Choose2C4() {
 
 } else if(collection5.length<2){
     collection5.push(hand11[3]);
+    collection.push(hand11[3]);
+
     document.getElementById("collectionAnchor22");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand11[3].suit}${hand11[3].value}.png`;
@@ -3090,6 +3006,8 @@ function Elevenhand11Choose2C5() {
     if(collection5.length<1){
 
     collection5.push(hand11[4]);
+    collection.push(hand11[4]);
+
     document.getElementById("collectionAnchor21");
     let ah11c5=document.createElement("img");
     ah11c5.src= `cardGameImages/${hand11[4].suit}${hand11[4].value}.png`;
@@ -3105,6 +3023,8 @@ function Elevenhand11Choose2C5() {
 
 } else if(collection5.length<2){
     collection5.push(hand11[4]);
+    collection.push(hand11[4]);
+
     document.getElementById("collectionAnchor22");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand11[4].suit}${hand11[4].value}.png`;
@@ -3178,6 +3098,8 @@ function Twelvehand12Choose2C1() {
     if(collection5.length<3){
 
     collection5.push(hand12[0]);
+    collection.push(hand12[0]);
+
     document.getElementById("collectionAnchor23");
     let ah12c1=document.createElement("img");
     ah12c1.src= `cardGameImages/${hand12[0].suit}${hand12[0].value}.png`;
@@ -3193,6 +3115,8 @@ function Twelvehand12Choose2C1() {
 
 } else if(collection5.length<4){
     collection5.push(hand12[0]);
+    collection.push(hand12[0]);
+
     document.getElementById("collectionAnchor24");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand12[0].suit}${hand12[0].value}.png`;
@@ -3215,6 +3139,8 @@ function Twelvehand12Choose2C2() {
     if(collection5.length<3){
 
     collection5.push(hand12[1]);
+    collection.push(hand12[1]);
+
     document.getElementById("collectionAnchor23");
     let ah12c2=document.createElement("img");
     ah12c2.src= `cardGameImages/${hand12[1].suit}${hand12[1].value}.png`;
@@ -3230,6 +3156,8 @@ function Twelvehand12Choose2C2() {
 
 } else if(collection5.length<4){
     collection5.push(hand12[1]);
+    collection.push(hand12[1]);
+
     document.getElementById("collectionAnchor24");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand12[1].suit}${hand12[1].value}.png`;
@@ -3251,6 +3179,8 @@ function Twelvehand12Choose2C3() {
     if(collection5.length<3){
 
     collection5.push(hand12[2]);
+    collection.push(hand12[2]);
+
     document.getElementById("collectionAnchor23");
     let ah12c3=document.createElement("img");
     ah12c3.src= `cardGameImages/${hand12[2].suit}${hand12[2].value}.png`;
@@ -3266,6 +3196,8 @@ function Twelvehand12Choose2C3() {
 
 } else if(collection5.length<4){
     collection5.push(hand12[2]);
+    collection.push(hand12[2]);
+
     document.getElementById("collectionAnchor24");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand12[2].suit}${hand12[2].value}.png`;
@@ -3287,6 +3219,8 @@ function Twelvehand12Choose2C4() {
     if(collection5.length<3){
 
     collection5.push(hand12[3]);
+    collection.push(hand12[3]);
+
     document.getElementById("collectionAnchor23");
     let ah12c4=document.createElement("img");
     ah12c4.src= `cardGameImages/${hand12[3].suit}${hand12[3].value}.png`;
@@ -3302,6 +3236,8 @@ function Twelvehand12Choose2C4() {
 
 } else if(collection5.length<4){
     collection5.push(hand12[3]);
+    collection.push(hand12[3]);
+
     document.getElementById("collectionAnchor24");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand12[3].suit}${hand12[3].value}.png`;
@@ -3323,6 +3259,8 @@ function Twelvehand12Choose2C5() {
     if(collection5.length<3){
 
     collection5.push(hand12[4]);
+    collection.push(hand12[4]);
+
     document.getElementById("collectionAnchor23");
     let ah12c5=document.createElement("img");
     ah12c5.src= `cardGameImages/${hand12[4].suit}${hand12[4].value}.png`;
@@ -3338,6 +3276,8 @@ function Twelvehand12Choose2C5() {
 
 } else if(collection5.length<4){
     collection5.push(hand12[4]);
+    collection.push(hand12[4]);
+
     document.getElementById("collectionAnchor24");
     let ah8c1=document.createElement("img");
     ah8c1.src= `cardGameImages/${hand12[4].suit}${hand12[4].value}.png`;
@@ -3409,6 +3349,8 @@ function Thirteenhand13Choose2C1() {
     if(collection5.length<5){
 
     collection5.push(hand13[0]);
+    collection.push(hand13[0]);
+
     document.getElementById("collectionAnchor25");
     let ah13c1=document.createElement("img");
     ah13c1.src= `cardGameImages/${hand13[0].suit}${hand13[0].value}.png`;
@@ -3425,6 +3367,8 @@ function Thirteenhand13Choose2C1() {
     
     } else if(collection6.length<1){
     collection6.push(hand13[0]);
+    collection.push(hand13[0]);
+
     document.getElementById("collectionAnchor26");
     let ah13c1=document.createElement("img");
     ah13c1.src= `cardGameImages/${hand13[0].suit}${hand13[0].value}.png`;
@@ -3446,6 +3390,8 @@ function Thirteenhand13Choose2C2() {
     if(collection5.length<5){
 
     collection5.push(hand13[1]);
+    collection.push(hand13[1]);
+
     document.getElementById("collectionAnchor25");
     let ah13c2=document.createElement("img");
     ah13c2.src= `cardGameImages/${hand13[1].suit}${hand13[1].value}.png`;
@@ -3461,6 +3407,8 @@ function Thirteenhand13Choose2C2() {
 
 } else if(collection6.length<1){
     collection6.push(hand13[1]);
+    collection.push(hand13[1]);
+
     document.getElementById("collectionAnchor26");
     let ah13c2=document.createElement("img");
     ah13c2.src= `cardGameImages/${hand13[1].suit}${hand13[1].value}.png`;
@@ -3482,6 +3430,8 @@ function Thirteenhand13Choose2C3() {
     if(collection5.length<5){
 
     collection5.push(hand13[2]);
+    collection.push(hand13[2]);
+
     document.getElementById("collectionAnchor25");
     let ah13c3=document.createElement("img");
     ah13c3.src= `cardGameImages/${hand13[2].suit}${hand13[2].value}.png`;
@@ -3497,6 +3447,8 @@ function Thirteenhand13Choose2C3() {
 
 } else if(collection6.length<1){
     collection6.push(hand13[2]);
+    collection.push(hand13[2]);
+
     document.getElementById("collectionAnchor26");
     let ah13c3=document.createElement("img");
     ah13c3.src= `cardGameImages/${hand13[2].suit}${hand13[2].value}.png`;
@@ -3518,6 +3470,8 @@ function Thirteenhand13Choose2C4() {
     if(collection5.length<5){
 
     collection5.push(hand13[3]);
+    collection.push(hand13[3]);
+
     document.getElementById("collectionAnchor25");
     let ah13c4=document.createElement("img");
     ah13c4.src= `cardGameImages/${hand13[3].suit}${hand13[3].value}.png`;
@@ -3533,6 +3487,8 @@ function Thirteenhand13Choose2C4() {
 
 } else if(collection6.length<1){
     collection6.push(hand13[3]);
+    collection.push(hand13[3]);
+
     document.getElementById("collectionAnchor26");
     let ah13c4=document.createElement("img");
     ah13c4.src= `cardGameImages/${hand13[3].suit}${hand13[3].value}.png`;
@@ -3554,6 +3510,8 @@ function Thirteenhand13Choose2C5() {
     if(collection5.length<5){
 
     collection5.push(hand13[4]);
+    collection.push(hand13[4]);
+
     document.getElementById("collectionAnchor25");
     let ah13c5=document.createElement("img");
     ah13c5.src= `cardGameImages/${hand13[4].suit}${hand13[4].value}.png`;
@@ -3569,6 +3527,8 @@ function Thirteenhand13Choose2C5() {
 
 } else if(collection6.length<1){
     collection6.push(hand13[4]);
+    collection.push(hand13[4]);
+
     document.getElementById("collectionAnchor26");
     let ah13c5=document.createElement("img");
     ah13c5.src= `cardGameImages/${hand13[4].suit}${hand13[4].value}.png`;
@@ -3639,6 +3599,8 @@ function Fourteenhand14Choose2C1() {
     if(collection6.length<2){
 
     collection6.push(hand14[0]);
+    collection.push(hand14[0]);
+
     document.getElementById("collectionAnchor27");
     let ah14c1=document.createElement("img");
     ah14c1.src= `cardGameImages/${hand14[0].suit}${hand14[0].value}.png`;
@@ -3652,6 +3614,8 @@ function Fourteenhand14Choose2C1() {
 
 } else if(collection6.length<3){
     collection6.push(hand14[0]);
+    collection.push(hand14[0]);
+
     document.getElementById("collectionAnchor28");
     let ah13c5=document.createElement("img");
     ah13c5.src= `cardGameImages/${hand14[0].suit}${hand14[0].value}.png`;
@@ -3660,6 +3624,33 @@ function Fourteenhand14Choose2C1() {
     ah13c5.setAttribute("style","height:240px;");
     ah13c5.setAttribute("style","padding:10px");
         document.getElementById("btn5").removeEventListener("click",Thirteenhand13Choose2C5);
+        let showConfirm=document.getElementById("confirm");
+        showConfirm.style.display="inline-block";
+        let handTakeAway=document.getElementById("handAnchor");
+    let buttonsHandTakeAway=document.getElementById("buttonsAnchor");
+    let roundHandTakeAway=document.getElementById("round");
+
+
+    while(handTakeAway.firstChild){
+        handTakeAway.removeChild(handTakeAway.firstChild);
+    }
+
+    while(buttonsHandTakeAway.firstChild){
+        buttonsHandTakeAway.removeChild(buttonsHandTakeAway.firstChild);
+    }
+
+    while(roundHandTakeAway.firstChild){
+        roundHandTakeAway.removeChild(roundHandTakeAway.firstChild);
+    }
+
+    let scoreShowLabel=document.getElementById("scoreLabel");
+    scoreShowLabel.style.display="inline-block";
+
+    let scoreShow=document.getElementById("score");
+    scoreShow.style.display="inline-block";
+
+    let hideGoToEval=document.getElementById("confirm");
+    hideGoToEval.style.display="inline-block";
         
 
 } else {
@@ -3669,6 +3660,8 @@ function Fourteenhand14Choose2C2() {
     if(collection6.length<2){
 
     collection6.push(hand14[1]);
+    collection.push(hand14[1]);
+
     document.getElementById("collectionAnchor27");
     let ah14c2=document.createElement("img");
     ah14c2.src= `cardGameImages/${hand14[1].suit}${hand14[1].value}.png`;
@@ -3682,6 +3675,8 @@ function Fourteenhand14Choose2C2() {
 
 } else if(collection6.length<3){
     collection6.push(hand14[1]);
+    collection.push(hand14[1]);
+
     document.getElementById("collectionAnchor28");
     let ah13c5=document.createElement("img");
     ah13c5.src= `cardGameImages/${hand14[1].suit}${hand14[1].value}.png`;
@@ -3690,6 +3685,33 @@ function Fourteenhand14Choose2C2() {
     ah13c5.setAttribute("style","height:240px;");
     ah13c5.setAttribute("style","padding:10px");
         document.getElementById("btn5").removeEventListener("click",Thirteenhand13Choose2C5);
+        let showConfirm=document.getElementById("confirm");
+        showConfirm.style.display="inline-block";
+        let handTakeAway=document.getElementById("handAnchor");
+    let buttonsHandTakeAway=document.getElementById("buttonsAnchor");
+    let roundHandTakeAway=document.getElementById("round");
+
+
+    while(handTakeAway.firstChild){
+        handTakeAway.removeChild(handTakeAway.firstChild);
+    }
+
+    while(buttonsHandTakeAway.firstChild){
+        buttonsHandTakeAway.removeChild(buttonsHandTakeAway.firstChild);
+    }
+
+    while(roundHandTakeAway.firstChild){
+        roundHandTakeAway.removeChild(roundHandTakeAway.firstChild);
+    }
+
+    let scoreShowLabel=document.getElementById("scoreLabel");
+    scoreShowLabel.style.display="inline-block";
+
+    let scoreShow=document.getElementById("score");
+    scoreShow.style.display="inline-block";
+
+    let hideGoToEval=document.getElementById("confirm");
+    hideGoToEval.style.display="inline-block";
 
 } else {
     } 
@@ -3699,6 +3721,8 @@ function Fourteenhand14Choose2C3() {
     if(collection6.length<2){
 
     collection6.push(hand14[2]);
+    collection.push(hand14[2]);
+
     document.getElementById("collectionAnchor27");
     let ah14c3=document.createElement("img");
     ah14c3.src= `cardGameImages/${hand14[2].suit}${hand14[2].value}.png`;
@@ -3712,6 +3736,8 @@ function Fourteenhand14Choose2C3() {
 
 } else if(collection6.length<3){
     collection6.push(hand14[2]);
+    collection.push(hand14[2]);
+
     document.getElementById("collectionAnchor28");
     let ah13c5=document.createElement("img");
     ah13c5.src= `cardGameImages/${hand14[2].suit}${hand14[2].value}.png`;
@@ -3720,7 +3746,33 @@ function Fourteenhand14Choose2C3() {
     ah13c5.setAttribute("style","height:240px;");
     ah13c5.setAttribute("style","padding:10px");
         document.getElementById("btn5").removeEventListener("click",Thirteenhand13Choose2C5);
+        let showConfirm=document.getElementById("confirm");
+        showConfirm.style.display="inline-block";
+        let handTakeAway=document.getElementById("handAnchor");
+    let buttonsHandTakeAway=document.getElementById("buttonsAnchor");
+    let roundHandTakeAway=document.getElementById("round");
 
+
+    while(handTakeAway.firstChild){
+        handTakeAway.removeChild(handTakeAway.firstChild);
+    }
+
+    while(buttonsHandTakeAway.firstChild){
+        buttonsHandTakeAway.removeChild(buttonsHandTakeAway.firstChild);
+    }
+
+    while(roundHandTakeAway.firstChild){
+        roundHandTakeAway.removeChild(roundHandTakeAway.firstChild);
+    }
+
+    let scoreShowLabel=document.getElementById("scoreLabel");
+    scoreShowLabel.style.display="inline-block";
+
+    let scoreShow=document.getElementById("score");
+    scoreShow.style.display="inline-block";
+
+    let hideGoToEval=document.getElementById("confirm");
+    hideGoToEval.style.display="inline-block";
 } else {
     } 
 };
@@ -3729,6 +3781,8 @@ function Fourteenhand14Choose2C4() {
     if(collection6.length<2){
 
     collection6.push(hand14[3]);
+    collection.push(hand14[3]);
+
     document.getElementById("collectionAnchor27");
     let ah14c4=document.createElement("img");
     ah14c4.src= `cardGameImages/${hand14[3].suit}${hand14[3].value}.png`;
@@ -3742,6 +3796,8 @@ function Fourteenhand14Choose2C4() {
 
 } else if(collection6.length<3){
     collection6.push(hand14[3]);
+    collection.push(hand14[3]);
+
     document.getElementById("collectionAnchor28");
     let ah13c5=document.createElement("img");
     ah13c5.src= `cardGameImages/${hand14[3].suit}${hand14[3].value}.png`;
@@ -3750,7 +3806,34 @@ function Fourteenhand14Choose2C4() {
     ah13c5.setAttribute("style","height:240px;");
     ah13c5.setAttribute("style","padding:10px");
         document.getElementById("btn5").removeEventListener("click",Thirteenhand13Choose2C5);
-
+        let showConfirm=document.getElementById("confirm");
+        showConfirm.style.display="inline-block";
+        
+        let handTakeAway=document.getElementById("handAnchor");
+        let buttonsHandTakeAway=document.getElementById("buttonsAnchor");
+        let roundHandTakeAway=document.getElementById("round");
+    
+    
+        while(handTakeAway.firstChild){
+            handTakeAway.removeChild(handTakeAway.firstChild);
+        }
+    
+        while(buttonsHandTakeAway.firstChild){
+            buttonsHandTakeAway.removeChild(buttonsHandTakeAway.firstChild);
+        }
+    
+        while(roundHandTakeAway.firstChild){
+            roundHandTakeAway.removeChild(roundHandTakeAway.firstChild);
+        }
+    
+        let scoreShowLabel=document.getElementById("scoreLabel");
+        scoreShowLabel.style.display="inline-block";
+    
+        let scoreShow=document.getElementById("score");
+        scoreShow.style.display="inline-block";
+    
+        let hideGoToEval=document.getElementById("confirm");
+        hideGoToEval.style.display="inline-block";
 } else {
     } 
 };
@@ -3759,6 +3842,8 @@ function Fourteenhand14Choose2C5() {
     if(collection6.length<2){
 
     collection6.push(hand14[4]);
+    collection.push(hand14[4]);
+
     document.getElementById("collectionAnchor27");
     let ah14c5=document.createElement("img");
     ah14c5.src= `cardGameImages/${hand14[4].suit}${hand14[4].value}.png`;
@@ -3772,6 +3857,8 @@ function Fourteenhand14Choose2C5() {
 
     } else if(collection6.length<3){
         collection6.push(hand14[4]);
+        collection.push(hand14[4]);
+
         document.getElementById("collectionAnchor28");
         let ah13c5=document.createElement("img");
         ah13c5.src= `cardGameImages/${hand14[4].suit}${hand14[4].value}.png`;
@@ -3780,12 +3867,915 @@ function Fourteenhand14Choose2C5() {
         ah13c5.setAttribute("style","height:240px;");
         ah13c5.setAttribute("style","padding:10px");
             document.getElementById("btn5").removeEventListener("click",Thirteenhand13Choose2C5);
+            let showConfirm=document.getElementById("confirm");
+            showConfirm.style.display="inline-block";
+            let handTakeAway=document.getElementById("handAnchor");
+    let buttonsHandTakeAway=document.getElementById("buttonsAnchor");
+    let roundHandTakeAway=document.getElementById("round");
+
+
+    while(handTakeAway.firstChild){
+        handTakeAway.removeChild(handTakeAway.firstChild);
+    }
+
+    while(buttonsHandTakeAway.firstChild){
+        buttonsHandTakeAway.removeChild(buttonsHandTakeAway.firstChild);
+    }
+
+    while(roundHandTakeAway.firstChild){
+        roundHandTakeAway.removeChild(roundHandTakeAway.firstChild);
+    }
+
+    let scoreShowLabel=document.getElementById("scoreLabel");
+    scoreShowLabel.style.display="inline-block";
+
+    let scoreShow=document.getElementById("score");
+    scoreShow.style.display="inline-block";
+
+    let hideGoToEval=document.getElementById("confirm");
+    hideGoToEval.style.display="inline-block";
 
 } else {
     } 
 };
 
 
+
+
+function getValue1(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor1");
+        valuesTest1.push("0");
+        valuesTest1.push(collection[0]);
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor1");
+        valuesTest2.push("0");
+        valuesTest2.push(collection[0]);
+} else {
+
+}
+
+    if(valuesTest1.length>1 && valuesTest2.length>1){
+        let SwapShow=document.getElementById("makeSwitch");
+        SwapShow.style.display="inline-block"
+        let resetShow=document.getElementById("reset");
+        resetShow.style.display="inline-block";
+    } else{
+
+    }
+
+};
+
+function getValue2(){
+
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor2");
+        valuesTest1.push("1");
+        valuesTest1.push(collection[1]);
+
+       //document.getElementById("card1Sel").style.backgroundColor="red";
+//document.body.style.backgroundColor="red";
+       // btnColor.style.backgroundColor="red";
+        //.style.text="white";
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor2");
+        valuesTest2.push("1");
+        valuesTest2.push(collection[1]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block";
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+};
+
+function getValue3(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor3");
+        valuesTest1.push("2");
+        valuesTest1.push(collection[2]);
+
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor3");
+        valuesTest2.push("2");
+        valuesTest2.push(collection[2]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+};
+
+
+function getValue4(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor4");
+        valuesTest1.push("3");
+        valuesTest1.push(collection[3]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor4");
+        valuesTest2.push("3");
+        valuesTest2.push(collection[3]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+};
+
+function getValue5(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor5");
+        valuesTest1.push("4");
+        valuesTest1.push(collection[4]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor5");
+        valuesTest2.push("4");
+        valuesTest2.push(collection[4]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+};
+
+
+function getValue6(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor6");
+        valuesTest1.push("5");
+        valuesTest1.push(collection[5]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor6");
+        valuesTest2.push("5");
+        valuesTest2.push(collection[5]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+};
+
+function getValue7(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor7");
+        valuesTest1.push("6");
+        valuesTest1.push(collection[6]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor7");
+        valuesTest2.push("6");
+        valuesTest2.push(collection[6]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function getValue8(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor8");
+        valuesTest1.push("7");
+        valuesTest1.push(collection[7]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor8");
+        valuesTest2.push("7");
+        valuesTest2.push(collection[7]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest1.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+
+}
+
+function getValue9(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor9");
+        valuesTest1.push("8");
+        valuesTest1.push(collection[8]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor9");
+        valuesTest2.push("8");
+        valuesTest2.push(collection[8]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest1.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+
+}
+
+function getValue10(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor10");
+        valuesTest1.push("9");
+        valuesTest1.push(collection[9]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor10");
+        valuesTest2.push("9");
+        valuesTest2.push(collection[9]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest1.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function getValue11(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor11");
+        valuesTest1.push("10");
+        valuesTest1.push(collection[10]);
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor11");
+        valuesTest2.push("10");
+        valuesTest2.push(collection[10]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest1.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function getValue12(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor12");
+        valuesTest1.push("11");
+        valuesTest1.push(collection[11]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor12");
+        valuesTest2.push("11");
+        valuesTest2.push(collection[11]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest1.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function getValue13(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor13");
+        valuesTest1.push("12");
+        valuesTest1.push(collection[12]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor13");
+        valuesTest2.push("12");
+        valuesTest2.push(collection[12]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest1.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function getValue14(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor14");
+        valuesTest1.push("13");
+        valuesTest1.push(collection[13]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor14");
+        valuesTest2.push("13");
+        valuesTest2.push(collection[13]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function getValue15(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor15");
+        valuesTest1.push("14");
+        valuesTest1.push(collection[14]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor15");
+        valuesTest2.push("14");
+        valuesTest2.push(collection[14]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function getValue16(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor16");
+        valuesTest1.push("15");
+        valuesTest1.push(collection[15]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor16");
+        valuesTest2.push("15");
+        valuesTest2.push(collection[15]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function getValue17(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor17");
+        valuesTest1.push("16");
+        valuesTest1.push(collection[16]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor17");
+        valuesTest2.push("16");
+        valuesTest2.push(collection[16]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function getValue18(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor18");
+        valuesTest1.push("17");
+        valuesTest1.push(collection[17]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor18");
+        valuesTest2.push("17");
+        valuesTest2.push(collection[17]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function getValue19(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor19");
+        valuesTest1.push("18");
+        valuesTest1.push(collection[18]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor19");
+        valuesTest2.push("18");
+        valuesTest2.push(collection[18]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+function getValue20(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor20");
+        valuesTest1.push("19");
+        valuesTest1.push(collection[19]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor20");
+        valuesTest2.push("19");
+        valuesTest2.push(collection[19]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+function getValue21(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor21");
+        valuesTest1.push("20");
+        valuesTest1.push(collection[20]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor21");
+        valuesTest2.push("20");
+        valuesTest2.push(collection[20]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+function getValue22(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor22");
+        valuesTest1.push("21");
+        valuesTest1.push(collection[21]);
+
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor22");
+        valuesTest2.push("21");
+        valuesTest2.push(collection[21]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+function getValue23(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor23");
+        valuesTest1.push("22");
+        valuesTest1.push(collection[22]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor23");
+        valuesTest2.push("22");
+        valuesTest2.push(collection[22]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+function getValue24(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor24");
+        valuesTest1.push("23");
+        valuesTest1.push(collection[23]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor24");
+        valuesTest2.push("23");
+        valuesTest2.push(collection[23]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+function getValue25(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor25");
+        valuesTest1.push("24");
+        valuesTest1.push(collection[24]);
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor25");
+        valuesTest2.push("24");
+        valuesTest2.push(collection[24]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+function getValue26(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor26");
+        valuesTest1.push("25");
+        valuesTest1.push(collection[25]);
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor26");
+        valuesTest2.push("25");
+        valuesTest2.push(collection[25]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function getValue27(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor27");
+        valuesTest1.push("26");
+        valuesTest1.push(collection[26]);
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor27");
+        valuesTest2.push("26");
+        valuesTest2.push(collection[26]);
+
+} else {
+
+}
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+
+function getValue28(){
+    if(valuesTest1.length<2){
+        valuesTest1.push("collectionAnchor28");
+        valuesTest1.push("27");
+        valuesTest1.push(collection[27]);
+
+       
+      
+    } else if (valuesTest2.length<2){
+        valuesTest2.push("collectionAnchor28");
+        valuesTest2.push("27");
+        valuesTest2.push(collection[27]);
+
+} else {
+
+}
+
+if(valuesTest1.length>1 && valuesTest2.length>1){
+    let SwapShow=document.getElementById("makeSwitch");
+    SwapShow.style.display="inline-block"
+    let resetShow=document.getElementById("reset");
+    resetShow.style.display="inline-block";
+} else{
+
+}
+}
+
+function makeSwitchCards(){
+    takeAway();
+    switchAdd();
+    switchCollection();
+    resetSwap();
+}
+
+function takeAway(){
+    newSwitchA=document.getElementById(valuesTest1[0]);
+newSwitchA.removeChild(newSwitchA.lastElementChild);
+newSwitchB=document.getElementById(valuesTest2[0]);
+newSwitchB.removeChild(newSwitchB.lastElementChild);
+}    
+
+function switchAdd(){
+let addVar=document.getElementById(valuesTest1[0]);
+let newSwitchAdd1=document.createElement("img");
+newSwitchAdd1.src=`cardGameImages/${valuesTest2[2].suit}${valuesTest2[2].value}.png`;
+addVar.appendChild(newSwitchAdd1);
+
+let addVar2=document.getElementById(valuesTest2[0]);
+let newSwitchAdd2=document.createElement("img");
+newSwitchAdd2.src=`cardGameImages/${valuesTest1[2].suit}${valuesTest1[2].value}.png`;
+addVar2.appendChild(newSwitchAdd2);
+}
+
+function switchCollection(){
+let temp=collection[valuesTest2[1]];
+collection[valuesTest2[1]]=collection[valuesTest1[1]];
+collection[valuesTest1[1]]=temp;
+
+
+}
+
+function resetSwap(){
+    valuesTest1.pop();
+    valuesTest1.pop();
+    valuesTest1.pop();
+    valuesTest2.pop();
+    valuesTest2.pop();
+    valuesTest2.pop(); 
+let takeAway1=document.getElementById("reset");
+takeAway1.style.display="none";
+let takeAway2=document.getElementById("makeSwitch");
+takeAway2.style.display="none";
+};
+
+/*function goToConfirmation(){
+
+    let handTakeAway=document.getElementById("handAnchor");
+    let buttonsHandTakeAway=document.getElementById("buttonsAnchor");
+    let roundHandTakeAway=document.getElementById("round");
+
+
+    while(handTakeAway.firstChild){
+        handTakeAway.removeChild(handTakeAway.firstChild);
+    }
+
+    while(buttonsHandTakeAway.firstChild){
+        buttonsHandTakeAway.removeChild(buttonsHandTakeAway.firstChild);
+    }
+
+    while(roundHandTakeAway.firstChild){
+        roundHandTakeAway.removeChild(roundHandTakeAway.firstChild);
+    }
+
+    let scoreShowLabel=document.getElementById("scoreLabel");
+    scoreShowLabel.style.display="inline-block";
+
+    let scoreShow=document.getElementById("score");
+    scoreShow.style.display="inline-block";
+
+    let hideGoToEval=document.getElementById("confirm");
+    hideGoToEval.style.display="inline-block";
+
+   
+
+ 
+}*/
+
+function goToConfirmation(){
+
+    document.getElementById("click1").removeEventListener("click", getValue1);
+    document.getElementById("click2").removeEventListener("click", getValue2);
+    document.getElementById("click3").removeEventListener("click", getValue3);
+    document.getElementById("click4").removeEventListener("click", getValue4);
+    document.getElementById("click5").removeEventListener("click", getValue5);
+    document.getElementById("click6").removeEventListener("click", getValue6);
+    document.getElementById("click7").removeEventListener("click", getValue7);
+    document.getElementById("click8").removeEventListener("click", getValue8);
+    document.getElementById("click9").removeEventListener("click", getValue9);
+    document.getElementById("click10").removeEventListener("click", getValue10);
+    document.getElementById("click11").removeEventListener("click", getValue11);
+    document.getElementById("click12").removeEventListener("click", getValue12);
+    document.getElementById("click13").removeEventListener("click", getValue13);
+    document.getElementById("click14").removeEventListener("click", getValue14);
+    document.getElementById("click15").removeEventListener("click", getValue15);
+    document.getElementById("click16").removeEventListener("click", getValue16);
+    document.getElementById("click17").removeEventListener("click", getValue17);
+    document.getElementById("click18").removeEventListener("click", getValue18);
+    document.getElementById("click19").removeEventListener("click", getValue19);
+    document.getElementById("click20").removeEventListener("click", getValue20);
+    document.getElementById("click21").removeEventListener("click", getValue21);
+    document.getElementById("click22").removeEventListener("click", getValue22);
+    document.getElementById("click23").removeEventListener("click", getValue23);
+    document.getElementById("click24").removeEventListener("click", getValue24);
+    document.getElementById("click25").removeEventListener("click", getValue25);
+    document.getElementById("click26").removeEventListener("click", getValue26);
+    document.getElementById("click27").removeEventListener("click", getValue27);
+    document.getElementById("click28").removeEventListener("click", getValue28);
+   
+   
+    let evalHandS=document.getElementById("handEvaluation");
+    evalHandS.style.display="inline-block";
+    
+    let evalBonusesS=document.getElementById("bonusEvaluation");
+    evalBonusesS.style.display="inline-block";
+
+    let hideConfirm=document.getElementById("confirm");
+    hideConfirm.style.display="none";
+
+    collectionRevised=collection.slice(0,27);
+
+
+};
+
+
+
+function evaluateHands(){
+
+}
+
+function evaluateHand1(){
+    
+}
+
+function evaluateBonuses(){
+
+}
 
 
 console.log("hand1");
@@ -3856,5 +4846,20 @@ console.log(collection5);
 console.log("collection6");
 
 console.log(collection6);
+
+console.log("collection");
+
+console.log(collection);
+
+console.log("valuesTest1");
+console.log(valuesTest1);
+
+console.log("valuesTest2");
+console.log(valuesTest2);
+
+console.log("collectionRevised");
+console.log(collectionRevised);
+
+
 
 console.log(deck);

@@ -4,6 +4,11 @@
     margin:auto;
 }
 
+.buttonControlsCollection{
+    display:inline-block;
+    margin-bottom:20px;
+}
+
 
 #graphic1{
     top: 50px;
@@ -12,10 +17,7 @@
 
 .card1{
     display:inline-block;
-    padding:20px;
     margin:auto;
-   
-   
     
 }
 
@@ -46,6 +48,13 @@
     font-size:25px;
 }
 
+h4{
+    display:inline-block;
+    color:white;
+    font-size:50px;
+    padding:15px;
+}
+
 h3{
     color:white;
     font-size:50px;
@@ -56,4 +65,12 @@ h2{
     color:white;
     font-size:30px;
     padding:10px;
+}
+
+h1{
+    text-align:right;
+    padding-left:60px;
+    color:white;
+    display:inline;
+    font-size:30px;
 }

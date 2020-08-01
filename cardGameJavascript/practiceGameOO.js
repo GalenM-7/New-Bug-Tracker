@@ -16,7 +16,13 @@ let hand11= [];
 let hand12= [];
 let hand13= [];
 let hand14= [];
-let collection=[];
+let collection1=[];
+let collection2=[];
+let collection3=[];
+let collection4=[];
+let collection5=[];
+let collection6=[];
+
 
 
 
@@ -447,8 +453,8 @@ function showHand1 () {
 
 
 function Onehand1Choose2C1() {
-    if(collection.length<2){
-    collection.push(hand1[0]);
+    if(collection1.length<2){
+    collection1.push(hand1[0]);
     document.getElementById("collectionAnchor1");
     let ah1c1=document.createElement("img");
     ah1c1.src= `cardGameImages/${hand1[0].suit}${hand1[0].value}.png`;
@@ -469,8 +475,8 @@ function Onehand1Choose2C1() {
 };
 
 function Onehand1Choose2C2() {
-    if(collection.length<2){
-    collection.push(hand1[1]);
+    if(collection1.length<2){
+    collection1.push(hand1[1]);
     document.getElementById("collectionAnchor1");
     let ah1c2=document.createElement("img");
     ah1c2.src= `cardGameImages/${hand1[1].suit}${hand1[1].value}.png`;
@@ -489,8 +495,8 @@ function Onehand1Choose2C2() {
 };
 
 function Onehand1Choose2C3() {
-    if(collection.length<2){
-    collection.push(hand1[2]);
+    if(collection1.length<2){
+    collection1.push(hand1[2]);
     document.getElementById("collectionAnchor1");
     let ah1c3=document.createElement("img");
     ah1c3.src= `cardGameImages/${hand1[2].suit}${hand1[2].value}.png`;
@@ -509,8 +515,8 @@ function Onehand1Choose2C3() {
 };
 
 function Onehand1Choose2C4() {
-    if(collection.length<2){
-    collection.push(hand1[3]);
+    if(collection1.length<2){
+    collection1.push(hand1[3]);
     document.getElementById("collectionAnchor1");
     let ah1c4=document.createElement("img");
     ah1c4.src= `cardGameImages/${hand1[3].suit}${hand1[3].value}.png`;
@@ -529,8 +535,8 @@ function Onehand1Choose2C4() {
 };
 
 function Onehand1Choose2C5() {
-    if(collection.length<2){
-    collection.push(hand1[4]);
+    if(collection1.length<2){
+    collection1.push(hand1[4]);
     document.getElementById("collectionAnchor1");
     let ah1c5=document.createElement("img");
     ah1c5.src= `cardGameImages/${hand1[4].suit}${hand1[4].value}.png`;
@@ -550,8 +556,8 @@ function Onehand1Choose2C5() {
 
 //clear hand1 function and choose 2 new buttons
 function Twohand2Choose2C1() {
-    if(collection.length<4){
-    collection.push(hand2[0]);
+    if(collection1.length<4){
+    collection1.push(hand2[0]);
     document.getElementById("collectionAnchor1");
     let ah1c1=document.createElement("img");
     ah1c1.src= `cardGameImages/${hand2[0].suit}${hand2[0].value}.png`;
@@ -569,8 +575,8 @@ function Twohand2Choose2C1() {
 };
 
 function Twohand2Choose2C2() {
-    if(collection.length<4){
-    collection.push(hand2[1]);
+    if(collection1.length<4){
+    collection1.push(hand2[1]);
     document.getElementById("collectionAnchor1");
     let ah1c2=document.createElement("img");
     ah1c2.src= `cardGameImages/${hand2[1].suit}${hand2[1].value}.png`;
@@ -588,8 +594,8 @@ function Twohand2Choose2C2() {
 };
 
 function Twohand2Choose2C3() {
-    if(collection.length<4){
-    collection.push(hand2[2]);
+    if(collection1.length<4){
+    collection1.push(hand2[2]);
     document.getElementById("collectionAnchor1");
     let ah1c3=document.createElement("img");
     ah1c3.src= `cardGameImages/${hand2[2].suit}${hand2[2].value}.png`;
@@ -607,8 +613,8 @@ function Twohand2Choose2C3() {
 };
 
 function Twohand2Choose2C4() {
-    if(collection.length<4){
-    collection.push(hand2[3]);
+    if(collection1.length<4){
+    collection1.push(hand2[3]);
     document.getElementById("collectionAnchor1");
     let ah1c4=document.createElement("img");
     ah1c4.src= `cardGameImages/${hand2[3].suit}${hand2[3].value}.png`;
@@ -627,8 +633,8 @@ function Twohand2Choose2C4() {
 };
 
 function Twohand2Choose2C5() {
-    if(collection.length<4){
-    collection.push(hand2[4]);
+    if(collection1.length<4){
+    collection1.push(hand2[4]);
     document.getElementById("collectionAnchor1");
     let ah1c5=document.createElement("img");
     ah1c5.src= `cardGameImages/${hand2[4].suit}${hand2[4].value}.png`;
@@ -801,8 +807,8 @@ function showHand3 () {
 // hand 3 choose 2
 
 function Threehand3Choose2C1() {
-    if(collection.length<5){
-    collection.push(hand3[0]);
+    if(collection1.length<5){
+    collection1.push(hand3[0]);
     document.getElementById("collectionAnchor1");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand3[0].suit}${hand3[0].value}.png`;
@@ -816,8 +822,8 @@ function Threehand3Choose2C1() {
     let GetHideBtn4C2=document.getElementById("getBtn4C");
     GetHideBtn4C2.style.display="inline-block";
         
-    } else if(collection.length<6){
-    collection.push(hand3[0]);
+    } else if(collection2.length<1){
+    collection2.push(hand3[0]);
     document.getElementById("collectionAnchor2");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand3[0].suit}${hand3[0].value}.png`;
@@ -836,9 +842,9 @@ function Threehand3Choose2C1() {
 };
 
 function Threehand3Choose2C2() {
-    if(collection.length<5){
+    if(collection1.length<5){
 
-    collection.push(hand3[1]);
+    collection1.push(hand3[1]);
     document.getElementById("collectionAnchor1");
     let ah3c2=document.createElement("img");
     ah3c2.src= `cardGameImages/${hand3[1].suit}${hand3[1].value}.png`;
@@ -852,8 +858,8 @@ function Threehand3Choose2C2() {
     let GetHideBtn4C2=document.getElementById("getBtn4C");
     GetHideBtn4C2.style.display="inline-block";
 
-} else if(collection.length<6){
-    collection.push(hand3[1]);
+} else if(collection2.length<0){
+    collection2.push(hand3[1]);
     document.getElementById("collectionAnchor2");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand3[1].suit}${hand3[1].value}.png`;
@@ -874,7 +880,7 @@ function Threehand3Choose2C2() {
 function Threehand3Choose2C3() {
     if(collection.length<5){
 
-    collection.push(hand3[2]);
+    collection1.push(hand3[2]);
     document.getElementById("collectionAnchor1");
     let ah3c3=document.createElement("img");
     ah3c3.src= `cardGameImages/${hand3[2].suit}${hand3[2].value}.png`;
@@ -888,8 +894,8 @@ function Threehand3Choose2C3() {
     let GetHideBtn4C2=document.getElementById("getBtn4C");
     GetHideBtn4C2.style.display="inline-block";
 
-} else if(collection.length<6){
-    collection.push(hand3[2]);
+} else if(collection2.length<1){
+    collection2.push(hand3[2]);
     document.getElementById("collectionAnchor2");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand3[2].suit}${hand3[2].value}.png`;
@@ -909,9 +915,9 @@ function Threehand3Choose2C3() {
 };
 
 function Threehand3Choose2C4() {
-    if(collection.length<5){
+    if(collection1.length<5){
 
-    collection.push(hand3[3]);
+    collection1.push(hand3[3]);
     document.getElementById("collectionAnchor1");
     let ah3c4=document.createElement("img");
     ah3c4.src= `cardGameImages/${hand3[3].suit}${hand3[3].value}.png`;
@@ -925,8 +931,8 @@ function Threehand3Choose2C4() {
     let GetHideBtn4C2=document.getElementById("getBtn4C");
     GetHideBtn4C2.style.display="inline-block";
 
-} else if(collection.length<6){
-    collection.push(hand3[3]);
+} else if(collection2.length<0){
+    collection2.push(hand3[3]);
     document.getElementById("collectionAnchor2");
     let ah3c1=document.createElement("img");
     ah3c1.src= `cardGameImages/${hand3[3].suit}${hand3[3].value}.png`;
@@ -945,9 +951,9 @@ function Threehand3Choose2C4() {
 };
 
 function Threehand3Choose2C5() {
-    if(collection.length<5){
+    if(collection1.length<5){
 
-    collection.push(hand3[4]);
+    collection1.push(hand3[4]);
     document.getElementById("collectionAnchor1");
     let ah3c5=document.createElement("img");
     ah3c5.src= `cardGameImages/${hand3[4].suit}${hand3[4].value}.png`;
@@ -961,7 +967,7 @@ function Threehand3Choose2C5() {
     let GetHideBtn4C2=document.getElementById("getBtn4C");
     GetHideBtn4C2.style.display="inline-block";
 
-} else if(collection.length<6){
+} else if(collection.length<0){
     collection.push(hand3[4]);
     document.getElementById("collectionAnchor2");
     let ah3c1=document.createElement("img");
@@ -1028,8 +1034,8 @@ function showHand4 () {
 // hand 4 choose 2
 
 function Fourhand4Choose2C1() {
-    if(collection.length<8){
-    collection.push(hand4[0]);
+    if(collection2.length<2){
+        collection2.push(hand4[0]);
     document.getElementById("collectionAnchor2");
     let ah4c1=document.createElement("img");
     ah4c1.src= `cardGameImages/${hand4[0].suit}${hand4[0].value}.png`;
@@ -1042,14 +1048,15 @@ function Fourhand4Choose2C1() {
             GetHideBtn4R.style.display="none";
             let GetHideBtn45C=document.getElementById("getBtn5C");
     GetHideBtn45C.style.display="inline-block";
+
 } else {
 } 
 };
 
 function Fourhand4Choose2C2() {
-    if(collection.length<8){
+    if(collection2.length<2){
 
-    collection.push(hand4[1]);
+        collection2.push(hand4[1]);
     document.getElementById("collectionAnchor2");
     let ah4c2=document.createElement("img");
     ah4c2.src= `cardGameImages/${hand4[1].suit}${hand4[1].value}.png`;
@@ -1062,14 +1069,15 @@ function Fourhand4Choose2C2() {
             GetHideBtn4R.style.display="none";
             let GetHideBtn45C=document.getElementById("getBtn5C");
             GetHideBtn45C.style.display="inline-block";
+
+       
 } else {
 } 
 };
 
 function Fourhand4Choose2C3() {
-    if(collection.length<8){
-
-    collection.push(hand4[2]);
+    if(collection2.length<2){
+    collection2.push(hand4[2]);
     document.getElementById("collectionAnchor2");
     let ah4c3=document.createElement("img");
     ah4c3.src= `cardGameImages/${hand4[2].suit}${hand4[2].value}.png`;
@@ -1082,14 +1090,15 @@ function Fourhand4Choose2C3() {
             GetHideBtn4R.style.display="none";
             let GetHideBtn45C=document.getElementById("getBtn5C");
             GetHideBtn45C.style.display="inline-block";
+
 } else {
 } 
 };
 
 function Fourhand4Choose2C4() {
-    if(collection.length<8){
+    if(collection2.length<2){
 
-    collection.push(hand4[3]);
+    collection2.push(hand4[3]);
     document.getElementById("collectionAnchor2");
     let ah4c4=document.createElement("img");
     ah4c4.src= `cardGameImages/${hand4[3].suit}${hand4[3].value}.png`;
@@ -1102,27 +1111,30 @@ function Fourhand4Choose2C4() {
             GetHideBtn4R.style.display="none";
             let GetHideBtn45C=document.getElementById("getBtn5C");
             GetHideBtn45C.style.display="inline-block";
+
         
 } else {
 } 
 };
 
 function Fourhand4Choose2C5() {
-    if(collection.length<8){
+    if(collection2.length<2){
 
-    collection.push(hand4[4]);
+    collection2.push(hand4[4]);
     document.getElementById("collectionAnchor2");
-    let ah5c5=document.createElement("img");
-    ah5c5.src= `cardGameImages/${hand4[4].suit}${hand4[4].value}.png`;
-    collectionAnchor2.appendChild(ah5c5);
-    ah5c5.setAttribute("style","width:180px;");
-    ah5c5.setAttribute("style","height:240px;");
-    ah5c5.setAttribute("style","padding:10px");
+    let ah4c5=document.createElement("img");
+    ah4c5.src= `cardGameImages/${hand4[4].suit}${hand4[4].value}.png`;
+    collectionAnchor2.appendChild(ah4c5);
+    ah4c5.setAttribute("style","width:180px;");
+    ah4c5.setAttribute("style","height:240px;");
+    ah4c5.setAttribute("style","padding:10px");
         document.getElementById("btn5").removeEventListener("click",Fourhand4Choose2C5);
             let GetHideBtn4R=document.getElementById("getBtn4");
             GetHideBtn4R.style.display="none";
             let GetHideBtn45C=document.getElementById("getBtn5C");
             GetHideBtn45C.style.display="inline-block";
+
+       
 
 } else {
 } 
@@ -2334,7 +2346,7 @@ function Twelvehand12Choose2C1() {
     collectionAnchor5.appendChild(ah12c1);
     ah12c1.setAttribute("style","width:180px;");
     ah12c1.setAttribute("style","height:240px;");
-    ah12c1.setAttribute("style","padding:10px");
+    ah12c1.setAttribute("style","padding:5px");
         document.getElementById("btn1").removeEventListener("click",Twelvehand12Choose2C1);
         let GetHideBtn12R=document.getElementById("getBtn12");
     GetHideBtn12R.style.display="none";
@@ -2355,7 +2367,7 @@ function Twelvehand12Choose2C2() {
     collectionAnchor5.appendChild(ah12c2);
     ah12c2.setAttribute("style","width:180px;");
     ah12c2.setAttribute("style","height:240px;");
-    ah12c2.setAttribute("style","padding:10px");
+    ah12c1.setAttribute("style","padding:5px");
         document.getElementById("btn2").removeEventListener("click",Twelvehand12Choose2C2);
         let GetHideBtn12R=document.getElementById("getBtn12");
     GetHideBtn12R.style.display="none";
@@ -2606,7 +2618,7 @@ function Thirteenhand13Choose2C4() {
     collectionAnchor6.appendChild(ah13c4);
     ah13c4.setAttribute("style","width:180px;");
     ah13c4.setAttribute("style","height:240px;");
-    ah13c4.setAttribute("style","padding:10px");
+    ah13c4.setAttribute("style","padding:5px");
         document.getElementById("btn4").removeEventListener("click",Thirteenhand13Choose2C4);
         let GetHideBtn13R=document.getElementById("getBtn13");
         GetHideBtn13R.style.display="none";
@@ -2627,7 +2639,7 @@ function Thirteenhand13Choose2C5() {
     collectionAnchor5.appendChild(ah13c5);
     ah13c5.setAttribute("style","width:180px;");
     ah13c5.setAttribute("style","height:240px;");
-    ah13c5.setAttribute("style","padding:10px");
+    ah13c5.setAttribute("style","padding:5px");
         document.getElementById("btn5").removeEventListener("click",Thirteenhand13Choose2C5);
         let GetHideBtn13R=document.getElementById("getBtn13");
         GetHideBtn13R.style.display="none";
