@@ -8,8 +8,8 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-       <Navbar></Navbar>
-       <NavbarBrand href="./nubugLogo2.png">Nubug</NavbarBrand>
+       <Main />
+     
       </div>
     );
   }
