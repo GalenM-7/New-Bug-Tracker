@@ -1,5 +1,6 @@
-const PERSONALITYDISORDERS=[
+const personalityDisorders=[
     DEPRESSION = {
+        id:0,
         symptom1: "A narcissist believes that they are more important than and superior to everyone else.",
         symptom2: "A narcissist's perception of themselves is over-inflated and not fully grounded in reality.",
         symptom3: "A narcissist would have a tendency to not care about interpersonal connections with people based on kindess and love.", 
@@ -10,6 +11,7 @@ const PERSONALITYDISORDERS=[
         symptom8: "A narcissist could feel disinterested or aimless.",
     },
     NARCISSISM = {
+        id:1,
         symptom1: "A narcissist believes that they are more important than and superior to everyone else.",
         symptom2: "A narcissist's perception of themselves is over-inflated and not fully grounded in reality.",
         symptom3: "A narcissist would have a tendency to not care about interpersonal connections with people based on kindess and love.", 
@@ -21,6 +23,7 @@ const PERSONALITYDISORDERS=[
     },
     
     PSYCHOPATHY = {
+        id:2,
         symptom1: "A narcissist believes that they are more important than and superior to everyone else.",
         symptom2: "A narcissist's perception of themselves is over-inflated and not fully grounded in reality.",
         symptom3: "A narcissist would have a tendency to not care about interpersonal connections with people based on kindess and love.", 
@@ -31,6 +34,7 @@ const PERSONALITYDISORDERS=[
         symptom8: "A narcissist could feel disinterested or aimless.",
     },
     PTSD = {
+        id:3,
         symptom1: "A narcissist believes that they are more important than and superior to everyone else.",
         symptom2: "A narcissist's perception of themselves is over-inflated and not fully grounded in reality.",
         symptom3: "A narcissist would have a tendency to not care about interpersonal connections with people based on kindess and love.", 
@@ -42,6 +46,7 @@ const PERSONALITYDISORDERS=[
     },
     
     SCHIZOID = {
+        id:4,
         symptom1: "A narcissist believes that they are more important than and superior to everyone else.",
         symptom2: "A narcissist's perception of themselves is over-inflated and not fully grounded in reality.",
         symptom3: "A narcissist would have a tendency to not care about interpersonal connections with people based on kindess and love.", 
@@ -52,6 +57,7 @@ const PERSONALITYDISORDERS=[
         symptom8: "A narcissist could feel disinterested or aimless.",
     },
     SOCIOPATHY = {
+        id:5,
         symptom1: "A narcissist believes that they are more important than and superior to everyone else.",
         symptom2: "A narcissist's perception of themselves is over-inflated and not fully grounded in reality.",
         symptom3: "A narcissist would have a tendency to not care about interpersonal connections with people based on kindess and love.", 

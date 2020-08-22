@@ -1,4 +1,4 @@
-export const sociopathyCharacters=[
+export const sociopathicCharacters=[
     {   
         id:0,
         name: "Marv",

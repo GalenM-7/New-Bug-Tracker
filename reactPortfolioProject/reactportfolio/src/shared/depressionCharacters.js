@@ -1,4 +1,4 @@
-export const depressionCharacters=[
+export const depressedCharacters=[
     {   
         id:0,
         name: "Jasper",
