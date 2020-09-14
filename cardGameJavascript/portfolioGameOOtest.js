@@ -4645,14 +4645,21 @@ function makeSwitchCards(){
 }
 
 function takeAway(){
+if ( valuesTest1[0] === valuesTest2[0]) {
+    
+} else{
     newSwitchA=document.getElementById(valuesTest1[0]);
-newSwitchA.removeChild(newSwitchA.lastElementChild);
-newSwitchB=document.getElementById(valuesTest2[0]);
-newSwitchB.removeChild(newSwitchB.lastElementChild);
-}    
+    newSwitchA.removeChild(newSwitchA.lastElementChild);
+    newSwitchB=document.getElementById(valuesTest2[0]);
+    newSwitchB.removeChild(newSwitchB.lastElementChild);
+}
+   
+}
 
 function switchAdd(){
-let addVar=document.getElementById(valuesTest1[0]);
+if ( valuesTest1[0]===valuesTest2[0]) {
+} else {
+    let addVar=document.getElementById(valuesTest1[0]);
 let newSwitchAdd1=document.createElement("img");
 newSwitchAdd1.src=`cardGameImages/${valuesTest2[2].suit}${valuesTest2[2].value}.png`;
 addVar.appendChild(newSwitchAdd1);
@@ -4660,13 +4667,17 @@ addVar.appendChild(newSwitchAdd1);
 let addVar2=document.getElementById(valuesTest2[0]);
 let newSwitchAdd2=document.createElement("img");
 newSwitchAdd2.src=`cardGameImages/${valuesTest1[2].suit}${valuesTest1[2].value}.png`;
-addVar2.appendChild(newSwitchAdd2);
+addVar2.appendChild(newSwitchAdd2);}
 }
 
 function switchCollection(){
-let temp=collection[valuesTest2[1]];
-collection[valuesTest2[1]]=collection[valuesTest1[1]];
-collection[valuesTest1[1]]=temp;
+if (valuesTest1 === valuesTest2) {
+    
+} else {
+    let temp=collection[valuesTest2[1]];
+    collection[valuesTest2[1]]=collection[valuesTest1[1]];
+    collection[valuesTest1[1]]=temp;
+}
 
 
 }
