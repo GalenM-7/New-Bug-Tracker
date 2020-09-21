@@ -17,11 +17,7 @@ let hand12= [];
 let hand13= [];
 let hand14= [];
 let collection=[];
-let collectionRevised1=[];
-let collectionRevised2=[];
-let collectionRevised3=[];
-let collectionRevised4=[];
-let collectionRevised5=[];
+let collectionRevised=[];
 let collection1=[];
 let collection2=[];
 let collection3=[];
@@ -30,65 +26,6 @@ let collection5=[];
 let collection6=[];
 let valuesTest1=[];
 let valuesTest2=[];
-let evaluateSet1=[];
-let evaluateSet2=[];
-let evaluateSet3=[];
-let evaluateSet4=[];
-let evaluateSet5=[];
-let end3=[];
-//let FEnd3=[];
-
-let evalSuit=[]
-let storeBonuses=[]
-let score=[]
-
-let Royal1=[];
-let Straight1=[];
-let FourKind1=[];
-let FullHouse1=[];
-let ThreeKind1=[];
-let Pair1=[];
-let Flush1=[];
-
-
-let Royal2=[];
-let Straight2=[];
-let FourKind2=[];
-let FullHouse2=[];
-let ThreeKind2=[];
-let TwoPair2=[];
-let Pair2=[];
-let Flush2=[];
-
-
-
-let Royal3=[];
-let Straight3=[];
-let FourKind3=[];
-let FullHouse3=[];
-let ThreeKind3=[];
-let Pair3=[];
-let Flush3=[];
-
-let Royal4=[];
-let Straight4=[];
-let FourKind4=[];
-let FullHouse4=[];
-let ThreeKind4=[];
-let Pair4=[];
-let Flush4=[];
-
-
-
-let Royal5=[];
-let Straight5=[];
-let FourKind5=[];
-let FullHouse5=[];
-let ThreeKind5=[];
-let Pair5=[];
-let Flush5=[];
-
-let finalCountBonuses=[]
 
 
 
@@ -342,11 +279,8 @@ function hideall(){
     let GetHideBtn15C=document.getElementById("getBtn15C");
     GetHideBtn15C.style.display="none";
 
-    let hideGetEval=document.getElementById("confirmButton");
+    let hideGetEval=document.getElementById("confirm");
     hideGetEval.style.display="none";
-
-   // let hideGetEvalChoice=document.getElementById("confirmChoices");
-   // hideGetEvalChoice.style.display="none";
 
     let makeSwitch1=document.getElementById("makeSwitch");
     makeSwitch1.style.display="none";
@@ -365,31 +299,13 @@ function hideall(){
 
     
 
-    let FE1=document.getElementById("FinalEvaluation1");
-    FE1.style.display="none";
+    let evalHand=document.getElementById("handEvaluation");
+    evalHand.style.display="none";
     
-    let FE2=document.getElementById("FinalEvaluation2");
-    FE2.style.display="none";
+    let evalBonuses=document.getElementById("bonusEvaluation");
+    evalBonuses.style.display="none";
 
-    let FE3=document.getElementById("FinalEvaluation3");
-    FE3.style.display="none";
 
-    let FE4=document.getElementById("FinalEvaluation4");
-    FE4.style.display="none";
-
-    let FE5=document.getElementById("FinalEvaluation5");
-    FE5.style.display="none";
-
-    //let E3=document.getElementById("3Evaluation");
-    //E3.style.display="none";
-
-    let Bonuses=document.getElementById("BonusEvaluation");
-    Bonuses.style.display="none";
-
-    let AddUp=document.getElementById("AddItUp");
-    AddUp.style.display="none";
-
-    //FinalEvaluation1
 
     document.getElementById("round");
     let roundCounter=document.createElement("p");
@@ -3708,7 +3624,7 @@ function Fourteenhand14Choose2C1() {
     ah13c5.setAttribute("style","height:240px;");
     ah13c5.setAttribute("style","padding:10px");
         document.getElementById("btn5").removeEventListener("click",Thirteenhand13Choose2C5);
-        let showConfirm=document.getElementById("confirmButton");
+        let showConfirm=document.getElementById("confirm");
         showConfirm.style.display="inline-block";
         let handTakeAway=document.getElementById("handAnchor");
     let buttonsHandTakeAway=document.getElementById("buttonsAnchor");
@@ -3733,7 +3649,7 @@ function Fourteenhand14Choose2C1() {
     let scoreShow=document.getElementById("score");
     scoreShow.style.display="inline-block";
 
-    let hideGoToEval=document.getElementById("confirmButton");
+    let hideGoToEval=document.getElementById("confirm");
     hideGoToEval.style.display="inline-block";
         
 
@@ -3769,7 +3685,7 @@ function Fourteenhand14Choose2C2() {
     ah13c5.setAttribute("style","height:240px;");
     ah13c5.setAttribute("style","padding:10px");
         document.getElementById("btn5").removeEventListener("click",Thirteenhand13Choose2C5);
-        let showConfirm=document.getElementById("confirmButton");
+        let showConfirm=document.getElementById("confirm");
         showConfirm.style.display="inline-block";
         let handTakeAway=document.getElementById("handAnchor");
     let buttonsHandTakeAway=document.getElementById("buttonsAnchor");
@@ -3794,7 +3710,7 @@ function Fourteenhand14Choose2C2() {
     let scoreShow=document.getElementById("score");
     scoreShow.style.display="inline-block";
 
-    let hideGoToEval=document.getElementById("confirmButton");
+    let hideGoToEval=document.getElementById("confirm");
     hideGoToEval.style.display="inline-block";
 
 } else {
@@ -3830,7 +3746,7 @@ function Fourteenhand14Choose2C3() {
     ah13c5.setAttribute("style","height:240px;");
     ah13c5.setAttribute("style","padding:10px");
         document.getElementById("btn5").removeEventListener("click",Thirteenhand13Choose2C5);
-        let showConfirm=document.getElementById("confirmButton");
+        let showConfirm=document.getElementById("confirm");
         showConfirm.style.display="inline-block";
         let handTakeAway=document.getElementById("handAnchor");
     let buttonsHandTakeAway=document.getElementById("buttonsAnchor");
@@ -3855,7 +3771,7 @@ function Fourteenhand14Choose2C3() {
     let scoreShow=document.getElementById("score");
     scoreShow.style.display="inline-block";
 
-    let hideGoToEval=document.getElementById("confirmButton");
+    let hideGoToEval=document.getElementById("confirm");
     hideGoToEval.style.display="inline-block";
 } else {
     } 
@@ -3890,7 +3806,7 @@ function Fourteenhand14Choose2C4() {
     ah13c5.setAttribute("style","height:240px;");
     ah13c5.setAttribute("style","padding:10px");
         document.getElementById("btn5").removeEventListener("click",Thirteenhand13Choose2C5);
-        let showConfirm=document.getElementById("confirmButton");
+        let showConfirm=document.getElementById("confirm");
         showConfirm.style.display="inline-block";
         
         let handTakeAway=document.getElementById("handAnchor");
@@ -3916,7 +3832,7 @@ function Fourteenhand14Choose2C4() {
         let scoreShow=document.getElementById("score");
         scoreShow.style.display="inline-block";
     
-        let hideGoToEval=document.getElementById("confirmButton");
+        let hideGoToEval=document.getElementById("confirm");
         hideGoToEval.style.display="inline-block";
 } else {
     } 
@@ -3951,7 +3867,7 @@ function Fourteenhand14Choose2C5() {
         ah13c5.setAttribute("style","height:240px;");
         ah13c5.setAttribute("style","padding:10px");
             document.getElementById("btn5").removeEventListener("click",Thirteenhand13Choose2C5);
-            let showConfirm=document.getElementById("confirmButton");
+            let showConfirm=document.getElementById("confirm");
             showConfirm.style.display="inline-block";
             let handTakeAway=document.getElementById("handAnchor");
     let buttonsHandTakeAway=document.getElementById("buttonsAnchor");
@@ -3976,7 +3892,7 @@ function Fourteenhand14Choose2C5() {
     let scoreShow=document.getElementById("score");
     scoreShow.style.display="inline-block";
 
-    let hideGoToEval=document.getElementById("confirmButton");
+    let hideGoToEval=document.getElementById("confirm");
     hideGoToEval.style.display="inline-block";
 
 } else {
@@ -4844,576 +4760,33 @@ function goToConfirmation(){
     document.getElementById("click28").removeEventListener("click", getValue28);
    
    
-    //let evalHandS=document.getElementById("handEvaluation");
-   // evalHandS.style.display="inline-block";
+    let evalHandS=document.getElementById("handEvaluation");
+    evalHandS.style.display="inline-block";
     
-   // let evalBonusesS=document.getElementById("bonusEvaluation");
-   // evalBonusesS.style.display="inline-block";
+    let evalBonusesS=document.getElementById("bonusEvaluation");
+    evalBonusesS.style.display="inline-block";
 
-    let hideConfirm=document.getElementById("confirmButton");
+    let hideConfirm=document.getElementById("confirm");
     hideConfirm.style.display="none";
 
-    let F1Show=document.getElementById("FinalEvaluation1");
-    F1Show.style.display="inline-block";
+    collectionRevised=collection.slice(0,27);
 
-    let F2Show=document.getElementById("FinalEvaluation2");
-    F2Show.style.display="inline-block";
 
-    let F3Show=document.getElementById("FinalEvaluation3");
-    F3Show.style.display="inline-block";
+};
 
-    let F4Show=document.getElementById("FinalEvaluation4");
-    F4Show.style.display="inline-block";
 
-    let F5Show=document.getElementById("FinalEvaluation5");
-    F5Show.style.display="inline-block";
 
-    //let threeShow=document.getElementById("3Evaluation");
-    //threeShow.style.display="inline-block";
-
-    let BonusesShow=document.getElementById("BonusEvaluation");
-    BonusesShow.style.display="inline-block";
-
-    let Add=document.getElementById("AddItUp");
-    Add.style.display="inline-block";
-
-    evaluateSet1.push(collection[0]);     evaluateSet1.push(collection[1]); evaluateSet1.push(collection[2]);     evaluateSet1.push(collection[3]);     evaluateSet1.push(collection[4])
-    console.log (evaluateSet1)
-
-    evaluateSet2.push(collection[5]);     evaluateSet2.push(collection[6]);     evaluateSet2.push(collection[7]);  evaluateSet2.push(collection[8]);     evaluateSet2.push(collection[9]);
-    console.log (evaluateSet2)
-
-    evaluateSet3.push(collection[10]);     evaluateSet3.push(collection[11]);     evaluateSet3.push(collection[12]);  evaluateSet3.push(collection[13]);     evaluateSet3.push(collection[14]);
-    console.log (evaluateSet3)
-
-
-    evaluateSet4.push(collection[15]);     evaluateSet4.push(collection[16]);     evaluateSet4.push(collection[17]);  evaluateSet4.push(collection[18]);     evaluateSet4.push(collection[19]);    console.log (evaluateSet4)
-
-
-    evaluateSet5.push(collection[20]);     evaluateSet5.push(collection[21]);     evaluateSet5.push(collection[22]);  evaluateSet5.push(collection[23]);     evaluateSet5.push(collection[24]);  
-    console.log (evaluateSet5)
-
-    end3.push(collection[25]);     end3.push(collection[26]);     
-
-    end3.push(collection[27])
-}
-
-
-
-function OneSetEvaluate () {
-    //let flushSuccess=[];
-CheckClubs=evaluateSet1.filter(item=>item.suit==="Clubs");
-if (CheckClubs.length===5) {Flush1.push("Flush")} else {};
-
-CheckDiamonds=evaluateSet1.filter(item=>item.suit==="Diamonds") 
-if (CheckDiamonds.length===5) {Flush1.push("Flush")} else {};
-
-CheckSpades=evaluateSet1.filter(item=>item.suit==="Spades");
-if (CheckSpades.length===5) {Flush1.push("Flush")} else {};
-
-CheckHearts=evaluateSet1.filter(item=>item.suit==="Hearts");
-if (CheckHearts.length===5) {Flush1.push("Flush")} else {};
-
-CheckSwords=evaluateSet1.filter(item=>item.suit==="Swords");
-if (CheckSwords.length===5) {Flush1.push("Flush")} else {};
-
-CheckSkulls=evaluateSet1.filter(item=>item.suit==="Skulls");
-if (CheckSkulls.length===5) {Flush1.push("Flush")} else {};
-
-Check2=evaluateSet1.filter(item=>item.value===2);
-if (Check2.length===2) {Pair1.push("Pair1")} else if (Check2.length===3){ThreeKind1.push("ThreeKind")} else if (Check2.length===4) {FourKind1.push("FourKind")} else {};
-
-Check3=evaluateSet1.filter(item=>item.value===3);
-if (Check3.length===2) {Pair1.push("Pair1")} else if (Check3.length===3){ThreeKind1.push("ThreeKind")} else if (Check3.length===4) {FourKind1.push("FourKind")} else {};
-
-Check4=evaluateSet1.filter(item=>item.value===4);
-if (Check4.length===2) {Pair1.push("Pair1")} else if (Check4.length===3){ThreeKind1.push("ThreeKind")} else if (Check4.length===4) {FourKind1.push("FourKind")} else {};
-
-Check5=evaluateSet1.filter(item=>item.value===5);
-if (Check5.length===2) {Pair1.push("Pair1")} else if (Check5.length===3){ThreeKind1.push("ThreeKind")} else if (Check5.length===4) {FourKind1.push("FourKind")} else {};
-
-Check6=evaluateSet1.filter(item=>item.value===6);
-if (Check6.length===2) {Pair1.push("Pair1")} else if (Check6.length===3){ThreeKind1.push("ThreeKind")} else if (Check6.length===4) {FourKind1.push("FourKind")} else {};
-
-Check7=evaluateSet1.filter(item=>item.value===7);
-if (Check7.length===2) {Pair1.push("Pair1")} else if (Check7.length===3){ThreeKind1.push("ThreeKind")} else if (Check7.length===4) {FourKind1.push("FourKind")} else {};
-
-Check8=evaluateSet1.filter(item=>item.value===8);
-if (Check8.length===2) {Pair1.push("Pair1")} else if (Check8.length===3){ThreeKind1.push("ThreeKind")} else if (Check8.length===4) {FourKind1.push("FourKind")} else {};
-
-Check9=evaluateSet1.filter(item=>item.value===7);
-if (Check9.length===2) {Pair1.push("Pair1")} else if (Check9.length===3){ThreeKind1.push("ThreeKind")} else if (Check9.length===4) {FourKind1.push("FourKind")} else {};
-
-Check10=evaluateSet1.filter(item=>item.value===10);
-if (Check10.length===2) {Pair1.push("Pair1")} else if (Check10.length===3){ThreeKind1.push("ThreeKind")} else if (Check10.length===4) {FourKind1.push("FourKind")} else {};
-
-Check11=evaluateSet1.filter(item=>item.value===11);
-if (Check11.length===2) {Pair1.push("Pair1")} else if (Check11.length===3){ThreeKind1.push("ThreeKind")} else if (Check11.length===4) {FourKind1.push("FourKind")} else {};
-
-Check12=evaluateSet1.filter(item=>item.value===12);
-if (Check12.length===2) {Pair1.push("Pair1")} else if (Check12.length===3){ThreeKind1.push("ThreeKind")} else if (Check12.length===4) {FourKind1.push("FourKind")} else {};
-
-Check13=evaluateSet1.filter(item=>item.value===13);
-if (Check13.length===2) {Pair1.push("Pair1")} else if (Check13.length===3){ThreeKind1.push("ThreeKind")} else if (Check13.length===4) {FourKind1.push("FourKind")} else {};
-
-Check14=evaluateSet1.filter(item=>item.value===14);
-if (Check14.length===2) {Pair1.push("Pair1")} else if (Check14.length===3){ThreeKind1.push("ThreeKind")} else if (Check14.length===4) {FourKind1.push("FourKind")} else {};
-
-CheckVF=[]
-
-    let Royal=[];
-    for (i=0;i<evaluateSet1.length;i++) {
-        if (evaluateSet1.value===10){ Royal.push("success")} else {};
-        if (evaluateSet1.value===11){ Royal.push("success")} else {};
-        if (evaluateSet1.value===12){ Royal.push("success")} else {};
-        if (evaluateSet1.value===13){ Royal.push("success")} else {};
-        if (evaluateSet1.value===14){ Royal.push("success")} else {};
-        if (Royal.length===5) {Royal1.push("Royal")} else {}
-    }
-
-    if (evaluateSet1[1].value===evaluateSet1[0].value+1 && evaluateSet1[2].value===evaluateSet1[1].value+1 && evaluateSet1[3].value===evaluateSet1[2].value+1 && evaluateSet1[4].value===evaluateSet1[3].value+1) {Straight1.push("Straight")} else {}
-
-    console.log("Pair1")
-
-    console.log(Pair1)
-}
-
-
-
-function TwoSetEvaluate () {
-    //let flushSuccess=[];
-CheckClubs=evaluateSet2.filter(item=>item.suit==="Clubs");
-if (CheckClubs.length===5) {Flush2.push("Flush")} else {};
-
-CheckDiamonds=evaluateSet2.filter(item=>item.suit==="Diamonds");
-if (CheckDiamonds.length===5) {Flush2.push("Flush")} else {};
-
-CheckSpades=evaluateSet2.filter(item=>item.suit==="Spades");
-if (CheckSpades.length===5) {Flush2.push("Flush")} else {};
-
-CheckHearts=evaluateSet2.filter(item=>item.suit==="Hearts");
-if (CheckHearts.length===5) {Flush2.push("Flush")} else {};
-
-CheckSwords=evaluateSet2.filter(item=>item.suit==="Swords");
-if (CheckSwords.length===5) {Flush2.push("Flush")} else {};
-
-CheckSkulls=evaluateSet2.filter(item=>item.suit==="Skulls");
-if (CheckSkulls.length===5) {Flush2.push("Flush")} else {};
-
-Check2=evaluateSet2.filter(item=>item.value===2);
-if (Check2.length===2) {Pair2.push("Pair1")} else if (Check2.length===3){ThreeKind2.push("ThreeKind")} else if (Check2.length===4) {FourKind2.push("FourKind")} else {};
-
-Check3=evaluateSet2.filter(item=>item.value===3);
-if (Check3.length===2) {Pair2.push("Pair1")} else if (Check3.length===3){ThreeKind2.push("ThreeKind")} else if (Check3.length===4) {FourKind2.push("FourKind")} else {};
-
-Check4=evaluateSet2.filter(item=>item.value===4);
-if (Check4.length===2) {Pair2.push("Pair1")} else if (Check4.length===3){ThreeKind2.push("ThreeKind")} else if (Check4.length===4) {FourKind2.push("FourKind")} else {};
-
-Check5=evaluateSet2.filter(item=>item.value===5);
-if (Check5.length===2) {Pair2.push("Pair1")} else if (Check5.length===3){ThreeKind2.push("ThreeKind")} else if (Check5.length===4) {FourKind2.push("FourKind")} else {};
-
-Check6=evaluateSet2.filter(item=>item.value===6);
-if (Check6.length===2) {Pair2.push("Pair1")} else if (Check6.length===3){ThreeKind2.push("ThreeKind")} else if (Check6.length===4) {FourKind2.push("FourKind")} else {};
-
-Check7=evaluateSet2.filter(item=>item.value===7);
-if (Check7.length===2) {Pair2.push("Pair1")} else if (Check7.length===3){ThreeKind2.push("ThreeKind")} else if (Check7.length===4) {FourKind2.push("FourKind")} else {};
-
-Check8=evaluateSet2.filter(item=>item.value===8);
-if (Check8.length===2) {Pair2.push("Pair1")} else if (Check8.length===3){ThreeKind2.push("ThreeKind")} else if (Check8.length===4) {FourKind2.push("FourKind")} else {};
-
-Check9=evaluateSet2.filter(item=>item.value===7);
-if (Check9.length===2) {Pair2.push("Pair1")} else if (Check9.length===3){ThreeKind2.push("ThreeKind")} else if (Check9.length===4) {FourKind2.push("FourKind")} else {};
-
-Check10=evaluateSet2.filter(item=>item.value===10);
-if (Check10.length===2) {Pair2.push("Pair1")} else if (Check10.length===3){ThreeKind2.push("ThreeKind")} else if (Check10.length===4) {FourKind2.push("FourKind")} else {};
-
-Check11=evaluateSet2.filter(item=>item.value===11);
-if (Check11.length===2) {Pair2.push("Pair1")} else if (Check11.length===3){ThreeKind2.push("ThreeKind")} else if (Check11.length===4) {FourKind2.push("FourKind")} else {};
-
-Check12=evaluateSet2.filter(item=>item.value===12);
-if (Check12.length===2) {Pair2.push("Pair1")} else if (Check12.length===3){ThreeKind2.push("ThreeKind")} else if (Check12.length===4) {FourKind2.push("FourKind")} else {};
-
-Check13=evaluateSet2.filter(item=>item.value===13);
-if (Check13.length===2) {Pair2.push("Pair1")} else if (Check13.length===3){ThreeKind2.push("ThreeKind")} else if (Check13.length===4) {FourKind2.push("FourKind")} else {};
-
-Check14=evaluateSet2.filter(item=>item.value===14);
-if (Check14.length===2) {Pair2.push("Pair1")} else if (Check14.length===3){ThreeKind2.push("ThreeKind")} else if (Check14.length===4) {FourKind2.push("FourKind")} else {};
-
-CheckVF=[]
-
-    let Royal=[];
-    for (i=0;i<evaluateSet2.length;i++) {
-        if (evaluateSet2.value===10){ Royal.push("success")} else {};
-        if (evaluateSet2.value===11){ Royal.push("success")} else {};
-        if (evaluateSet2.value===12){ Royal.push("success")} else {};
-        if (evaluateSet2.value===13){ Royal.push("success")} else {};
-        if (evaluateSet2.value===14){ Royal.push("success")} else {};
-        if (Royal.length===5) {evaluateSet2.push("Royal")} else {}
-    }
-
-    if (evaluateSet2[1].value===evaluateSet2[0].value+1 && evaluateSet2[2].value===evaluateSet2[1].value+1 && evaluateSet2[3].value===evaluateSet2[2].value+1 && evaluateSet2[4].value===evaluateSet2[3].value+1) {Straight2.push("Straight")} else {}
-console.log("222222")
-console.log(Flush2)
+function evaluateHands(){
 
 }
 
-
-
-
-function ThreeSetEvaluate () {
-    //let flushSuccess=[];
-CheckClubs=evaluateSet3.filter(item=>item.suit==="Clubs");
-if (CheckClubs.length===5) {Flush3.push("Flush")};
-
-CheckDiamonds=evaluateSet3.filter(item=>item.suit==="Diamonds");
-if (CheckDiamonds.length===5) {Flush3.push("Flush")};
-
-CheckSpades=evaluateSet3.filter(item=>item.suit==="Spades");
-if (CheckSpades.length===5) {Flush3.push("Flush")};
-
-CheckHearts=evaluateSet3.filter(item=>item.suit==="Hearts");
-if (CheckHearts.length===5) {Flush3.push("Flush")};
-
-CheckSwords=evaluateSet3.filter(item=>item.suit==="Swords");
-if (CheckSwords.length===5) {Flush3.push("Flush")};
-
-CheckSkulls=evaluateSet3.filter(item=>item.suit==="Skulls");
-if (CheckSkulls.length===5) {Flush3.push("Flush")};
-
-Check2=evaluateSet3.filter(item=>item.value===2);
-if (Check2.length===2) {Pair3.push("Pair1")} else if (Check2.length===3){ThreeKind3.push("ThreeKind")} else if (Check2.length===4) {FourKind3.push("FourKind")} else {};
-
-Check3=evaluateSet3.filter(item=>item.value===3);
-if (Check3.length===2) {Pair3.push("Pair1")} else if (Check3.length===3){ThreeKind3.push("ThreeKind")} else if (Check3.length===4) {FourKind3.push("FourKind")} else {};
-
-Check4=evaluateSet3.filter(item=>item.value===4);
-if (Check4.length===2) {Pair3.push("Pair1")} else if (Check4.length===3){ThreeKind3.push("ThreeKind")} else if (Check4.length===4) {FourKind3.push("FourKind")} else {};
-
-Check5=evaluateSet3.filter(item=>item.value===5);
-if (Check5.length===2) {Pair3.push("Pair1")} else if (Check5.length===3){ThreeKind3.push("ThreeKind")} else if (Check5.length===4) {FourKind3.push("FourKind")} else {};
-
-Check6=evaluateSet3.filter(item=>item.value===6);
-if (Check6.length===2) {Pair3.push("Pair1")} else if (Check6.length===3){ThreeKind3.push("ThreeKind")} else if (Check6.length===4) {FourKind3.push("FourKind")} else {};
-
-Check7=evaluateSet3.filter(item=>item.value===7);
-if (Check7.length===2) {Pair3.push("Pair1")} else if (Check7.length===3){ThreeKind3.push("ThreeKind")} else if (Check7.length===4) {FourKind3.push("FourKind")} else {};
-
-Check8=evaluateSet3.filter(item=>item.value===8);
-if (Check8.length===2) {Pair3.push("Pair1")} else if (Check8.length===3){ThreeKind3.push("ThreeKind")} else if (Check8.length===4) {FourKind3.push("FourKind")} else {};
-
-Check9=evaluateSet3.filter(item=>item.value===7);
-if (Check9.length===2) {Pair3.push("Pair1")} else if (Check9.length===3){ThreeKind3.push("ThreeKind")} else if (Check9.length===4) {FourKind3.push("FourKind")} else {};
-
-Check10=evaluateSet3.filter(item=>item.value===10);
-if (Check10.length===2) {Pair3.push("Pair1")} else if (Check10.length===3){ThreeKind3.push("ThreeKind")} else if (Check10.length===4) {FourKind3.push("FourKind")} else {};
-
-Check11=evaluateSet3.filter(item=>item.value===11);
-if (Check11.length===2) {Pair3.push("Pair1")} else if (Check11.length===3){ThreeKind3.push("ThreeKind")} else if (Check11.length===4) {FourKind3.push("FourKind")} else {};
-
-Check12=evaluateSet3.filter(item=>item.value===12);
-if (Check12.length===2) {Pair3.push("Pair1")} else if (Check12.length===3){ThreeKind3.push("ThreeKind")} else if (Check12.length===4) {FourKind3.push("FourKind")} else {};
-
-Check13=evaluateSet3.filter(item=>item.value===13);
-if (Check13.length===2) {Pair3.push("Pair1")} else if (Check13.length===3){ThreeKind3.push("ThreeKind")} else if (Check13.length===4) {FourKind3.push("FourKind")} else {};
-
-Check14=evaluateSet3.filter(item=>item.value===14);
-if (Check14.length===2) {Pair3.push("Pair1")} else if (Check14.length===3){ThreeKind3.push("ThreeKind")} else if (Check14.length===4) {FourKind3.push("FourKind")} else {};
-
-CheckVF=[]
-
-    let Royal=[];
-    for (i=0;i<evaluateSet3.length;i++) {
-        if (evaluateSet3.value===10){ Royal.push("success")} else {};
-        if (evaluateSet3.value===11){ Royal.push("success")} else {};
-        if (evaluateSet3.value===12){ Royal.push("success")} else {};
-        if (evaluateSet3.value===13){ Royal.push("success")} else {};
-        if (evaluateSet3.value===14){ Royal.push("success")} else {};
-        if (Royal.length===5) {evaluateSet2.push("Royal")} else {}
-    }
-
-    if (evaluateSet3[1].value===evaluateSet3[0].value+1 && evaluateSet3[2].value===evaluateSet3[1].value+1 && evaluateSet3[3].value===evaluateSet3[2].value+1 && evaluateSet3[4].value===evaluateSet3[3].value+1) {Straight3.push("Straight")} else {}
+function evaluateHand1(){
     
-    console.log("3333333333")
-    console.log(Pair3)
-
 }
 
-
-
-    
-
-
-function FourSetEvaluate () {
-    //let flushSuccess=[];
-CheckClubs=evaluateSet4.filter(item=>item.suit==="Clubs");
-if (CheckClubs.length===5) {Flush4.push("Flush")};
-
-CheckDiamonds=evaluateSet4.filter(item=>item.suit==="Diamonds");
-if (CheckDiamonds.length===5) {Flush4.push("Flush")};
-
-CheckSpades=evaluateSet4.filter(item=>item.suit==="Spades");
-if (CheckSpades.length===5) {Flush4.push("Flush")};
-
-CheckHearts=evaluateSet4.filter(item=>item.suit==="Hearts");
-if (CheckHearts.length===5) {Flush4.push("Flush")};
-
-CheckSwords=evaluateSet4.filter(item=>item.suit==="Swords");
-if (CheckSwords.length===5) {Flush4.push("Flush")};
-
-CheckSkulls=evaluateSet4.filter(item=>item.suit==="Skulls");
-if (CheckSkulls.length===5) {Flush4.push("Flush")};
-
-Check2=evaluateSet4.filter(item=>item.value===2);
-if (Check2.length===2) {Pair4.push("Pair1")} else if (Check2.length===3){ThreeKind4.push("ThreeKind")} else if (Check2.length===4) {FourKind4.push("FourKind")} else {};
-
-Check3=evaluateSet4.filter(item=>item.value===3);
-if (Check3.length===2) {Pair4.push("Pair1")} else if (Check3.length===3){ThreeKind4.push("ThreeKind")} else if (Check3.length===4) {FourKind4.push("FourKind")} else {};
-
-Check4=evaluateSet4.filter(item=>item.value===4);
-if (Check4.length===2) {Pair4.push("Pair1")} else if (Check4.length===3){ThreeKind4.push("ThreeKind")} else if (Check4.length===4) {FourKind4.push("FourKind")} else {};
-
-Check5=evaluateSet4.filter(item=>item.value===5);
-if (Check5.length===2) {Pair4.push("Pair1")} else if (Check5.length===3){ThreeKind4.push("ThreeKind")} else if (Check5.length===4) {FourKind4.push("FourKind")} else {};
-
-Check6=evaluateSet4.filter(item=>item.value===6);
-if (Check6.length===2) {Pair4.push("Pair1")} else if (Check6.length===3){ThreeKind4.push("ThreeKind")} else if (Check6.length===4) {FourKind4.push("FourKind")} else {};
-
-Check7=evaluateSet4.filter(item=>item.value===7);
-if (Check7.length===2) {Pair4.push("Pair1")} else if (Check7.length===3){ThreeKind4.push("ThreeKind")} else if (Check7.length===4) {FourKind4.push("FourKind")} else {};
-
-Check8=evaluateSet4.filter(item=>item.value===8);
-if (Check8.length===2) {Pair4.push("Pair1")} else if (Check8.length===3){ThreeKind4.push("ThreeKind")} else if (Check8.length===4) {FourKind4.push("FourKind")} else {};
-
-Check9=evaluateSet4.filter(item=>item.value===7);
-if (Check9.length===2) {Pair4.push("Pair1")} else if (Check9.length===3){ThreeKind4.push("ThreeKind")} else if (Check9.length===4) {FourKind4.push("FourKind")} else {};
-
-Check10=evaluateSet4.filter(item=>item.value===10);
-if (Check10.length===2) {Pair4.push("Pair1")} else if (Check10.length===3){ThreeKind4.push("ThreeKind")} else if (Check10.length===4) {FourKind4.push("FourKind")} else {};
-
-Check11=evaluateSet4.filter(item=>item.value===11);
-if (Check11.length===2) {Pair4.push("Pair1")} else if (Check11.length===3){ThreeKind4.push("ThreeKind")} else if (Check11.length===4) {FourKind4.push("FourKind")} else {};
-
-Check12=evaluateSet4.filter(item=>item.value===12);
-if (Check12.length===2) {Pair4.push("Pair1")} else if (Check12.length===3){ThreeKind4.push("ThreeKind")} else if (Check12.length===4) {FourKind4.push("FourKind")} else {};
-
-Check13=evaluateSet4.filter(item=>item.value===13);
-if (Check13.length===2) {Pair4.push("Pair1")} else if (Check13.length===3){ThreeKind4.push("ThreeKind")} else if (Check13.length===4) {FourKind4.push("FourKind")} else {};
-
-Check14=evaluateSet4.filter(item=>item.value===14);
-if (Check14.length===2) {Pair4.push("Pair1")} else if (Check14.length===3){ThreeKind4.push("ThreeKind")} else if (Check14.length===4) {FourKind4.push("FourKind")} else {};
-
-CheckVF=[]
-
-    let Royal=[];
-    for (i=0;i<evaluateSet4.length;i++) {
-        if (evaluateSet4.value===10){ Royal.push("success")} else {};
-        if (evaluateSet4.value===11){ Royal.push("success")} else {};
-        if (evaluateSet4.value===12){ Royal.push("success")} else {};
-        if (evaluateSet4.value===13){ Royal.push("success")} else {};
-        if (evaluateSet4.value===14){ Royal.push("success")} else {};
-        if (Royal.length===5) {evaluateSet2.push("Royal")} else {}
-    }
-
-    if (evaluateSet4[1].value===evaluateSet4[0].value+1 && evaluateSet4[2].value===evaluateSet4[1].value+1 && evaluateSet4[3].value===evaluateSet4[2].value+1 && evaluateSet4[4].value===evaluateSet4[3].value+1) {Straight4.push("Straight")} else {}
-
-    console.log("44444444")
-    console.log(Pair4)
+function evaluateBonuses(){
 
 }
-
-
-
-    
-function FiveSetEvaluate () {
-    //let flushSuccess=[];
-CheckClubs=evaluateSet5.filter(item=>item.suit==="Clubs");
-if (CheckClubs.length===5) {Flush4.push("Flush")};
-
-CheckDiamonds=evaluateSet5.filter(item=>item.suit==="Diamonds");
-if (CheckDiamonds.length===5) {Flush4.push("Flush")};
-
-CheckSpades=evaluateSet5.filter(item=>item.suit==="Spades");
-if (CheckSpades.length===5) {Flush4.push("Flush")};
-
-CheckHearts=evaluateSet5.filter(item=>item.suit==="Hearts");
-if (CheckHearts.length===5) {Flush4.push("Flush")};
-
-CheckSwords=evaluateSet5.filter(item=>item.suit==="Swords");
-if (CheckSwords.length===5) {Flush4.push("Flush")};
-
-CheckSkulls=evaluateSet5.filter(item=>item.suit==="Skulls");
-if (CheckSkulls.length===5) {Flush4.push("Flush")};
-
-Check2=evaluateSet5.filter(item=>item.value===2);
-if (Check2.length===2) {Pair5.push("Pair1")} else if (Check2.length===3){ThreeKind5.push("ThreeKind")} else if (Check2.length===4) {FourKind5.push("FourKind")} else {};
-
-Check3=evaluateSet5.filter(item=>item.value===3);
-if (Check3.length===2) {Pair5.push("Pair1")} else if (Check3.length===3){ThreeKind5.push("ThreeKind")} else if (Check3.length===4) {FourKind5.push("FourKind")} else {};
-
-Check4=evaluateSet5.filter(item=>item.value===4);
-if (Check4.length===2) {Pair5.push("Pair1")} else if (Check4.length===3){ThreeKind5.push("ThreeKind")} else if (Check4.length===4) {FourKind5.push("FourKind")} else {};
-
-Check5=evaluateSet5.filter(item=>item.value===5);
-if (Check5.length===2) {Pair5.push("Pair1")} else if (Check5.length===3){ThreeKind5.push("ThreeKind")} else if (Check5.length===4) {FourKind5.push("FourKind")} else {};
-
-Check6=evaluateSet5.filter(item=>item.value===6);
-if (Check6.length===2) {Pair5.push("Pair1")} else if (Check6.length===3){ThreeKind5.push("ThreeKind")} else if (Check6.length===4) {FourKind5.push("FourKind")} else {};
-
-Check7=evaluateSet5.filter(item=>item.value===7);
-if (Check7.length===2) {Pair5.push("Pair1")} else if (Check7.length===3){ThreeKind5.push("ThreeKind")} else if (Check7.length===4) {FourKind5.push("FourKind")} else {};
-
-Check8=evaluateSet5.filter(item=>item.value===8);
-if (Check8.length===2) {Pair5.push("Pair1")} else if (Check8.length===3){ThreeKind5.push("ThreeKind")} else if (Check8.length===4) {FourKind5.push("FourKind")} else {};
-
-Check9=evaluateSet5.filter(item=>item.value===7);
-if (Check9.length===2) {Pair5.push("Pair1")} else if (Check9.length===3){ThreeKind5.push("ThreeKind")} else if (Check9.length===4) {FourKind5.push("FourKind")} else {};
-
-Check10=evaluateSet5.filter(item=>item.value===10);
-if (Check10.length===2) {Pair5.push("Pair1")} else if (Check10.length===3){ThreeKind5.push("ThreeKind")} else if (Check10.length===4) {FourKind5.push("FourKind")} else {};
-
-Check11=evaluateSet5.filter(item=>item.value===11);
-if (Check11.length===2) {Pair5.push("Pair1")} else if (Check11.length===3){ThreeKind5.push("ThreeKind")} else if (Check11.length===4) {FourKind5.push("FourKind")} else {};
-
-Check12=evaluateSet5.filter(item=>item.value===12);
-if (Check12.length===2) {Pair5.push("Pair1")} else if (Check12.length===3){ThreeKind5.push("ThreeKind")} else if (Check12.length===4) {FourKind5.push("FourKind")} else {};
-
-Check13=evaluateSet5.filter(item=>item.value===13);
-if (Check13.length===2) {Pair5.push("Pair1")} else if (Check13.length===3){ThreeKind5.push("ThreeKind")} else if (Check13.length===4) {FourKind5.push("FourKind")} else {};
-
-Check14=evaluateSet5.filter(item=>item.value===14);
-if (Check14.length===2) {Pair5.push("Pair1")} else if (Check14.length===3){ThreeKind5.push("ThreeKind")} else if (Check14.length===4) {FourKind5.push("FourKind")} else {};
-
-CheckVF=[]
-
-    let Royal=[];
-    for (i=0;i<evaluateSet5.length;i++) {
-        if (evaluateSet5.value===10){ Royal.push("success")} else {};
-        if (evaluateSet5.value===11){ Royal.push("success")} else {};
-        if (evaluateSet5.value===12){ Royal.push("success")} else {};
-        if (evaluateSet5.value===13){ Royal.push("success")} else {};
-        if (evaluateSet5.value===14){ Royal.push("success")} else {};
-        if (Royal.length===5) {Royal5.push("Royal")} else {}
-    }
-
-    if (evaluateSet5[1].value===evaluateSet5[0].value+1 && evaluateSet5[2].value===evaluateSet5[1].value+1 && evaluateSet5[3].value===evaluateSet5[2].value+1 && evaluateSet5[4].value===evaluateSet5[3].value+1) {Straight5.push("Straight")} else {}
-
-    console.log("555555555")
-console.log(Pair5)
-
-}
-
-
-        
-
-
-function BonusChoices(){
-    
-let AllNew=evaluateSet1.concat(evaluateSet2).concat(evaluateSet3).concat(evaluateSet4).concat(evaluateSet5).concat(end3);
-console.log("stats");
-
-
-let filter11=AllNew.filter(item=>item.value===11);
-if (filter11.length===6){finalCountBonuses.push("Jack")} else {finalCountBonuses.push("Fail")};
-
-let filter12=AllNew.filter(item=>item.value===12);
-if (filter12.length===6){finalCountBonuses.push("Queen")} else {finalCountBonuses.push("Fail")};
-
-let filter13=AllNew.filter(item=>item.value===13);
-if (filter13.length===6){finalCountBonuses.push("King")} else {finalCountBonuses.push("Fail")};
-
-let filter14=AllNew.filter(item=>item.value===14);
-if (filter14.length===6){finalCountBonuses.push("Ace")} else {finalCountBonuses.push("Fail")};
-
-console.log(finalCountBonuses);
-console.log(AllNew);
-console.log(filter11);
-console.log(filter12);
-console.log(filter13);
-console.log(filter14);
-  
-    }
-    
-function EvaluateHands(){
-        if (Royal1.length===5 && Flush1.length===1){ score.push(80) } 
-        else if (Straight1.length===1 && Flush1.length==1){score.push(60)} 
-        else if (FourKind1.length===1) {score.push(50)} 
-        else if (ThreeKind1.length===1 && Pair1.length===1){score.push(40)} 
-        else if (Flush1.length === 1){score.push(35)} 
-        else if (Straight1.length === 1){score.push(30)} 
-        else if (ThreeKind1.length === 1){score.push(25)} 
-        else if (Pair1.length === 2){score.push(15)} 
-        else if (Pair1.length === 1){score.push(10)} 
-        else{score.push(0)}
-
-        if (Royal2.length===5 && Flush2.length===1){ score.push(80) } 
-        else if (Straight2.length===1 && Flush2.length==1){score.push(60)} 
-        else if (FourKind2.length===1) {score.push(50)} 
-        else if (ThreeKind2.length===1 && Pair2.length===1){score.push(40)} 
-        else if (Flush2.length === 1){score.push(35)} 
-        else if (Straight2.length === 1){score.push(30)} 
-        else if (ThreeKind2.length === 1){score.push(25)} 
-        else if (Pair2.length === 2){score.push(15)} 
-        else if (Pair2.length === 1){score.push(10)} 
-        else{score.push(0)}
-
-        if (Royal3.length===5 && Flush3.length===1){ score.push(80) } 
-        else if (Straight3.length===1 && Flush3.length==1){score.push(60)} 
-        else if (FourKind3.length===1) {score.push(50)} 
-        else if (ThreeKind3.length===1 && Pair3.length===1){score.push(40)} 
-        else if (Flush3.length === 1){score.push(35)} 
-        else if (Straight3.length === 1){score.push(30)} 
-        else if (ThreeKind3.length === 1){score.push(25)} 
-        else if (Pair3.length === 2){score.push(15)} 
-        else if (Pair3.length === 1){score.push(10)} 
-        else{score.push(0)}
-
-        if (Royal4.length===5 && Flush4.length===1){ score.push(80) } 
-        else if (Straight4.length===1 && Flush4.length==1){score.push(60)} 
-        else if (FourKind4.length===1) {score.push(50)} 
-        else if (ThreeKind4.length===1 && Pair4.length===1){score.push(40)} 
-        else if (Flush4.length === 1){score.push(35)} 
-        else if (Straight4.length === 1){score.push(30)} 
-        else if (ThreeKind4.length === 1){score.push(25)} 
-        else if (Pair4.length === 2){score.push(15)} 
-        else if (Pair4.length === 1){score.push(10)} 
-        else{score.push(0)}
-
-
-        if (Royal5.length===5 && Flush5.length===1){ score.push(80) } 
-        else if (Straight5.length===1 && Flush5.length==1){score.push(60)} 
-        else if (FourKind5.length===1) {score.push(50)} 
-        else if (ThreeKind5.length===1 && Pair5.length===1){score.push(40)} 
-        else if (Flush5.length === 1){score.push(35)} 
-        else if (Straight5.length === 1){score.push(30)} 
-        else if (ThreeKind5.length === 1){score.push(25)} 
-        else if (Pair5.length === 2){score.push(15)} 
-        else if (Pair5.length === 1){score.push(10)} 
-        else{score.push(0)}
-
-        if (finalCountBonuses[0] === "Jack" && finalCountBonuses[1] === "Queen" && finalCountBonuses[2] === "King" && finalCountBonuses[3] === "Ace")  {score.push(60)} else if (finalCountBonuses[0] === "Jack" && finalCountBonuses[1] === "Queen" && finalCountBonuses[2] === "King" ) {score.push(50)} else if (finalCountBonuses[0] === "Jack" && finalCountBonuses[1] === "Queen" ) {score.push(40)} else if (finalCountBonuses[0] === "Jack") {score.push(30)} else {score.push(0)};
-       
-        console.log("scores");
-
-        console.log(score[0]);
-        console.log(score[1]);
-        console.log(score[2]);
-        console.log(score[3]);
-        console.log(score[4]);
-        console.log(score[5]);
-
-
-
-
-        let FinalScore=score[0] + score[1] + score[2] + score[3] + score[4] + score[5];
-        window.alert("Your Final Score is " + FinalScore + " points");
-        
-        document.getElementById("scoreLabel").innerText= "Your Score " + FinalScore;
-        
-    }
-
-
-/*
-
 
 
 console.log("hand1");
@@ -5495,9 +4868,9 @@ console.log(valuesTest1);
 console.log("valuesTest2");
 console.log(valuesTest2);
 
-
+console.log("collectionRevised");
+console.log(collectionRevised);
 
 
 
 console.log(deck);
-*/
