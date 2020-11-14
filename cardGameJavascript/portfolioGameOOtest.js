@@ -85,7 +85,20 @@ let finalCountBonuses = [];
 
 let handCounter = [];
 
-let check = [];
+let handChoices = [];
+let handChoices2 = [];
+let handChoices3 = [];
+let handChoices4 = [];
+let handChoices5 = [];
+let handChoices6 = [];
+let handChoices7 = [];
+let handChoices8 = [];
+let handChoices9 = [];
+let handChoices10 = [];
+let handChoices11 = [];
+let handChoices12 = [];
+let handChoices13 = [];
+let handChoices14 = [];
 
 let check2 = [];
 
@@ -93,14 +106,8 @@ let check2 = [];
 
 let anchor = ["collectionAnchor1"];
 
-
- let HandDup = ["Hearts", "Diamonds", "Clubs", "Spades", "Skulls", "Swords"];
- let Hand2Dup = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-
-
- 
-
-
+let HandSuit = [];
+let HandValue = [];
 
 //let anchorsDeleted = [];
 
@@ -258,8 +265,6 @@ deck.deal12();
 deck.deal13();
 deck.deal14();
 
-
-
 //show first hand,
 function hideall() {
   let hideGetEval = document.getElementById("confirmButton");
@@ -298,15 +303,23 @@ function hideall() {
   let AddUp = document.getElementById("AddItUp");
   AddUp.style.display = "none";
 
-  document.getElementById("handAnchor1").addEventListener("click", ChooseTwoClickFirst);
-  document.getElementById("handAnchor2").addEventListener("click", ChooseTwoClickSecond);
-  document.getElementById("handAnchor3").addEventListener("click", ChooseTwoClickThird);
-  document.getElementById("handAnchor4").addEventListener("click", ChooseTwoClickFourth);
-  document.getElementById("handAnchor5").addEventListener("click", ChooseTwoClickFifth);
+  document
+    .getElementById("handAnchor1")
+    .addEventListener("click", ChooseTwoClickFirst);
+  document
+    .getElementById("handAnchor2")
+    .addEventListener("click", ChooseTwoClickSecond);
+  document
+    .getElementById("handAnchor3")
+    .addEventListener("click", ChooseTwoClickThird);
+  document
+    .getElementById("handAnchor4")
+    .addEventListener("click", ChooseTwoClickFourth);
+  document
+    .getElementById("handAnchor5")
+    .addEventListener("click", ChooseTwoClickFifth);
 
-
-
-  document.getElementById("click1").addEventListener("click", getValue1); 
+  document.getElementById("click1").addEventListener("click", getValue1);
   document.getElementById("click2").addEventListener("click", getValue2);
   document.getElementById("click3").addEventListener("click", getValue3);
   document.getElementById("click4").addEventListener("click", getValue4);
@@ -338,8 +351,6 @@ function hideall() {
 
 window.onload = hideall();
 
-
-
 function changeRound(number) {
   document.getElementById("round");
   let roundCounter = document.createElement("p");
@@ -350,49 +361,48 @@ function changeRound(number) {
   roundCounter.style.color = "white";
 }
 
-function seeAll (){
-console.log(hand1);
-console.log(hand2);
-console.log(hand3);
-console.log(hand4);
-console.log(hand5);
-console.log(hand6);
-console.log(hand7);
-console.log(hand8);
-console.log(hand9);
-console.log(hand10);
-console.log(hand11);
-console.log(hand12);
-console.log(hand13);
-console.log(hand14);
-console.log(check2);
-
+function seeAll() {
+  console.log(hand1);
+  console.log(hand2);
+  console.log(hand3);
+  console.log(hand4);
+  console.log(hand5);
+  console.log(hand6);
+  console.log(hand7);
+  console.log(hand8);
+  console.log(hand9);
+  console.log(hand10);
+  console.log(hand11);
+  console.log(hand12);
+  console.log(hand13);
+  console.log(hand14);
+  console.log(check2);
 }
 function clearRound() {
- let anchorRound=document.getElementById("round");
+  let anchorRound = document.getElementById("round");
   while (anchorRound.firstChild) {
     anchorRound.removeChild(anchorRound.firstChild);
   }
 }
 
 function clearHand() {
-  let anchorHand1=document.getElementById("handAnchor1");
+  let anchorHand1 = document.getElementById("handAnchor1");
   while (anchorHand1.firstChild) {
     anchorHand1.removeChild(anchorHand1.firstChild);
   }
-    let anchorHand2=document.getElementById("handAnchor2");
+  let anchorHand2 = document.getElementById("handAnchor2");
   while (anchorHand2.firstChild) {
     anchorHand2.removeChild(anchorHand2.firstChild);
   }
-    let anchorHand3=document.getElementById("handAnchor3");
+  let anchorHand3 = document.getElementById("handAnchor3");
   while (anchorHand3.firstChild) {
     anchorHand3.removeChild(anchorHand3.firstChild);
   }
-    let anchorHand4 = document.getElementById("handAnchor4");
+  let anchorHand4 = document.getElementById("handAnchor4");
   while (anchorHand4.firstChild) {
     anchorHand4.removeChild(anchorHand4.firstChild);
   }
-    let anchorHand5 = document.getElementById("handAnchor5");
+  let anchorHand5 = document.getElementById("handAnchor5");
   while (anchorHand5.firstChild) {
     anchorHand5.removeChild(anchorHand5.firstChild);
   }
@@ -451,13 +461,9 @@ function getHand() {
   let hand13function = hand13;
   let hand14function = hand14;
 
-  function addDup(){
-    HandDup.push("duplicate");
-  }
-
   switch (check2.length) {
     case 0:
-        clearHand();
+      clearHand();
       showCard1(hand1function);
       showCard2(hand1function);
       showCard3(hand1function);
@@ -467,81 +473,74 @@ function getHand() {
       console.log(hand1);
       break;
     case 1:
-        clearHand();
-      addDup();
+      clearHand();
       showCard1(hand2function);
       showCard2(hand2function);
       showCard3(hand2function);
       showCard4(hand2function);
-      showCard5(hand2function);      
+      showCard5(hand2function);
       clearRound();
       changeRound("Two");
       console.log(hand2);
       break;
     case 2:
-        clearHand();
-        addDup();
+      clearHand();
       showCard1(hand3function);
       showCard2(hand3function);
       showCard3(hand3function);
       showCard4(hand3function);
-      showCard5(hand3function); 
+      showCard5(hand3function);
       clearRound();
       changeRound("Three");
       console.log(hand3);
       break;
     case 3:
       clearHand();
-      addDup();
       showCard1(hand4function);
       showCard2(hand4function);
       showCard3(hand4function);
       showCard4(hand4function);
-      showCard5(hand4function); 
+      showCard5(hand4function);
       clearRound();
       changeRound("Four");
       console.log(hand4);
       break;
     case 4:
       clearHand();
-      addDup();      
       showCard1(hand5function);
       showCard2(hand5function);
       showCard3(hand5function);
       showCard4(hand5function);
-      showCard5(hand5function); 
+      showCard5(hand5function);
       clearRound();
       changeRound("Five");
       console.log(hand5);
       break;
     case 5:
       clearHand();
-      addDup();      
       showCard1(hand6function);
       showCard2(hand6function);
       showCard3(hand6function);
       showCard4(hand6function);
-      showCard5(hand6function);      
+      showCard5(hand6function);
       clearRound();
       changeRound("Six");
       console.log(hand6);
       break;
     case 6:
       clearHand();
-      addDup();
-    showCard1(hand7function);
-    showCard2(hand7function);
-    showCard3(hand7function);
-    showCard4(hand7function);
-    showCard5(hand7function);
-    clearRound();
+      showCard1(hand7function);
+      showCard2(hand7function);
+      showCard3(hand7function);
+      showCard4(hand7function);
+      showCard5(hand7function);
+      clearRound();
       clearRound();
       changeRound("Seven");
       console.log(hand7);
       break;
     case 7:
       clearHand();
-      addDup();
       showCard1(hand8function);
       showCard2(hand8function);
       showCard3(hand8function);
@@ -552,73 +551,67 @@ function getHand() {
       console.log(hand8);
       break;
     case 8:
-    clearHand();
-    addDup();
-    showCard1(hand9function);
-    showCard2(hand9function);
-    showCard3(hand9function);
-    showCard4(hand9function);
-    showCard5(hand9function);
+      clearHand();
+      showCard1(hand9function);
+      showCard2(hand9function);
+      showCard3(hand9function);
+      showCard4(hand9function);
+      showCard5(hand9function);
       clearRound();
       changeRound("Nine");
       console.log(hand9);
       break;
     case 9:
-    clearHand();
-    addDup();
-    showCard1(hand10function);
-    showCard2(hand10function);
-    showCard3(hand10function);
-    showCard4(hand10function);
-    showCard5(hand10function);
+      clearHand();
+      showCard1(hand10function);
+      showCard2(hand10function);
+      showCard3(hand10function);
+      showCard4(hand10function);
+      showCard5(hand10function);
       clearRound();
       changeRound("Ten");
       console.log(hand10);
       break;
     case 10:
-    clearHand();
-    addDup();
-    showCard1(hand11function);
-    showCard2(hand11function);
-    showCard3(hand11function);
-    showCard4(hand11function);
-    showCard5(hand11function);
+      clearHand();
+      showCard1(hand11function);
+      showCard2(hand11function);
+      showCard3(hand11function);
+      showCard4(hand11function);
+      showCard5(hand11function);
       clearRound();
       changeRound("Eleven");
       console.log(hand11);
       break;
     case 11:
-    clearHand();
-    addDup();
-    showCard1(hand12function);
-    showCard2(hand12function);
-    showCard3(hand12function);
-    showCard4(hand12function);
-    showCard5(hand12function); 
-     clearRound();
+      clearHand();
+      showCard1(hand12function);
+      showCard2(hand12function);
+      showCard3(hand12function);
+      showCard4(hand12function);
+      showCard5(hand12function);
+      clearRound();
       changeRound("Twelve");
       console.log(hand12);
       break;
     case 12:
-    clearHand();
-    addDup();
-    showCard1(hand13function);
-    showCard2(hand13function);
-    showCard3(hand13function);
-    showCard4(hand13function);
-    showCard5(hand13function); 
+      clearHand();
+      showCard1(hand13function);
+      showCard2(hand13function);
+      showCard3(hand13function);
+      showCard4(hand13function);
+      showCard5(hand13function);
       clearRound();
       changeRound("Thirteen");
       console.log(hand13);
       break;
     case 13:
-    clearHand();
-    addDup();
-    showCard1(hand14function);
-    showCard2(hand14function);
-    showCard3(hand14function);
-    showCard4(hand14function);
-    showCard5(hand14function); 
+      clearHand();
+      showCard1(hand14function);
+      showCard2(hand14function);
+      showCard3(hand14function);
+      showCard4(hand14function);
+      showCard5(hand14function);
       clearRound();
       changeRound("Fourteen");
       console.log(hand14);
@@ -629,9 +622,9 @@ function getHand() {
 }
 
 //function for collectionAnchor variable used to attach image to "Your Collection"
-function whichAnchor () {
-if (collection.length === 1) {
-    anchor[0]="collectionAnchor2";
+function whichAnchor() {
+  if (collection.length === 1) {
+    anchor[0] = "collectionAnchor2";
   } else if (collection.length === 2) {
     anchor[0] = "collectionAnchor3";
   } else if (collection.length === 3) {
@@ -685,15 +678,14 @@ if (collection.length === 1) {
   } else if (collection.length === 27) {
     anchor[0] = "collectionAnchor28";
   } else {
-
   }
 }
 
 //Master Equation for first card all hands
 
 function ChooseTwoClickFirst() {
-  let numbers2 = [0,2,4,6,8,10,12,14,16,18,20,22,24,26];
-  let numbers = [1,3,5,7,9,11,13,15,17,19,21,23,25,27];
+  //let numbers2 = [0,2,4,6,8,10,12,14,16,18,20,22,24,26];
+  //let numbers = [1,3,5,7,9,11,13,15,17,19,21,23,25,27];
 
   let hand1function = hand1;
   let hand2function = hand2;
@@ -709,175 +701,135 @@ function ChooseTwoClickFirst() {
   let hand12function = hand12;
   let hand13function = hand13;
   let hand14function = hand14;
-  
 
+  let handChoicesFunction = handChoices;
+  let handChoicesFunction2 = handChoices2;
+  let handChoicesFunction3 = handChoices3;
+  let handChoicesFunction4 = handChoices4;
+  let handChoicesFunction5 = handChoices5;
+  let handChoicesFunction6 = handChoices6;
+  let handChoicesFunction7 = handChoices7;
+  let handChoicesFunction8 = handChoices8;
+  let handChoicesFunction9 = handChoices9;
+  let handChoicesFunction10 = handChoices10;
+  let handChoicesFunction11 = handChoices11;
+  let handChoicesFunction12 = handChoices12;
+  let handChoicesFunction13 = handChoices13;
+  let handChoicesFunction14 = handChoices14;
 
-    if (collection.length < 2) {
-    ChooseTwoCardSecond(
-      hand1function,
-      numbers2[0],
-      numbers[0]
-    );
+  if (collection.length < 2) {
+    ChooseTwoCardFirst(hand1function, 0, 1);
     whichAnchor();
-  } else if (collection.length === 3 || collection.length === 4) {
-    ChooseTwoCardSecond(
-      hand2function,
-      numbers2[1],
-      numbers[1],
-    );
+  } else if (collection.length === 2 || collection.length === 3) {
+    ChooseTwoCardFirst(hand2function, 2, 3, handChoicesFunction2);
     whichAnchor();
-  } else if (collection.length === 5 || collection.length === 6) {
-    ChooseTwoCardSecond(
-      hand3function,
-      numbers2[2],
-      numbers[2],
-    );
+  } else if (collection.length === 4 || collection.length === 5) {
+    ChooseTwoCardFirst(hand3function, 4, 5, handChoicesFunction3);
     whichAnchor();
-  } else if (collection.length === 7 || collection.length === 8) {
-    ChooseTwoCardSecond(
-      hand4function,
-      numbers2[3],
-      numbers[3],
-    );
+  } else if (collection.length === 6 || collection.length === 7) {
+    ChooseTwoCardFirst(hand4function, 6, 7, handChoicesFunction4);
     whichAnchor();
-  } else if (collection.length === 9 || collection.length === 10) {
-    ChooseTwoCardSecond(
-      hand5function,
-      numbers2[4],
-      numbers[4],
-    );
+  } else if (collection.length === 8 || collection.length === 9) {
+    ChooseTwoCardFirst(hand5function, 8, 9, handChoicesFunction5);
     whichAnchor();
-  } else if (collection.length === 11 || collection.length === 12) {
-    ChooseTwoCardSecond(
-      hand6function,
-      numbers2[5],
-      numbers[5],
-    );
+  } else if (collection.length === 10 || collection.length === 11) {
+    ChooseTwoCardFirst(hand6function, 10, 11, handChoicesFunction6);
     whichAnchor();
-  } else if (collection.length === 13 || collection.length === 14) {
-    ChooseTwoCardSecond(
-      hand7function,
-      numbers2[6],
-      numbers[6],
-      Hand7DupF,
-      Hand1DupF2
-    );
+  } else if (collection.length === 12 || collection.length === 13) {
+    ChooseTwoCardFirst(hand7function, 12, 13, handChoicesFunction7);
     whichAnchor();
-  } else if (collection.length === 15 || collection.length === 16) {
-    ChooseTwoCardSecond(
-      hand8function,
-      numbers2[7],
-      numbers[7],
-      Hand8DupF,
-      Hand1DupF2
-    );
+  } else if (collection.length === 14 || collection.length === 15) {
+    ChooseTwoCardFirst(hand8function, 14, 15, handChoicesFunction8);
     whichAnchor();
-  } else if (collection.length === 17 || collection.length === 18) {
-    ChooseTwoCardSecond(
-      hand9function,
-      numbers2[8],
-      numbers[8],
-      Hand9DupF,
-      Hand1DupF2
-    );
+  } else if (collection.length === 16 || collection.length === 17) {
+    ChooseTwoCardFirst(hand9function, 16, 17, handChoicesFunction9);
     whichAnchor();
-  } else if (collection.length === 19 || collection.length === 20) {
-    ChooseTwoCardSecond(
-      hand10function,
-      numbers2[9],
-      numbers[9],
-      Hand10DupF,
-      Hand1DupF2
-    );
+  } else if (collection.length === 18 || collection.length === 19) {
+    ChooseTwoCardFirst(hand10function, 18, 19, handChoicesFunction10);
     whichAnchor();
-  } else if (collection.length === 21 || collection.length === 22) {
-    ChooseTwoCardSecond(
-      hand11function,
-      numbers2[10],
-      numbers[10],
-      Hand11DupF,
-      Hand1DupF2
-    );
+  } else if (collection.length === 20 || collection.length === 21) {
+    ChooseTwoCardFirst(hand11function, 20, 21, handChoicesFunction11);
     whichAnchor();
-  } else if (collection.length === 23 || collection.length === 24) {
-    ChooseTwoCardSecond(
-      hand12function,
-      numbers2[11],
-      numbers[11],
-      Hand12DupF,
-      Hand1DupF2
-    );
+  } else if (collection.length === 22 || collection.length === 23) {
+    ChooseTwoCardFirst(hand12function, 22, 23, handChoicesFunction12);
     whichAnchor();
-  } else if (collection.length === 25 || collection.length === 26) {
-    ChooseTwoCardSecond(
-      hand13function,
-      numbers2[12],
-      numbers[12],
-      Hand13DupF,
-      Hand1DupF2
-    );
+  } else if (collection.length === 24 || collection.length === 25) {
+    ChooseTwoCardFirst(hand13function, 24, 25, handChoicesFunction13);
     whichAnchor();
-  } else if (collection.length === 27 || collection.length === 28) {
-    ChooseTwoCardSecond(
-      hand14function,
-      numbers2[13],
-      numbers[13],
-      Hand14DupF,
-      Hand1DupF2
-    );
+  } else if (collection.length === 26 || collection.length === 27) {
+    ChooseTwoCardFirst(hand14function, 26, 27, handChoicesFunction14);
     whichAnchor();
   } else {
   }
-  }
+}
 
 // Equation for just first card of each hand
 
-
-function ChooseTwoCardFirst(
-  hand,
-  number,
-  number2,
-) {
+function ChooseTwoCardFirst(hand, number, number2) {
+  let handCheck = ["false","false","false","false","false","false","false","false","false","false","false","false","false","false"];
 
   if (collection.length === number) {
-      collection.push(hand[0]);
-      //Hand1Dup.push("One");
-      window.alert("why");
-      let toAttach = document.getElementById(anchor);
-      let card1 = document.createElement("img");
-      card1.src = `cardGameImages/${hand[0].suit}${hand[0].value}.png`;
-      toAttach.appendChild(card1);
-      //dupCheck.push("One");
-      console.log("collection");
-      console.log(collection);
-      console.log("check");
-      console.log(check);
-    } else if (
-      collection[number2].suit === hand[0] &&
-      collection[number2].value === hand[0]
-    ) {
-      console.log("duplicate");
-    } else if (collection.length === number2) {
-      collection.push(hand[0]);
-      let toAttach = document.getElementById(anchor);
-      let card1 = document.createElement("img");
-      card1.src = `cardGameImages/${hand[0].suit}${hand[0].value}.png`;
-      toAttach.appendChild(card1);
-      check.push("One");
-      console.log("collection");
-      console.log(collection);
-      console.log("check");
-      console.log(check);
-    } else {
-    }
+    collection.push(hand[0]);
+    handCheck.splice(number, 1, "true");
+    let toAttach = document.getElementById(anchor);
+    let card1 = document.createElement("img");
+    card1.src = `cardGameImages/${hand[0].suit}${hand[0].value}.png`;
+    toAttach.appendChild(card1);
+    console.log(handCheck)
+    console.log(handCheck[number]);
+  } else if (handCheck[number] === "true"){
+    console.log("error");
+  } else if (collection.length === number2){
+    let toAttach = document.getElementById(anchor);
+    let card1 = document.createElement("img");
+    card1.src = `cardGameImages/${hand[0].suit}${hand[0].value}.png`;
+    toAttach.appendChild(card1);
+    console.log(handCheck);
+    console.log(handCheck[number]);
+    
+  } else {
+
+  }
 }
+/*
+  if (set2Array.length === 2) {
+  } else if (collection.length === number) {
+    collection.push(hand[0]);
+    set2Array.push("One");
+    //HandSuit.push("One");
+    window.alert("why");
+    let toAttach = document.getElementById(anchor);
+    let card1 = document.createElement("img");
+    card1.src = `cardGameImages/${hand[0].suit}${hand[0].value}.png`;
+    toAttach.appendChild(card1);
+    console.log("collection");
+    console.log(collection);
+  } else if (
+    collection1.suit === hand1.suit &&
+    collection1.value === hand1.value
+  ) {
+    console.log("duplicate");
+  } else if (collection.length === number2) {
+    collection.push(hand[0]);
+    set2Array.push("One");
+    let toAttach = document.getElementById(anchor);
+    let card1 = document.createElement("img");
+    card1.src = `cardGameImages/${hand[0].suit}${hand[0].value}.png`;
+    toAttach.appendChild(card1);
+    console.log("collection");
+    console.log(collection);
+
+
+  
+    getHand();
+    
+  } else {
+  }*/
+
 
 // Master Equation second card of all hands
 
 function ChooseTwoClickSecond() {
-  let numbers2 = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26];
-  let numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26];
-
   let hand1function = hand1;
   let hand2function = hand2;
   let hand3function = hand3;
@@ -892,130 +844,112 @@ function ChooseTwoClickSecond() {
   let hand12function = hand12;
   let hand13function = hand13;
   let hand14function = hand14;
-  let Hand1DupF = Hand1Dup;
-  let Hand2DupF = Hand2Dup;
-  let Hand3DupF = Hand3Dup;
-  let Hand4DupF = Hand4Dup;
-  let Hand5DupF = Hand5Dup;
-  let Hand6DupF = Hand6Dup;
-  let Hand7DupF = Hand7Dup;
-  let Hand8DupF = Hand8Dup;
-  let Hand9DupF = Hand9Dup;
-  let Hand10DupF = Hand10Dup;
-  let Hand11DupF = Hand11Dup;
-  let Hand12DupF = Hand12Dup;
-  let Hand13DupF = Hand13Dup;
-  let Hand14DupF = Hand14Dup;
+
+  let handChoicesFunction = handChoices;
+  let handChoicesFunction2 = handChoices2;
+  let handChoicesFunction3 = handChoices3;
+  let handChoicesFunction4 = handChoices4;
+  let handChoicesFunction5 = handChoices5;
+  let handChoicesFunction6 = handChoices6;
+  let handChoicesFunction7 = handChoices7;
+  let handChoicesFunction8 = handChoices8;
+  let handChoicesFunction9 = handChoices9;
+  let handChoicesFunction10 = handChoices10;
+  let handChoicesFunction11 = handChoices11;
+  let handChoicesFunction12 = handChoices12;
+  let handChoicesFunction13 = handChoices13;
+  let handChoicesFunction14 = handChoices14;
 
   if (collection.length < 2) {
-    ChooseTwoCardSecond(hand1function, numbers2[0], numbers[0], Hand1DupF);
+    ChooseTwoCardSecond(hand1function, 0, 1, handChoicesFunction);
     whichAnchor();
-  } else if (collection.length === 3 || collection.length === 4) {
-    ChooseTwoCardSecond(hand2function, numbers2[1], numbers[1], Hand2DupF);
+  } else if (collection.length === 2 || collection.length === 3) {
+    ChooseTwoCardSecond(hand2function, 2, 3, handChoicesFunction2);
     whichAnchor();
-  } else if (collection.length === 5 || collection.length === 6) {
-    ChooseTwoCardSecond(hand3function, numbers2[2], numbers[2], Hand3DupF);
+  } else if (collection.length === 4 || collection.length === 5) {
+    ChooseTwoCardSecond(hand3function, 4, 5, handChoicesFunction3);
     whichAnchor();
-  } else if (collection.length === 7 || collection.length === 8) {
-    ChooseTwoCardSecond(hand4function, numbers2[3], numbers[3], Hand4DupF);
+  } else if (collection.length === 6 || collection.length === 7) {
+    ChooseTwoCardSecond(hand4function, 6, 7, handChoicesFunction4);
     whichAnchor();
-  } else if (collection.length === 9 || collection.length === 10) {
-    ChooseTwoCardSecond(hand5function, numbers2[4], numbers[4], Hand5DupF);
+  } else if (collection.length === 8 || collection.length === 9) {
+    ChooseTwoCardSecond(hand5function, 8, 9, handChoicesFunction5);
     whichAnchor();
-  } else if (collection.length === 11 || collection.length === 12) {
-    ChooseTwoCardSecond(hand6function, numbers2[5], numbers[5], Hand6DupF);
+  } else if (collection.length === 10 || collection.length === 11) {
+    ChooseTwoCardSecond(hand6function, 10, 11, handChoicesFunction6);
     whichAnchor();
-  } else if (collection.length === 13 || collection.length === 14) {
-    ChooseTwoCardSecond(hand7function, numbers2[6], numbers[6], Hand7DupF);
+  } else if (collection.length === 12 || collection.length === 13) {
+    ChooseTwoCardSecond(hand7function, 12, 13, handChoicesFunction7);
     whichAnchor();
-  } else if (collection.length === 15 || collection.length === 16) {
-    ChooseTwoCardSecond(hand8function, numbers2[7], numbers[7], Hand8DupF);
+  } else if (collection.length === 14 || collection.length === 15) {
+    ChooseTwoCardSecond(hand8function, 14, 15, handChoicesFunction8);
     whichAnchor();
-  } else if (collection.length === 17 || collection.length === 18) {
-    ChooseTwoCardSecond(hand9function, numbers2[8], numbers[8], Hand9DupF);
+  } else if (collection.length === 16 || collection.length === 17) {
+    ChooseTwoCardSecond(hand9function, 16, 17, handChoicesFunction9);
     whichAnchor();
-  } else if (collection.length === 19 || collection.length === 20) {
-    ChooseTwoCardSecond(hand10function, numbers2[9], numbers[9], Hand10DupF);
+  } else if (collection.length === 18 || collection.length === 19) {
+    ChooseTwoCardSecond(hand10function, 18, 19, handChoicesFunction10);
     whichAnchor();
-  } else if (collection.length === 21 || collection.length === 22) {
-    ChooseTwoCardSecond(hand11function, numbers2[10], numbers[10], Hand11DupF);
+  } else if (collection.length === 20 || collection.length === 21) {
+    ChooseTwoCardSecond(hand11function, 20, 21, handChoicesFunction11);
     whichAnchor();
-  } else if (collection.length === 23 || collection.length === 24) {
-    ChooseTwoCardSecond(hand12function, numbers2[11], numbers[11], Hand12DupF);
+  } else if (collection.length === 22 || collection.length === 23) {
+    ChooseTwoCardSecond(hand12function, 22, 23, handChoicesFunction12);
     whichAnchor();
-  } else if (collection.length === 25 || collection.length === 26) {
-    ChooseTwoCardSecond(hand13function, numbers2[12], numbers[12], Hand13DupF);
+  } else if (collection.length === 24 || collection.length === 25) {
+    ChooseTwoCardSecond(hand13function, 24, 25, handChoicesFunction13);
     whichAnchor();
-  } else if (collection.length === 27 || collection.length === 28) {
-    ChooseTwoCardSecond(hand14function, numbers2[13], numbers[13], Hand14DupF);
+  } else if (collection.length === 26 || collection.length === 27) {
+    ChooseTwoCardSecond(hand14function, 26, 27, handChoicesFunction14);
     whichAnchor();
   } else {
   }
 }
 
-
-
-
 // Equation for just second card of each hand
 
-function ChooseTwoCardSecond(hand, number, number2, dupHand) {
-
-    if (collection.length === 0) {
-      dupHand.push("Two");
-    } else if (collection.length === 2) {
-      Hand2Dup.push("Two");
-    } else if (collection.length === 4) {
-      Hand3Dup.push("Two");
-    } else if (collection.length === 6) {
-      Hand4Dup.push("Two");
-    } else if (collection.length === 8) {
-      Hand5Dup.push("Two");
-    } else if (collection.length === 10) {
-      Hand6Dup.push("Two");
-    } else if (collection.length === 12) {
-      Hand7Dup.push("Two");
-    } else if (collection.length === 14) {
-      Hand8Dup.push("Two");
-    } else if (collection.length === 16) {
-      Hand9Dup.push("Two");
-    } else if (collection.length === 18) {
-      Hand10Dup.push("Two");
-    } else if (collection.length === 20) {
-      Hand11Dup.push("Two");
-    } else if (collection.length === 22) {
-      Hand12Dup.push("Two");
-    } else if (collection.length === 24) {
-      Hand13Dup.push("Two");
-    } else if (collection.length === 26) {
-      Hand14Dup.push("Two");
-    } else {
-    }   
-  
+function ChooseTwoCardSecond(hand, number, number2, set2Array) {
+  let handDup = [];
+  let hand1 = hand[1];
+  let collection1 = collection[number];
   if (collection.length === number) {
+    handDup = handDup.concat(hand[1]);
+    console.log("dup");
+    console.log(handDup);
+  } else {
+  }
+
+  if (set2Array.length === 2) {
+  } else if (collection.length === number) {
     collection.push(hand[1]);
+    set2Array.push("Check");
     window.alert("why");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[1].suit}${hand[1].value}.png`;
     toAttach.appendChild(card1);
-     Hand1Dup.push("Two");
     console.log("collection");
     console.log(collection);
-    console.log("check");
-    console.log(check);
-  } else if (dupHand[0] === "Two") {
-      console.log("duplicate");
+    //console.log("check");
+    //console.log(check);
+  } else if (
+    collection1.suit === hand1.suit &&
+    collection1.value === hand1.value
+  ) {
+    console.log("duplicate");
   } else if (collection.length === number2) {
     collection.push(hand[1]);
+    set2Array.push("Check");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[1].suit}${hand[1].value}.png`;
     toAttach.appendChild(card1);
-    check.push("Two");
+    //check.push("Two");
     console.log("collection");
     console.log(collection);
-    console.log("check");
-    console.log(check);
+    getHand();
+    //console.log("check");
+    //console.log(check);
   } else {
   }
 }
@@ -1023,9 +957,6 @@ function ChooseTwoCardSecond(hand, number, number2, dupHand) {
 // Master Function Third card of all hands
 
 function ChooseTwoClickThird() {
-  let numbers2 = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26];
-  let numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26];
-
   let hand1function = hand1;
   let hand2function = hand2;
   let hand3function = hand3;
@@ -1040,128 +971,106 @@ function ChooseTwoClickThird() {
   let hand12function = hand12;
   let hand13function = hand13;
   let hand14function = hand14;
-  let Hand1DupF = Hand1Dup;
-  let Hand2DupF = Hand2Dup;
-  let Hand3DupF = Hand3Dup;
-  let Hand4DupF = Hand4Dup;
-  let Hand5DupF = Hand5Dup;
-  let Hand6DupF = Hand6Dup;
-  let Hand7DupF = Hand7Dup;
-  let Hand8DupF = Hand8Dup;
-  let Hand9DupF = Hand9Dup;
-  let Hand10DupF = Hand10Dup;
-  let Hand11DupF = Hand11Dup;
-  let Hand12DupF = Hand12Dup;
-  let Hand13DupF = Hand13Dup;
-  let Hand14DupF = Hand14Dup;
 
-if (collection.length < 2) {
-  ChooseThreeCardSecond(hand1function, numbers2[0], numbers[0], Hand1DupF);
-  whichAnchor();
-} else if (collection.length === 3 || collection.length === 4) {
-  ChooseThreeCardSecond(hand2function, numbers2[1], numbers[1], Hand2DupF);
-  whichAnchor();
-} else if (collection.length === 5 || collection.length === 6) {
-  ChooseThreeCardSecond(hand3function, numbers2[2], numbers[2], Hand3DupF);
-  whichAnchor();
-} else if (collection.length === 7 || collection.length === 8) {
-  ChooseThreeCardSecond(hand4function, numbers2[3], numbers[3], Hand4DupF);
-  whichAnchor();
-} else if (collection.length === 9 || collection.length === 10) {
-  ChooseThreeCardSecond(hand5function, numbers2[4], numbers[4], Hand5DupF);
-  whichAnchor();
-} else if (collection.length === 11 || collection.length === 12) {
-  ChooseThreeCardSecond(hand6function, numbers2[5], numbers[5], Hand6DupF);
-  whichAnchor();
-} else if (collection.length === 13 || collection.length === 14) {
-  ChooseThreeCardSecond(hand7function, numbers2[6], numbers[6], Hand7DupF);
-  whichAnchor();
-} else if (collection.length === 15 || collection.length === 16) {
-  ChooseThreeCardSecond(hand8function, numbers2[7], numbers[7], Hand8DupF);
-  whichAnchor();
-} else if (collection.length === 17 || collection.length === 18) {
-  ChooseThreeCardSecond(hand9function, numbers2[8], numbers[8], Hand9DupF);
-  whichAnchor();
-} else if (collection.length === 19 || collection.length === 20) {
-  ChooseThreeCardSecond(hand10function, numbers2[9], numbers[9], Hand10DupF);
-  whichAnchor();
-} else if (collection.length === 21 || collection.length === 22) {
-  ChooseThreeCardSecond(hand11function, numbers2[10], numbers[10], Hand11DupF);
-  whichAnchor();
-} else if (collection.length === 23 || collection.length === 24) {
-  ChooseThreeCardSecond(hand12function, numbers2[11], numbers[11], Hand12DupF);
-  whichAnchor();
-} else if (collection.length === 25 || collection.length === 26) {
-  ChooseThreeCardSecond(hand13function, numbers2[12], numbers[12], Hand13DupF);
-  whichAnchor();
-} else if (collection.length === 27 || collection.length === 28) {
-  ChooseThreeCardSecond(hand14function, numbers2[13], numbers[13], Hand14DupF);
-  whichAnchor();
-} else {
-}
-}
+  let handChoicesFunction = handChoices;
+  let handChoicesFunction2 = handChoices2;
+  let handChoicesFunction3 = handChoices3;
+  let handChoicesFunction4 = handChoices4;
+  let handChoicesFunction5 = handChoices5;
+  let handChoicesFunction6 = handChoices6;
+  let handChoicesFunction7 = handChoices7;
+  let handChoicesFunction8 = handChoices8;
+  let handChoicesFunction9 = handChoices9;
+  let handChoicesFunction10 = handChoices10;
+  let handChoicesFunction11 = handChoices11;
+  let handChoicesFunction12 = handChoices12;
+  let handChoicesFunction13 = handChoices13;
+  let handChoicesFunction14 = handChoices14;
 
+  if (collection.length < 2) {
+    ChooseTwoCardThird(hand1function, 0, 1, handChoicesFunction);
+    whichAnchor();
+  } else if (collection.length === 2 || collection.length === 3) {
+    ChooseTwoCardThird(hand2function, 2, 3, handChoicesFunction2);
+    whichAnchor();
+  } else if (collection.length === 4 || collection.length === 5) {
+    ChooseTwoCardThird(hand3function, 4, 5, handChoicesFunction3);
+    whichAnchor();
+  } else if (collection.length === 6 || collection.length === 7) {
+    ChooseTwoCardThird(hand4function, 6, 7, handChoicesFunction4);
+    whichAnchor();
+  } else if (collection.length === 8 || collection.length === 9) {
+    ChooseTwoCardThird(hand5function, 8, 9, handChoicesFunction5);
+    whichAnchor();
+  } else if (collection.length === 10 || collection.length === 11) {
+    ChooseTwoCardThird(hand6function, 10, 11, handChoicesFunction6);
+    whichAnchor();
+  } else if (collection.length === 12 || collection.length === 13) {
+    ChooseTwoCardThird(hand7function, 12, 13, handChoicesFunction7);
+    whichAnchor();
+  } else if (collection.length === 14 || collection.length === 15) {
+    ChooseTwoCardThird(hand8function, 14, 15, handChoicesFunction8);
+    whichAnchor();
+  } else if (collection.length === 16 || collection.length === 17) {
+    ChooseTwoCardThird(hand9function, 16, 17, handChoicesFunction9);
+    whichAnchor();
+  } else if (collection.length === 18 || collection.length === 19) {
+    ChooseTwoCardThird(hand10function, 18, 19, handChoicesFunction10);
+    whichAnchor();
+  } else if (collection.length === 20 || collection.length === 21) {
+    ChooseTwoCardThird(hand11function, 20, 21, handChoicesFunction11);
+    whichAnchor();
+  } else if (collection.length === 22 || collection.length === 23) {
+    ChooseTwoCardThird(hand12function, 22, 23, handChoicesFunction12);
+    whichAnchor();
+  } else if (collection.length === 24 || collection.length === 25) {
+    ChooseTwoCardThird(hand13function, 24, 25, handChoicesFunction13);
+    whichAnchor();
+  } else if (collection.length === 26 || collection.length === 27) {
+    ChooseTwoCardThird(hand14function, 26, 27, handChoicesFunction14);
+    whichAnchor();
+  } else {
+  }
+}
 
 // Equation for just third card of each hand
 
-function ChooseTwoCardThird(hand, number, number2, dupHand) {
-
-    if (collection.length === 0) {
-      Hand1Dup.push("Three");
-    } else if (collection.length === 2) {
-      Hand2Dup.push("Three");
-    } else if (collection.length === 4) {
-      Hand3Dup.push("Three");
-    } else if (collection.length === 6) {
-      Hand4Dup.push("Three");
-    } else if (collection.length === 8) {
-      Hand5Dup.push("Three");
-    } else if (collection.length === 10) {
-      Hand6Dup.push("Three");
-    } else if (collection.length === 12) {
-      Hand7Dup.push("Three");
-    } else if (collection.length === 14) {
-      Hand8Dup.push("Three");
-    } else if (collection.length === 16) {
-      Hand9Dup.push("Three");
-    } else if (collection.length === 18) {
-      Hand10Dup.push("Three");
-    } else if (collection.length === 20) {
-      Hand11Dup.push("Three");
-    } else if (collection.length === 22) {
-      Hand12Dup.push("Three");
-    } else if (collection.length === 24) {
-      Hand13Dup.push("Three");
-    } else if (collection.length === 26) {
-      Hand14Dup.push("Three");
-    } else {
-    }   
-  
+function ChooseTwoCardThird(hand, number, number2, set2Array) {
+  let handDup = [];
+  let hand1 = hand[2];
+  let collection1 = collection[number];
   if (collection.length === number) {
+    handDup = handDup.concat(hand1[2]);
+    console.log("dup");
+    console.log(handDup);
+  } else {
+  }
+
+  if (set2Array.length === 2 ) {
+  } else if (collection.length === number) {
     collection.push(hand[2]);
-    window.alert("why");
+    set2Array.push("Check");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[2].suit}${hand[2].value}.png`;
     toAttach.appendChild(card1);
-     dupHand.push("Three");
     console.log("collection");
     console.log(collection);
-    console.log("check");
-    console.log(check);
-  } else if ( dupHand[0] === "Three") { 
-    console.log("Duplicate")
+  } else if (
+    collection1.suit === hand1.suit &&
+    collection1.value === hand1.value
+  ) {
+    console.log("duplicate");
   } else if (collection.length === number2) {
     collection.push(hand[2]);
+    set2Array.push("Check");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[2].suit}${hand[2].value}.png`;
     toAttach.appendChild(card1);
-    check.push("One");
     console.log("collection");
     console.log(collection);
-    console.log("check");
-    console.log(check);
+    getHand();
   } else {
   }
 }
@@ -1169,9 +1078,6 @@ function ChooseTwoCardThird(hand, number, number2, dupHand) {
 // Master Function Fourth card of all hands
 
 function ChooseTwoClickFourth() {
-  let numbers2 = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26];
-  let numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26];
-
   let hand1function = hand1;
   let hand2function = hand2;
   let hand3function = hand3;
@@ -1186,62 +1092,63 @@ function ChooseTwoClickFourth() {
   let hand12function = hand12;
   let hand13function = hand13;
   let hand14function = hand14;
-  let Hand1DupF = Hand1Dup;
-  let Hand2DupF = Hand2Dup;
-  let Hand3DupF = Hand3Dup;
-  let Hand4DupF = Hand4Dup;
-  let Hand5DupF = Hand5Dup;
-  let Hand6DupF = Hand6Dup;
-  let Hand7DupF = Hand7Dup;
-  let Hand8DupF = Hand8Dup;
-  let Hand9DupF = Hand9Dup;
-  let Hand10DupF = Hand10Dup;
-  let Hand11DupF = Hand11Dup;
-  let Hand12DupF = Hand12Dup;
-  let Hand13DupF = Hand13Dup;
-  let Hand14DupF = Hand14Dup;
+
+  let handChoicesFunction = handChoices;
+  let handChoicesFunction2 = handChoices2;
+  let handChoicesFunction3 = handChoices3;
+  let handChoicesFunction4 = handChoices4;
+  let handChoicesFunction5 = handChoices5;
+  let handChoicesFunction6 = handChoices6;
+  let handChoicesFunction7 = handChoices7;
+  let handChoicesFunction8 = handChoices8;
+  let handChoicesFunction9 = handChoices9;
+  let handChoicesFunction10 = handChoices10;
+  let handChoicesFunction11 = handChoices11;
+  let handChoicesFunction12 = handChoices12;
+  let handChoicesFunction13 = handChoices13;
+  let handChoicesFunction14 = handChoices14;
 
   if (collection.length < 2) {
-    ChooseThreeCardFourth(hand1function, numbers2[0], numbers[0], Hand1DupF);
+    ChooseTwoCardFourth(hand1function, 0, 1, handChoicesFunction);
     whichAnchor();
-  } else if (collection.length === 3 || collection.length === 4) {
-    ChooseThreeCardFourth(hand2function, numbers2[1], numbers[1], Hand2DupF);
+  } else if (collection.length === 2 || collection.length === 3) {
+    ChooseTwoCardFourth(hand2function, 2, 3, handChoicesFunction2);
     whichAnchor();
-  } else if (collection.length === 5 || collection.length === 6) {
-    ChooseThreeCardFourth(hand3function, numbers2[2], numbers[2], Hand3DupF);
+  } else if (collection.length === 4 || collection.length === 5) {
+    ChooseTwoCardFourth(hand3function, 4, 5, handChoicesFunction3);
     whichAnchor();
-  } else if (collection.length === 7 || collection.length === 8) {
-    ChooseThreeCardFourth(hand4function, numbers2[3], numbers[3], Hand4DupF);
+  } else if (collection.length === 6 || collection.length === 7) {
+    ChooseTwoCardFourth(hand4function, 6, 7, handChoicesFunction4);
     whichAnchor();
-  } else if (collection.length === 9 || collection.length === 10) {
-    ChooseThreeCardFourth(hand5function, numbers2[4], numbers[4], Hand5DupF);
+  } else if (collection.length === 8 || collection.length === 9) {
+    ChooseTwoCardFourth(hand5function, 8, 9, handChoicesFunction5);
     whichAnchor();
-  } else if (collection.length === 11 || collection.length === 12) {
-    ChooseThreeCardFourth(hand6function, numbers2[5], numbers[5], Hand6DupF);
+  } else if (collection.length === 10 || collection.length === 11) {
+    ChooseTwoCardFourth(hand6function, 10, 11, handChoicesFunction6);
     whichAnchor();
-  } else if (collection.length === 13 || collection.length === 14) {
-    ChooseThreeCardFourth(hand7function, numbers2[6], numbers[6], Hand7DupF);
+  } else if (collection.length === 12 || collection.length === 13) {
+    ChooseTwoCardFourth(hand7function, 12, 13, handChoicesFunction7);
     whichAnchor();
-  } else if (collection.length === 15 || collection.length === 16) {
-    ChooseThreeCardFourth(hand8function, numbers2[7], numbers[7], Hand8DupF);
+  } else if (collection.length === 14 || collection.length === 15) {
+    ChooseTwoCardFourth(hand8function, 14, 15, handChoicesFunction8);
     whichAnchor();
-  } else if (collection.length === 17 || collection.length === 18) {
-    ChooseThreeCardFourth(hand9function, numbers2[8], numbers[8], Hand9DupF);
+  } else if (collection.length === 16 || collection.length === 17) {
+    ChooseTwoCardFourth(hand9function, 16, 17, handChoicesFunction9);
     whichAnchor();
-  } else if (collection.length === 19 || collection.length === 20) {
-    ChooseThreeCardFourth(hand10function, numbers2[9], numbers[9], Hand10DupF);
+  } else if (collection.length === 18 || collection.length === 19) {
+    ChooseTwoCardFourth(hand10function, 18, 19, handChoicesFunction10);
     whichAnchor();
-  } else if (collection.length === 21 || collection.length === 22) {
-    ChooseThreeCardFourth(hand11function, numbers2[10], numbers[10], Hand11DupF);
+  } else if (collection.length === 20 || collection.length === 21) {
+    ChooseTwoCardFourth(hand11function, 20, 21, handChoicesFunction11);
     whichAnchor();
-  } else if (collection.length === 23 || collection.length === 24) {
-    ChooseThreeCardFourth(hand12function, numbers2[11], numbers[11], Hand12DupF);
+  } else if (collection.length === 22 || collection.length === 23) {
+    ChooseTwoCardFourth(hand12function, 22, 23, handChoicesFunction12);
     whichAnchor();
-  } else if (collection.length === 25 || collection.length === 26) {
-    ChooseThreeCardFourth(hand13function, numbers2[12], numbers[12], Hand13DupF);
+  } else if (collection.length === 24 || collection.length === 25) {
+    ChooseTwoCardFourth(hand13function, 24, 25, handChoicesFunction13);
     whichAnchor();
-  } else if (collection.length === 27 || collection.length === 28) {
-    ChooseThreeCardFourth(hand14function, numbers2[13], numbers[13], Hand14DupF);
+  } else if (collection.length === 26 || collection.length === 27) {
+    ChooseTwoCardFourth(hand14function, 26, 27, handChoicesFunction14);
     whichAnchor();
   } else {
   }
@@ -1249,76 +1156,50 @@ function ChooseTwoClickFourth() {
 
 // Equation for just fourth card of each hand
 
-function ChooseTwoCardFourth(hand, number, number2, dupHand) {
-  
-    if (collection.length === 0) {
-      Hand1Dup.push("Four");
-    } else if (collection.length === 2) {
-      Hand2Dup.push("Four");
-    } else if (collection.length === 4) {
-      Hand3Dup.push("Four");
-    } else if (collection.length === 6) {
-      Hand4Dup.push("Four");
-    } else if (collection.length === 8) {
-      Hand5Dup.push("Four");
-    } else if (collection.length === 10) {
-      Hand6Dup.push("Four");
-    } else if (collection.length === 12) {
-      Hand7Dup.push("Four");
-    } else if (collection.length === 14) {
-      Hand8Dup.push("Four");
-    } else if (collection.length === 16) {
-      Hand9Dup.push("Four");
-    } else if (collection.length === 18) {
-      Hand10Dup.push("Four");
-    } else if (collection.length === 20) {
-      Hand11Dup.push("Four");
-    } else if (collection.length === 22) {
-      Hand12Dup.push("Four");
-    } else if (collection.length === 24) {
-      Hand13Dup.push("Four");
-    } else if (collection.length === 26) {
-      Hand14Dup.push("Four");
-    } else {
-    }   
-  
-
+function ChooseTwoCardFourth(hand, number, number2, set2Array) {
+  let handDup = [];
+  let hand1 = hand[1];
+  let collection1 = collection[number];
   if (collection.length === number) {
+    handDup = handDup.concat(hand[3]);
+    console.log("dup");
+    console.log(handDup);
+  } else {
+  }
+
+  if (set2Array.length === 2) {
+  } else if (collection.length === number) {
     collection.push(hand[3]);
-    window.alert("why");
+    set2Array.push("Check");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[3].suit}${hand[3].value}.png`;
     toAttach.appendChild(card1);
-     Hand1Dup.push("Four");
+    handDup.push("Four");
     console.log("collection");
     console.log(collection);
-    console.log("check");
-    console.log(check);
-  } else if (dupHand[0] === "Four") { 
-    console.log("Duplicate")
+  } else if (
+    collection1.suit === hand1.suit &&
+    collection1.value === hand1.value
+  ) {
+    console.log("duplicate");
   } else if (collection.length === number2) {
     collection.push(hand[3]);
+    set2Array.push("Check");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[3].suit}${hand[3].value}.png`;
     toAttach.appendChild(card1);
-    check.push("One");
     console.log("collection");
     console.log(collection);
-    console.log("check");
-    console.log(check);
+    getHand();
   } else {
   }
 }
 
-
 // Master Function Fourth card of all hands
 
 function ChooseTwoClickFifth() {
-  let numbers2 = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26];
-  let numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26];
-
   let hand1function = hand1;
   let hand2function = hand2;
   let hand3function = hand3;
@@ -1333,133 +1214,112 @@ function ChooseTwoClickFifth() {
   let hand12function = hand12;
   let hand13function = hand13;
   let hand14function = hand14;
-  let Hand1DupF = Hand1Dup;
-  let Hand2DupF = Hand2Dup;
-  let Hand3DupF = Hand3Dup;
-  let Hand4DupF = Hand4Dup;
-  let Hand5DupF = Hand5Dup;
-  let Hand6DupF = Hand6Dup;
-  let Hand7DupF = Hand7Dup;
-  let Hand8DupF = Hand8Dup;
-  let Hand9DupF = Hand9Dup;
-  let Hand10DupF = Hand10Dup;
-  let Hand11DupF = Hand11Dup;
-  let Hand12DupF = Hand12Dup;
-  let Hand13DupF = Hand13Dup;
-  let Hand14DupF = Hand14Dup;
 
-    if (collection.length === 0) {
-      Hand1Dup.push("Five");
-    } else if (collection.length === 2) {
-      Hand2Dup.push("Five");
-    } else if (collection.length === 4) {
-      Hand3Dup.push("Five");
-    } else if (collection.length === 6) {
-      Hand4Dup.push("Five");
-    } else if (collection.length === 8) {
-      Hand5Dup.push("Five");
-    } else if (collection.length === 10) {
-      Hand6Dup.push("Five");
-    } else if (collection.length === 12) {
-      Hand7Dup.push("Five");
-    } else if (collection.length === 14) {
-      Hand8Dup.push("Five");
-    } else if (collection.length === 16) {
-      Hand9Dup.push("Five");
-    } else if (collection.length === 18) {
-      Hand10Dup.push("Five");
-    } else if (collection.length === 20) {
-      Hand11Dup.push("Five");
-    } else if (collection.length === 22) {
-      Hand12Dup.push("Five");
-    } else if (collection.length === 24) {
-      Hand13Dup.push("Five");
-    } else if (collection.length === 26) {
-      Hand14Dup.push("Five");
-    } else {
-    }   
-  
- 
+  let handChoicesFunction = handChoices;
+  let handChoicesFunction2 = handChoices2;
+  let handChoicesFunction3 = handChoices3;
+  let handChoicesFunction4 = handChoices4;
+  let handChoicesFunction5 = handChoices5;
+  let handChoicesFunction6 = handChoices6;
+  let handChoicesFunction7 = handChoices7;
+  let handChoicesFunction8 = handChoices8;
+  let handChoicesFunction9 = handChoices9;
+  let handChoicesFunction10 = handChoices10;
+  let handChoicesFunction11 = handChoices11;
+  let handChoicesFunction12 = handChoices12;
+  let handChoicesFunction13 = handChoices13;
+  let handChoicesFunction14 = handChoices14;
+
   if (collection.length < 2) {
-    ChooseThreeCardFifth(hand1function, numbers2[0], numbers[0], Hand1DupF);
+    ChooseTwoCardFifth(hand1function, 0, 1, handChoicesFunction);
     whichAnchor();
-  } else if (collection.length === 3 || collection.length === 4) {
-    ChooseThreeCardFifth(hand2function, numbers2[1], numbers[1], Hand2DupF);
+  } else if (collection.length === 2 || collection.length === 3) {
+    ChooseTwoCardFifth(hand2function, 2, 3, handChoicesFunction2);
     whichAnchor();
-  } else if (collection.length === 5 || collection.length === 6) {
-    ChooseThreeCardFifth(hand3function, numbers2[2], numbers[2], Hand3DupF);
+  } else if (collection.length === 4 || collection.length === 5) {
+    ChooseTwoCardFifth(hand3function, 4, 5, handChoicesFunction3);
     whichAnchor();
-  } else if (collection.length === 7 || collection.length === 8) {
-    ChooseThreeCardFifth(hand4function, numbers2[3], numbers[3], Hand4DupF);
+  } else if (collection.length === 6 || collection.length === 7) {
+    ChooseTwoCardFifth(hand4function, 6, 7, handChoicesFunction4);
     whichAnchor();
-  } else if (collection.length === 9 || collection.length === 10) {
-    ChooseThreeCardFifth(hand5function, numbers2[4], numbers[4], Hand5DupF);
+  } else if (collection.length === 8 || collection.length === 9) {
+    ChooseTwoCardFifth(hand5function, 8, 9, handChoicesFunction5);
     whichAnchor();
-  } else if (collection.length === 11 || collection.length === 12) {
-    ChooseThreeCardFifth(hand6function, numbers2[5], numbers[5], Hand6DupF);
+  } else if (collection.length === 10 || collection.length === 11) {
+    ChooseTwoCardFifth(hand6function, 10, 11, handChoicesFunction6);
     whichAnchor();
-  } else if (collection.length === 13 || collection.length === 14) {
-    ChooseThreeCardFifth(hand7function, numbers2[6], numbers[6], Hand7DupF);
+  } else if (collection.length === 12 || collection.length === 13) {
+    ChooseTwoCardFifth(hand7function, 12, 13, handChoicesFunction7);
     whichAnchor();
-  } else if (collection.length === 15 || collection.length === 16) {
-    ChooseThreeCardFifth(hand8function, numbers2[7], numbers[7], Hand8DupF);
+  } else if (collection.length === 14 || collection.length === 15) {
+    ChooseTwoCardFifth(hand8function, 14, 15, handChoicesFunction8);
     whichAnchor();
-  } else if (collection.length === 17 || collection.length === 18) {
-    ChooseThreeCardFifth(hand9function, numbers2[8], numbers[8], Hand9DupF);
+  } else if (collection.length === 16 || collection.length === 17) {
+    ChooseTwoCardFifth(hand9function, 16, 17, handChoicesFunction9);
     whichAnchor();
-  } else if (collection.length === 19 || collection.length === 20) {
-    ChooseThreeCardFifth(hand10function, numbers2[9], numbers[9], Hand10DupF);
+  } else if (collection.length === 18 || collection.length === 19) {
+    ChooseTwoCardFifth(hand10function, 18, 19, handChoicesFunction10);
     whichAnchor();
-  } else if (collection.length === 21 || collection.length === 22) {
-    ChooseThreeCardFifth(hand11function, numbers2[10], numbers[10], Hand11DupF);
+  } else if (collection.length === 20 || collection.length === 21) {
+    ChooseTwoCardFifth(hand11function, 20, 21, handChoicesFunction11);
     whichAnchor();
-  } else if (collection.length === 23 || collection.length === 24) {
-    ChooseThreeCardFifth(hand12function, numbers2[11], numbers[11], Hand12DupF);
+  } else if (collection.length === 22 || collection.length === 23) {
+    ChooseTwoCardFifth(hand12function, 22, 23, handChoicesFunction12);
     whichAnchor();
-  } else if (collection.length === 25 || collection.length === 26) {
-    ChooseThreeCardFifth(hand13function, numbers2[12], numbers[12], Hand13DupF);
+  } else if (collection.length === 24 || collection.length === 25) {
+    ChooseTwoCardFifth(hand13function, 24, 25, handChoicesFunction13);
     whichAnchor();
-  } else if (collection.length === 27 || collection.length === 28) {
-    ChooseThreeCardFifth(hand14function, numbers2[13], numbers[13], Hand14DupF);
+  } else if (collection.length === 26 || collection.length === 27) {
+    ChooseTwoCardFifth(hand14function, 26, 27, handChoicesFunction14);
     whichAnchor();
   } else {
   }
 }
-
 
 // Equation for just fifth card of fifth hand
 
-function ChooseTwoCardFifth(hand, number, number2, dupHand) {
-
+function ChooseTwoCardFifth(hand, number, number2, set2Array) {
+  let handDup = [];
+  let hand1 = hand[1];
+  let collection1 = collection[number];
   if (collection.length === number) {
+    handDup = handDup.concat(hand[4]);
+    console.log("dup");
+    console.log(handDup);
+  } else {
+  }
+
+  if (set2Array.length === 2) {
+  } else if (collection.length === number) {
     collection.push(hand[4]);
-    window.alert("why");
+    set2Array.push("Check");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[4].suit}${hand[4].value}.png`;
     toAttach.appendChild(card1);
-     dupHand.push("Five");
+    handDup.push("Five");
     console.log("collection");
     console.log(collection);
-    console.log("check");
-    console.log(check);
-  } else if (dupHand[0] === "Five") { 
-    console.log("Duplicate")
+    // console.log("check");
+    // console.log(check);
+  } else if (
+    collection1.suit === hand1.suit &&
+    collection1.value === hand1.value
+  ) {
+    console.log("duplicate");
   } else if (collection.length === number2) {
     collection.push(hand[4]);
+    set2Array.push("Check");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[4].suit}${hand[4].value}.png`;
     toAttach.appendChild(card1);
-    check.push("One");
     console.log("collection");
     console.log(collection);
-    console.log("check");
-    console.log(check);
+    getHand();
   } else {
   }
 }
-
 
 ////////////////////////////////////////////////
 
