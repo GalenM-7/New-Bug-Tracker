@@ -20,21 +20,14 @@ let hand14 = [];
 
 let collection = [];
 
-let collectionRevised1 = [];
-let collectionRevised2 = [];
-let collectionRevised3 = [];
-let collectionRevised4 = [];
-let collectionRevised5 = [];
-
 let valuesTest1 = [];
 let valuesTest2 = [];
+
 let evaluateSet1 = [];
 let evaluateSet2 = [];
 let evaluateSet3 = [];
 let evaluateSet4 = [];
 let evaluateSet5 = [];
-let end3 = [];
-//let FEnd3=[];
 
 let evalSuit = [];
 let storeBonuses = [];
@@ -100,16 +93,13 @@ let handChoices12 = [];
 let handChoices13 = [];
 let handChoices14 = [];
 
+let drawCounter = [];
+
+
+
 let check2 = [];
 
-//let dupCheck= [];
-
-let anchor = ["collectionAnchor1"];
-
-let HandSuit = [];
-let HandValue = [];
-
-//let anchorsDeleted = [];
+let anchor = [];
 
 //create deck and deal functions
 
@@ -267,9 +257,6 @@ deck.deal14();
 
 //show first hand,
 function hideall() {
-  let hideGetEval = document.getElementById("confirmButton");
-  hideGetEval.style.display = "none";
-
   let makeSwitch1 = document.getElementById("makeSwitch");
   makeSwitch1.style.display = "none";
 
@@ -282,356 +269,106 @@ function hideall() {
   let scoreHide = document.getElementById("score");
   scoreHide.style.display = "none";
 
-  let FE1 = document.getElementById("FinalEvaluation1");
+  let FE1 = document.getElementById("FinalEvaluation");
   FE1.style.display = "none";
-
-  let FE2 = document.getElementById("FinalEvaluation2");
-  FE2.style.display = "none";
-
-  let FE3 = document.getElementById("FinalEvaluation3");
-  FE3.style.display = "none";
-
-  let FE4 = document.getElementById("FinalEvaluation4");
-  FE4.style.display = "none";
-
-  let FE5 = document.getElementById("FinalEvaluation5");
-  FE5.style.display = "none";
-
-  let Bonuses = document.getElementById("BonusEvaluation");
-  Bonuses.style.display = "none";
 
   let AddUp = document.getElementById("AddItUp");
   AddUp.style.display = "none";
 
-  document
-    .getElementById("handAnchor1")
-    .addEventListener("click", ChooseTwoClickFirst);
-  document
-    .getElementById("handAnchor2")
-    .addEventListener("click", ChooseTwoClickSecond);
-  document
-    .getElementById("handAnchor3")
-    .addEventListener("click", ChooseTwoClickThird);
-  document
-    .getElementById("handAnchor4")
-    .addEventListener("click", ChooseTwoClickFourth);
-  document
-    .getElementById("handAnchor5")
-    .addEventListener("click", ChooseTwoClickFifth);
+  
 
-  document.getElementById("click1").addEventListener("click", getValue1);
-  document.getElementById("click2").addEventListener("click", getValue2);
-  document.getElementById("click3").addEventListener("click", getValue3);
-  document.getElementById("click4").addEventListener("click", getValue4);
-  document.getElementById("click5").addEventListener("click", getValue5);
-  document.getElementById("click6").addEventListener("click", getValue6);
-  document.getElementById("click7").addEventListener("click", getValue7);
-  document.getElementById("click8").addEventListener("click", getValue8);
-  document.getElementById("click9").addEventListener("click", getValue9);
-  document.getElementById("click10").addEventListener("click", getValue10);
-  document.getElementById("click11").addEventListener("click", getValue11);
-  document.getElementById("click12").addEventListener("click", getValue12);
-  document.getElementById("click13").addEventListener("click", getValue13);
-  document.getElementById("click14").addEventListener("click", getValue14);
-  document.getElementById("click15").addEventListener("click", getValue15);
-  document.getElementById("click16").addEventListener("click", getValue16);
-  document.getElementById("click17").addEventListener("click", getValue17);
-  document.getElementById("click18").addEventListener("click", getValue18);
-  document.getElementById("click19").addEventListener("click", getValue19);
-  document.getElementById("click20").addEventListener("click", getValue20);
-  document.getElementById("click21").addEventListener("click", getValue21);
-  document.getElementById("click22").addEventListener("click", getValue22);
-  document.getElementById("click23").addEventListener("click", getValue23);
-  document.getElementById("click24").addEventListener("click", getValue24);
-  document.getElementById("click25").addEventListener("click", getValue25);
-  document.getElementById("click26").addEventListener("click", getValue26);
-  document.getElementById("click27").addEventListener("click", getValue27);
-  document.getElementById("click28").addEventListener("click", getValue28);
+  document
+    .getElementById("collectionAnchor1")
+    .addEventListener("click", getValue1);
+  document
+    .getElementById("collectionAnchor2")
+    .addEventListener("click", getValue2);
+  document
+    .getElementById("collectionAnchor3")
+    .addEventListener("click", getValue3);
+  document
+    .getElementById("collectionAnchor4")
+    .addEventListener("click", getValue4);
+  document
+    .getElementById("collectionAnchor5")
+    .addEventListener("click", getValue5);
+  document
+    .getElementById("collectionAnchor6")
+    .addEventListener("click", getValue6);
+  document
+    .getElementById("collectionAnchor7")
+    .addEventListener("click", getValue7);
+  document
+    .getElementById("collectionAnchor8")
+    .addEventListener("click", getValue8);
+  document
+    .getElementById("collectionAnchor9")
+    .addEventListener("click", getValue9);
+  document
+    .getElementById("collectionAnchor10")
+    .addEventListener("click", getValue10);
+  document
+    .getElementById("collectionAnchor11")
+    .addEventListener("click", getValue11);
+  document
+    .getElementById("collectionAnchor12")
+    .addEventListener("click", getValue12);
+  document
+    .getElementById("collectionAnchor13")
+    .addEventListener("click", getValue13);
+  document
+    .getElementById("collectionAnchor14")
+    .addEventListener("click", getValue14);
+  document
+    .getElementById("collectionAnchor15")
+    .addEventListener("click", getValue15);
+  document
+    .getElementById("collectionAnchor16")
+    .addEventListener("click", getValue16);
+  document
+    .getElementById("collectionAnchor17")
+    .addEventListener("click", getValue17);
+  document
+    .getElementById("collectionAnchor18")
+    .addEventListener("click", getValue18);
+  document
+    .getElementById("collectionAnchor19")
+    .addEventListener("click", getValue19);
+  document
+    .getElementById("collectionAnchor20")
+    .addEventListener("click", getValue20);
+  document
+    .getElementById("collectionAnchor21")
+    .addEventListener("click", getValue21);
+  document
+    .getElementById("collectionAnchor22")
+    .addEventListener("click", getValue22);
+  document
+    .getElementById("collectionAnchor23")
+    .addEventListener("click", getValue23);
+  document
+    .getElementById("collectionAnchor24")
+    .addEventListener("click", getValue24);
+  document
+    .getElementById("collectionAnchor25")
+    .addEventListener("click", getValue25);
+  document
+    .getElementById("collectionAnchor26")
+    .addEventListener("click", getValue26);
+  document
+    .getElementById("collectionAnchor27")
+    .addEventListener("click", getValue27);
+  document
+    .getElementById("collectionAnchor28")
+    .addEventListener("click", getValue28);
 }
 
 window.onload = hideall();
 
-/*
-
-function changeRound(number) {
-  document.getElementById("round");
-  let roundCounter = document.createElement("p");
-  round.appendChild(roundCounter);
-  roundCounter.innerHTML = `This is Hand ${number}`;
-  roundCounter.setAttribute("style", "font-size: 50px");
-  roundCounter.style.textAlign = "right";
-  roundCounter.style.color = "white";
-}
-
-function seeAll() {
-  console.log(hand1);
-  console.log(hand2);
-  console.log(hand3);
-  console.log(hand4);
-  console.log(hand5);
-  console.log(hand6);
-  console.log(hand7);
-  console.log(hand8);
-  console.log(hand9);
-  console.log(hand10);
-  console.log(hand11);
-  console.log(hand12);
-  console.log(hand13);
-  console.log(hand14);
-  console.log(check2);
-}
-function clearRound() {
-  let anchorRound = document.getElementById("round");
-  while (anchorRound.firstChild) {
-    anchorRound.removeChild(anchorRound.firstChild);
-  }
-}
-
-function clearHand() {
-  let anchorHand1 = document.getElementById("handAnchor1");
-  while (anchorHand1.firstChild) {
-    anchorHand1.removeChild(anchorHand1.firstChild);
-  }
-  let anchorHand2 = document.getElementById("handAnchor2");
-  while (anchorHand2.firstChild) {
-    anchorHand2.removeChild(anchorHand2.firstChild);
-  }
-  let anchorHand3 = document.getElementById("handAnchor3");
-  while (anchorHand3.firstChild) {
-    anchorHand3.removeChild(anchorHand3.firstChild);
-  }
-  let anchorHand4 = document.getElementById("handAnchor4");
-  while (anchorHand4.firstChild) {
-    anchorHand4.removeChild(anchorHand4.firstChild);
-  }
-  let anchorHand5 = document.getElementById("handAnchor5");
-  while (anchorHand5.firstChild) {
-    anchorHand5.removeChild(anchorHand5.firstChild);
-  }
-}
-
-function showCard1(currentHand) {
-  document.getElementById("handAnchor1");
-  let h1c1 = document.createElement("img");
-  h1c1.src = `cardGameImages/${currentHand[0].suit}${currentHand[0].value}.png`;
-  handAnchor1.appendChild(h1c1);
-}
-
-function showCard2(currentHand) {
-  document.getElementById("handAnchor2");
-  let h1c1 = document.createElement("img");
-  h1c1.src = `cardGameImages/${currentHand[1].suit}${currentHand[1].value}.png`;
-  handAnchor2.appendChild(h1c1);
-}
-
-function showCard3(currentHand) {
-  document.getElementById("handAnchor3");
-  let h1c1 = document.createElement("img");
-  h1c1.src = `cardGameImages/${currentHand[2].suit}${currentHand[2].value}.png`;
-  handAnchor3.appendChild(h1c1);
-}
-
-function showCard4(currentHand) {
-  document.getElementById("handAnchor4");
-  let h1c1 = document.createElement("img");
-  h1c1.src = `cardGameImages/${currentHand[3].suit}${currentHand[3].value}.png`;
-  handAnchor4.appendChild(h1c1);
-}
-
-function showCard5(currentHand) {
-  document.getElementById("handAnchor5");
-  let h1c1 = document.createElement("img");
-  h1c1.src = `cardGameImages/${currentHand[4].suit}${currentHand[4].value}.png`;
-  handAnchor5.appendChild(h1c1);
-  check2.push("draw");
-}
-
-//function to differenciate which hand we are on/round we are on
-function getHand() {
-  window.alert("i hate this");
-  */
-  /*
-  let hand1function = hand1;
-  let hand2function = hand2;
-  let hand3function = hand3;
-  let hand4function = hand4;
-  let hand5function = hand5;
-  let hand6function = hand6;
-  let hand7function = hand7;
-  let hand8function = hand8;
-  let hand9function = hand9;
-  let hand10function = hand10;
-  let hand11function = hand11;
-  let hand12function = hand12;
-  let hand13function = hand13;
-  let hand14function = hand14;
-  /*
-
- // switch (collection.length) {
-   // case 0:
-    //  clearHand();
-      //showCard1(hand1function);
-     // showCard2(hand1function);
-     // showCard3(hand1function);
-     // showCard4(hand1function);
-     // showCard5(hand1function);
-     // changeRound("One");
-     // console.log(hand1function);
-     // break;
-    /*
-      case 2:
-      clearHand();
-      showCard1(hand2function);
-      showCard2(hand2function);
-      showCard3(hand2function);
-      showCard4(hand2function);
-      showCard5(hand2function);
-      clearRound();
-      changeRound("Two");
-      console.log(hand2function);
-      break;
-    case 4:
-      clearHand();
-      showCard1(hand3function);
-      showCard2(hand3function);
-      showCard3(hand3function);
-      showCard4(hand3function);
-      showCard5(hand3function);
-      clearRound();
-      changeRound("Three");
-      console.log(hand3function);
-      break;
-    case 6:
-      clearHand();
-      showCard1(hand4function);
-      showCard2(hand4function);
-      showCard3(hand4function);
-      showCard4(hand4function);
-      showCard5(hand4function);
-      clearRound();
-      changeRound("Four");
-      console.log(hand4function);
-      break;
-    case 8:
-      clearHand();
-      showCard1(hand5function);
-      showCard2(hand5function);
-      showCard3(hand5function);
-      showCard4(hand5function);
-      showCard5(hand5function);
-      clearRound();
-      changeRound("Five");
-      console.log(hand5function);
-      break;
-    case 10:
-      clearHand();
-      showCard1(hand6function);
-      showCard2(hand6function);
-      showCard3(hand6function);
-      showCard4(hand6function);
-      showCard5(hand6function);
-      clearRound();
-      changeRound("Six");
-      console.log(hand6function);
-      break;
-    case 12:
-      clearHand();
-      showCard1(hand7function);
-      showCard2(hand7function);
-      showCard3(hand7function);
-      showCard4(hand7function);
-      showCard5(hand7function);
-      clearRound();
-      changeRound("Seven");
-      console.log(hand7function);
-      break;
-    case 14:
-      clearHand();
-      showCard1(hand8function);
-      showCard2(hand8function);
-      showCard3(hand8function);
-      showCard4(hand8function);
-      showCard5(hand8function);
-      clearRound();
-      changeRound("Eight");
-      console.log(hand8function);
-      break;
-    case 16:
-      clearHand();
-      showCard1(hand9function);
-      showCard2(hand9function);
-      showCard3(hand9function);
-      showCard4(hand9function);
-      showCard5(hand9function);
-      clearRound();
-      changeRound("Nine");
-      console.log(hand9function);
-      break;
-    case 18:
-      clearHand();
-      showCard1(hand10function);
-      showCard2(hand10function);
-      showCard3(hand10function);
-      showCard4(hand10function);
-      showCard5(hand10function);
-      clearRound();
-      changeRound("Ten");
-      console.log(hand10function);
-      break;
-    case 20:
-      clearHand();
-      showCard1(hand11function);
-      showCard2(hand11function);
-      showCard3(hand11function);
-      showCard4(hand11function);
-      showCard5(hand11function);
-      clearRound();
-      changeRound("Eleven");
-      console.log(hand11function);
-      break;
-    case 22:
-      clearHand();
-      showCard1(hand12function);
-      showCard2(hand12function);
-      showCard3(hand12function);
-      showCard4(hand12function);
-      showCard5(hand12function);
-      clearRound();
-      changeRound("Twelve");
-      console.log(hand12function);
-      break;
-    case 24:
-      clearHand();
-      showCard1(hand13function);
-      showCard2(hand13function);
-      showCard3(hand13function);
-      showCard4(hand13function);
-      showCard5(hand13function);
-      clearRound();
-      changeRound("Thirteen");
-      console.log(hand13function);
-      break;
-    case 26:
-      clearHand();
-      showCard1(hand14function);
-      showCard2(hand14function);
-      showCard3(hand14function);
-      showCard4(hand14function);
-      showCard5(hand14function);
-      clearRound();
-      changeRound("Fourteen");
-      console.log(hand14function);
-      break;
-    */
-  //default:
-  // break;
-  // }
-  /*
-}
-
-//function for collectionAnchor variable used to attach image to "Your Collection"
 function whichAnchor() {
-  if (collection.length === 1) {
+  if (collection.length === 0) {
+    anchor[0] = "collectionAnchor1";
+  } else if (collection.length === 1) {
     anchor[0] = "collectionAnchor2";
   } else if (collection.length === 2) {
     anchor[0] = "collectionAnchor3";
@@ -689,726 +426,643 @@ function whichAnchor() {
   }
 }
 
-//Master Equation for first card all hands
+function clearHand() {
+  let anchorHand1 = document.getElementById("handAnchor1");
+  while (anchorHand1.firstChild) {
+    anchorHand1.removeChild(anchorHand1.firstChild);
+  }
+  let anchorHand2 = document.getElementById("handAnchor2");
+  while (anchorHand2.firstChild) {
+    anchorHand2.removeChild(anchorHand2.firstChild);
+  }
+  let anchorHand3 = document.getElementById("handAnchor3");
+  while (anchorHand3.firstChild) {
+    anchorHand3.removeChild(anchorHand3.firstChild);
+  }
+  let anchorHand4 = document.getElementById("handAnchor4");
+  while (anchorHand4.firstChild) {
+    anchorHand4.removeChild(anchorHand4.firstChild);
+  }
+  let anchorHand5 = document.getElementById("handAnchor5");
+  while (anchorHand5.firstChild) {
+    anchorHand5.removeChild(anchorHand5.firstChild);
+  }
+}
 
-function ChooseTwoClickFirst() {
-  */
-  /*
-  let hand1function = hand1;
-  let hand2function = hand2;
-  let hand3function = hand3;
-  let hand4function = hand4;
-  let hand5function = hand5;
-  let hand6function = hand6;
-  let hand7function = hand7;
-  let hand8function = hand8;
-  let hand9function = hand9;
-  let hand10function = hand10;
-  let hand11function = hand11;
-  let hand12function = hand12;
-  let hand13function = hand13;
-  let hand14function = hand14;
+function changeRound(number) {
+  document.getElementById("round");
+  let roundCounter = document.createElement("p");
+  round.appendChild(roundCounter);
+  roundCounter.innerHTML = `Hand ${number}`;
+  roundCounter.setAttribute("style", "font-size: 50px");
+  roundCounter.style.textAlign = "right";
+  roundCounter.style.color = "white";
+}
 
-  let handChoicesFunction = handChoices;
-  let handChoicesFunction2 = handChoices2;
-  let handChoicesFunction3 = handChoices3;
-  let handChoicesFunction4 = handChoices4;
-  let handChoicesFunction5 = handChoices5;
-  let handChoicesFunction6 = handChoices6;
-  let handChoicesFunction7 = handChoices7;
-  let handChoicesFunction8 = handChoices8;
-  let handChoicesFunction9 = handChoices9;
-  let handChoicesFunction10 = handChoices10;
-  let handChoicesFunction11 = handChoices11;
-  let handChoicesFunction12 = handChoices12;
-  let handChoicesFunction13 = handChoices13;
-  let handChoicesFunction14 = handChoices14;
+function clearRound() {
+  let anchorRound = document.getElementById("round");
+  while (anchorRound.firstChild) {
+    anchorRound.removeChild(anchorRound.firstChild);
+  }
+}
 
-  */
+function showCard1(currentHand) {
+  document.getElementById("handAnchor1");
+  let h1c1 = document.createElement("img");
+  h1c1.src = `cardGameImages/${currentHand[0].suit}${currentHand[0].value}.png`;
+  handAnchor1.appendChild(h1c1);
+}
 
-  if (collection.length < 2) {
-    ChooseTwoCardFirst(hand1, 0, 1, handChoices);
-    whichAnchor();
-  } else if (collection.length === 2 || collection.length === 3) {
-    ChooseTwoCardFirst(hand2, 2, 3, handChoices2);
-    whichAnchor();
-  } else if (collection.length === 4 || collection.length === 5) {
-    ChooseTwoCardFirst(hand3, 4, 5, handChoices3);
-    whichAnchor();
-  } else if (collection.length === 6 || collection.length === 7) {
-    ChooseTwoCardFirst(hand4, 6, 7, handChoices4);
-    whichAnchor();
-  } else if (collection.length === 8 || collection.length === 9) {
-    ChooseTwoCardFirst(hand5, 8, 9, handChoices5);
-    whichAnchor();
-  } else if (collection.length === 10 || collection.length === 11) {
-    ChooseTwoCardFirst(hand6, 10, 11, handChoices6);
-    whichAnchor();
-  } else if (collection.length === 12 || collection.length === 13) {
-    ChooseTwoCardFirst(hand7, 12, 13, handChoices7);
-    whichAnchor();
-  } else if (collection.length === 14 || collection.length === 15) {
-    ChooseTwoCardFirst(hand8, 14, 15, handChoices8);
-    whichAnchor();
-  } else if (collection.length === 16 || collection.length === 17) {
-    ChooseTwoCardFirst(hand9, 16, 17, handChoices9);
-    whichAnchor();
-  } else if (collection.length === 18 || collection.length === 19) {
-    ChooseTwoCardFirst(hand10, 18, 19, handChoices10);
-    whichAnchor();
-  } else if (collection.length === 20 || collection.length === 21) {
-    ChooseTwoCardFirst(hand11, 20, 21, handChoices11);
-    whichAnchor();
-  } else if (collection.length === 22 || collection.length === 23) {
-    ChooseTwoCardFirst(hand12, 22, 23, handChoices12);
-    whichAnchor();
-  } else if (collection.length === 24 || collection.length === 25) {
-    ChooseTwoCardFirst(hand13, 24, 25, handChoices13);
-    whichAnchor();
-  } else if (collection.length === 26 || collection.length === 27) {
-    ChooseTwoCardFirst(hand14, 26, 27, handChoices14);
-    whichAnchor();
+function showCard2(currentHand) {
+  document.getElementById("handAnchor2");
+  let h1c1 = document.createElement("img");
+  h1c1.src = `cardGameImages/${currentHand[1].suit}${currentHand[1].value}.png`;
+  handAnchor2.appendChild(h1c1);
+}
+
+function showCard3(currentHand) {
+  document.getElementById("handAnchor3");
+  let h1c1 = document.createElement("img");
+  h1c1.src = `cardGameImages/${currentHand[2].suit}${currentHand[2].value}.png`;
+  handAnchor3.appendChild(h1c1);
+}
+
+function showCard4(currentHand) {
+  document.getElementById("handAnchor4");
+  let h1c1 = document.createElement("img");
+  h1c1.src = `cardGameImages/${currentHand[3].suit}${currentHand[3].value}.png`;
+  handAnchor4.appendChild(h1c1);
+}
+
+function showCard5(currentHand) {
+  document.getElementById("handAnchor5");
+  let h1c1 = document.createElement("img");
+  h1c1.src = `cardGameImages/${currentHand[4].suit}${currentHand[4].value}.png`;
+  handAnchor5.appendChild(h1c1);
+  check2.push("draw");
+}
+
+function getHand() {
+  if (collection.length === 0 && drawCounter.length === 0) {
+    changeRound("One");
+    showCard1(hand1);
+    showCard2(hand1);
+    showCard3(hand1);
+    showCard4(hand1);
+    showCard5(hand1);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 2 && drawCounter.length === 1) {
+    clearHand();
+    clearRound();
+    changeRound("Two");
+    showCard1(hand2);
+    showCard2(hand2);
+    showCard3(hand2);
+    showCard4(hand2);
+    showCard5(hand2);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 4 && drawCounter.length === 2) {
+    clearHand();
+    clearRound();
+    changeRound("Three");
+    showCard1(hand3);
+    showCard2(hand3);
+    showCard3(hand3);
+    showCard4(hand3);
+    showCard5(hand3);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 6 && drawCounter.length === 3) {
+    clearHand();
+    clearRound();
+    changeRound("Four");
+    showCard1(hand4);
+    showCard2(hand4);
+    showCard3(hand4);
+    showCard4(hand4);
+    showCard5(hand4);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 8 && drawCounter.length === 4) {
+    clearHand();
+    clearRound();
+    changeRound("Five");
+    showCard1(hand5);
+    showCard2(hand5);
+    showCard3(hand5);
+    showCard4(hand5);
+    showCard5(hand5);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 10 && drawCounter.length === 5) {
+    clearHand();
+    clearRound();
+    changeRound("Six");
+    showCard1(hand6);
+    showCard2(hand6);
+    showCard3(hand6);
+    showCard4(hand6);
+    showCard5(hand6);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 12 && drawCounter.length === 6) {
+    clearHand();
+    clearRound();
+    changeRound("Seven");
+    showCard1(hand7);
+    showCard2(hand7);
+    showCard3(hand7);
+    showCard4(hand7);
+    showCard5(hand7);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 14 && drawCounter.length === 7) {
+    clearHand();
+    clearRound();
+    changeRound("Eight");
+    showCard1(hand8);
+    showCard2(hand8);
+    showCard3(hand8);
+    showCard4(hand8);
+    showCard5(hand8);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 16 && drawCounter.length === 8) {
+    clearHand();
+    clearRound();
+    changeRound("Nine");
+    showCard1(hand9);
+    showCard2(hand9);
+    showCard3(hand9);
+    showCard4(hand9);
+    showCard5(hand9);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 18 && drawCounter.length === 9) {
+    clearHand();
+    clearRound();
+    changeRound("Ten");
+    showCard1(hand10);
+    showCard2(hand10);
+    showCard3(hand10);
+    showCard4(hand10);
+    showCard5(hand10);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 20 && drawCounter.length === 10) {
+    clearHand();
+    clearRound();
+    changeRound("Eleven");
+    showCard1(hand11);
+    showCard2(hand11);
+    showCard3(hand11);
+    showCard4(hand11);
+    showCard5(hand11);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 22 && drawCounter.length === 11) {
+    clearHand();
+    clearRound();
+    changeRound("Twelve");
+    showCard1(hand12);
+    showCard2(hand12);
+    showCard3(hand12);
+    showCard4(hand12);
+    showCard5(hand12);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 24 && drawCounter.length === 12) {
+    clearHand();
+    clearRound();
+    changeRound("Thirteen");
+    showCard1(hand13);
+    showCard2(hand13);
+    showCard3(hand13);
+    showCard4(hand13);
+    showCard5(hand13);
+    drawCounter.push("draw");
+    console.log("collection length");
+    console.log(collection.length);
+    console.log(drawCounter.length);
+  } else if (collection.length === 26 && drawCounter.length === 13) {
+    clearHand();
+    clearRound();
+    changeRound("Fourteen");
+    showCard1(hand14);
+    showCard2(hand14);
+    showCard3(hand14);
+    showCard4(hand14);
+    showCard5(hand14);
+    drawCounter.push("draw");
   } else {
   }
 }
 
-// Equation for just first card of each hand
+function seeAll() {
+  console.log("1");
+  console.log(handChoices);
+  console.log("2");
+  console.log(handChoices2);
+  console.log("3");
+  console.log(handChoices3);
+}
 
-function ChooseTwoCardFirst(hand, number, number2, handCheck) {
-  let handCheck = [
-    "false",
-    "false",
-    "false",
-    "false",
-    "false",
-    "false",
-    "false",
-    "false",
-    "false",
-    "false",
-    "false",
-    "false",
-    "false",
-    "false",
-  ];
-
-  if (handCheck.length > 1) {
-    console.log("limit 2 reached");
-    console.log("handCheck");
-    console.log(handCheck);
-  } else if (collection.length === number) {
-    collection.push(hand[0]);
-    //handCheck.splice(number, 1, "true");
-    let toAttach = document.getElementById(anchor);
-    let card1 = document.createElement("img");
-    card1.src = `cardGameImages/${hand[0].suit}${hand[0].value}.png`;
-    toAttach.appendChild(card1);
-    //console.log(handCheck)
-    //console.log(handCheck[number]);
-    console.log("handCheck");
-    console.log(handCheck);
-  } else if (collection.length === number2 && handCheck.length < 2) {
-    collection.push(hand[0]);
-    //handCheck.splice(number, 1, "true");
-    let toAttach = document.getElementById(anchor);
-    let card1 = document.createElement("img");
-    card1.src = `cardGameImages/${hand[0].suit}${hand[0].value}.png`;
-    toAttach.appendChild(card1);
+function addCard1() {
+  if (handChoices.length < 2 && drawCounter.length === 1) {
+    whichAnchor();
+    Card1(handChoices, hand1, 0, 1);
+  } else if (handChoices2.length < 2 && drawCounter.length === 2) {
+    whichAnchor();
+    Card1(handChoices2, hand2, 2, 3);
+  } else if (handChoices3.length < 2 && drawCounter.length === 3) {
+    whichAnchor();
+    Card1(handChoices3, hand3, 4, 5);
+  } else if (handChoices4.length < 2 && drawCounter.length === 4) {
+    whichAnchor();
+    Card1(handChoices4, hand4, 6, 7);
+  } else if (handChoices5.length < 2 && drawCounter.length === 5) {
+    whichAnchor();
+    Card1(handChoices5, hand5, 8, 9);
+  } else if (handChoices6.length < 2 && drawCounter.length === 6) {
+    whichAnchor();
+    Card1(handChoices6, hand6, 10, 11);
+  } else if (handChoices7.length < 2 && drawCounter.length === 7) {
+    whichAnchor();
+    Card1(handChoices7, hand7, 12, 13);
+  } else if (handChoices8.length < 2 && drawCounter.length === 8) {
+    whichAnchor();
+    Card1(handChoices8, hand8, 14, 15);
+  } else if (handChoices9.length < 2 && drawCounter.length === 9) {
+    whichAnchor();
+    Card1(handChoices9, hand9, 16, 17);
+  } else if (handChoices10.length < 2 && drawCounter.length === 10) {
+    whichAnchor();
+    Card1(handChoices10, hand10, 18, 19);
+  } else if (handChoices11.length < 2 && drawCounter.length === 11) {
+    whichAnchor();
+    Card1(handChoices11, hand11, 20, 21);
+  } else if (handChoices12.length < 2 && drawCounter.length === 12) {
+    whichAnchor();
+    Card1(handChoices12, hand12, 22, 23);
+  } else if (handChoices13.length < 2 && drawCounter.length === 13) {
+    whichAnchor();
+    Card1(handChoices13, hand13, 24, 25);
+  } else if (handChoices14.length < 2 && drawCounter.length === 14) {
+    whichAnchor();
+    Card1(handChoices14, hand14, 26, 27);
   } else {
   }
 }
-/*
-  if (set2Array.length === 2) {
-  } else if (collection.length === number) {
-    collection.push(hand[0]);
-    set2Array.push("One");
-    //HandSuit.push("One");
-    window.alert("why");
-    let toAttach = document.getElementById(anchor);
-    let card1 = document.createElement("img");
-    card1.src = `cardGameImages/${hand[0].suit}${hand[0].value}.png`;
-    toAttach.appendChild(card1);
-    console.log("collection");
-    console.log(collection);
-  } else if (
-    collection1.suit === hand1.suit &&
-    collection1.value === hand1.value
-  ) {
+
+function Card1(choices, hand, number, number2) {
+  if (choices[0] === "card1") {
     console.log("duplicate");
+    console.log(choices);
+  } else if (collection.length === number) {
+    collection.push(hand[0]);
+    choices.push("card1");
+    console.log(choices);
+    let toAttach = document.getElementById(anchor);
+    let card1 = document.createElement("img");
+    card1.src = `cardGameImages/${hand[0].suit}${hand[0].value}.png`;
+    toAttach.appendChild(card1);
+    console.log("anchor");
+    console.log(anchor);
   } else if (collection.length === number2) {
     collection.push(hand[0]);
-    set2Array.push("One");
+    choices.push("card1");
+    console.log(choices);
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[0].suit}${hand[0].value}.png`;
     toAttach.appendChild(card1);
-    console.log("collection");
-    console.log(collection);
-
-
-  
-    getHand();
-    
-  } else {
-  }*/
-
-// Master Equation second card of all hands
-
-function ChooseTwoClickSecond() {
-  let hand1function = hand1;
-  let hand2function = hand2;
-  let hand3function = hand3;
-  let hand4function = hand4;
-  let hand5function = hand5;
-  let hand6function = hand6;
-  let hand7function = hand7;
-  let hand8function = hand8;
-  let hand9function = hand9;
-  let hand10function = hand10;
-  let hand11function = hand11;
-  let hand12function = hand12;
-  let hand13function = hand13;
-  let hand14function = hand14;
-
-  let handChoicesFunction = handChoices;
-  let handChoicesFunction2 = handChoices2;
-  let handChoicesFunction3 = handChoices3;
-  let handChoicesFunction4 = handChoices4;
-  let handChoicesFunction5 = handChoices5;
-  let handChoicesFunction6 = handChoices6;
-  let handChoicesFunction7 = handChoices7;
-  let handChoicesFunction8 = handChoices8;
-  let handChoicesFunction9 = handChoices9;
-  let handChoicesFunction10 = handChoices10;
-  let handChoicesFunction11 = handChoices11;
-  let handChoicesFunction12 = handChoices12;
-  let handChoicesFunction13 = handChoices13;
-  let handChoicesFunction14 = handChoices14;
-
-  if (collection.length < 2) {
-    ChooseTwoCardSecond(hand1function, 0, 1, handChoicesFunction);
-    whichAnchor();
-  } else if (collection.length === 2 || collection.length === 3) {
-    ChooseTwoCardSecond(hand2function, 2, 3, handChoicesFunction2);
-    whichAnchor();
-  } else if (collection.length === 4 || collection.length === 5) {
-    ChooseTwoCardSecond(hand3function, 4, 5, handChoicesFunction3);
-    whichAnchor();
-  } else if (collection.length === 6 || collection.length === 7) {
-    ChooseTwoCardSecond(hand4function, 6, 7, handChoicesFunction4);
-    whichAnchor();
-  } else if (collection.length === 8 || collection.length === 9) {
-    ChooseTwoCardSecond(hand5function, 8, 9, handChoicesFunction5);
-    whichAnchor();
-  } else if (collection.length === 10 || collection.length === 11) {
-    ChooseTwoCardSecond(hand6function, 10, 11, handChoicesFunction6);
-    whichAnchor();
-  } else if (collection.length === 12 || collection.length === 13) {
-    ChooseTwoCardSecond(hand7function, 12, 13, handChoicesFunction7);
-    whichAnchor();
-  } else if (collection.length === 14 || collection.length === 15) {
-    ChooseTwoCardSecond(hand8function, 14, 15, handChoicesFunction8);
-    whichAnchor();
-  } else if (collection.length === 16 || collection.length === 17) {
-    ChooseTwoCardSecond(hand9function, 16, 17, handChoicesFunction9);
-    whichAnchor();
-  } else if (collection.length === 18 || collection.length === 19) {
-    ChooseTwoCardSecond(hand10function, 18, 19, handChoicesFunction10);
-    whichAnchor();
-  } else if (collection.length === 20 || collection.length === 21) {
-    ChooseTwoCardSecond(hand11function, 20, 21, handChoicesFunction11);
-    whichAnchor();
-  } else if (collection.length === 22 || collection.length === 23) {
-    ChooseTwoCardSecond(hand12function, 22, 23, handChoicesFunction12);
-    whichAnchor();
-  } else if (collection.length === 24 || collection.length === 25) {
-    ChooseTwoCardSecond(hand13function, 24, 25, handChoicesFunction13);
-    whichAnchor();
-  } else if (collection.length === 26 || collection.length === 27) {
-    ChooseTwoCardSecond(hand14function, 26, 27, handChoicesFunction14);
-    whichAnchor();
+    console.log("anchor");
+    console.log(anchor);
   } else {
   }
 }
 
-// Equation for just second card of each hand
-
-function ChooseTwoCardSecond(hand, number, number2, set2Array) {
-  let handDup = [];
-  let hand1 = hand[1];
-  let collection1 = collection[number];
-  if (collection.length === number) {
-    handDup = handDup.concat(hand[1]);
-    console.log("dup");
-    console.log(handDup);
+function addCard2() {
+  if (handChoices.length < 2 && drawCounter.length === 1) {
+    whichAnchor();
+    Card2(handChoices, hand1, 0, 1);
+  } else if (handChoices2.length < 2 && drawCounter.length === 2) {
+    whichAnchor();
+    Card2(handChoices2, hand2, 2, 3);
+  } else if (handChoices3.length < 2 && drawCounter.length === 3) {
+    whichAnchor();
+    Card2(handChoices3, hand3, 4, 5);
+  } else if (handChoices4.length < 2 && drawCounter.length === 4) {
+    whichAnchor();
+    Card2(handChoices4, hand4, 6, 7);
+  } else if (handChoices5.length < 2 && drawCounter.length === 5) {
+    whichAnchor();
+    Card2(handChoices5, hand5, 8, 9);
+  } else if (handChoices6.length < 2 && drawCounter.length === 6) {
+    whichAnchor();
+    Card2(handChoices6, hand6, 10, 11);
+  } else if (handChoices7.length < 2 && drawCounter.length === 7) {
+    whichAnchor();
+    Card2(handChoices7, hand7, 12, 13);
+  } else if (handChoices8.length < 2 && drawCounter.length === 8) {
+    whichAnchor();
+    Card2(handChoices8, hand8, 14, 15);
+  } else if (handChoices9.length < 2 && drawCounter.length === 9) {
+    whichAnchor();
+    Card2(handChoices9, hand9, 16, 17);
+  } else if (handChoices10.length < 2 && drawCounter.length === 10) {
+    whichAnchor();
+    Card2(handChoices10, hand10, 18, 19);
+  } else if (handChoices11.length < 2 && drawCounter.length === 11) {
+    whichAnchor();
+    Card2(handChoices11, hand11, 20, 21);
+  } else if (handChoices12.length < 2 && drawCounter.length === 12) {
+    whichAnchor();
+    Card2(handChoices12, hand12, 22, 23);
+  } else if (handChoices13.length < 2 && drawCounter.length === 13) {
+    whichAnchor();
+    Card2(handChoices13, hand13, 24, 25);
+  } else if (handChoices14.length < 2 && drawCounter.length === 14) {
+    whichAnchor();
+    Card2(handChoices14, hand14, 26, 27);
   } else {
   }
+}
 
-  if (set2Array.length === 2) {
+function Card2(choices, hand, number, number2) {
+  if (choices[0] === "card2" || collection.length > number2) {
+    console.log("duplicate");
   } else if (collection.length === number) {
     collection.push(hand[1]);
-    set2Array.push("Check");
-    window.alert("why");
+    choices.push("card2");
+    console.log(choices);
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[1].suit}${hand[1].value}.png`;
     toAttach.appendChild(card1);
-    console.log("collection");
-    console.log(collection);
-    //console.log("check");
-    //console.log(check);
-  } else if (
-    collection1.suit === hand1.suit &&
-    collection1.value === hand1.value
-  ) {
-    console.log("duplicate");
+    console.log("anchor");
+        console.log(anchor);
+
   } else if (collection.length === number2) {
     collection.push(hand[1]);
-    set2Array.push("Check");
+    choices.push("card2");
+    console.log(choices);
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[1].suit}${hand[1].value}.png`;
     toAttach.appendChild(card1);
-    //check.push("Two");
-    console.log("collection");
-    console.log(collection);
-    getHand();
-    //console.log("check");
-    //console.log(check);
+    console.log("anchor");
+    console.log(anchor);
   } else {
   }
 }
 
-// Master Function Third card of all hands
-
-function ChooseTwoClickThird() {
-  let hand1function = hand1;
-  let hand2function = hand2;
-  let hand3function = hand3;
-  let hand4function = hand4;
-  let hand5function = hand5;
-  let hand6function = hand6;
-  let hand7function = hand7;
-  let hand8function = hand8;
-  let hand9function = hand9;
-  let hand10function = hand10;
-  let hand11function = hand11;
-  let hand12function = hand12;
-  let hand13function = hand13;
-  let hand14function = hand14;
-
-  let handChoicesFunction = handChoices;
-  let handChoicesFunction2 = handChoices2;
-  let handChoicesFunction3 = handChoices3;
-  let handChoicesFunction4 = handChoices4;
-  let handChoicesFunction5 = handChoices5;
-  let handChoicesFunction6 = handChoices6;
-  let handChoicesFunction7 = handChoices7;
-  let handChoicesFunction8 = handChoices8;
-  let handChoicesFunction9 = handChoices9;
-  let handChoicesFunction10 = handChoices10;
-  let handChoicesFunction11 = handChoices11;
-  let handChoicesFunction12 = handChoices12;
-  let handChoicesFunction13 = handChoices13;
-  let handChoicesFunction14 = handChoices14;
-
-  if (collection.length < 2) {
-    ChooseTwoCardThird(hand1function, 0, 1, handChoicesFunction);
+function addCard3() {
+  if (handChoices.length < 2 && drawCounter.length === 1) {
     whichAnchor();
-  } else if (collection.length === 2 || collection.length === 3) {
-    ChooseTwoCardThird(hand2function, 2, 3, handChoicesFunction2);
+    Card3(handChoices, hand1, 0, 1);
+  } else if (handChoices2.length < 2 && drawCounter.length === 2) {
     whichAnchor();
-  } else if (collection.length === 4 || collection.length === 5) {
-    ChooseTwoCardThird(hand3function, 4, 5, handChoicesFunction3);
+    Card3(handChoices2, hand2, 2, 3);
+  } else if (handChoices3.length < 2 && drawCounter.length === 3) {
     whichAnchor();
-  } else if (collection.length === 6 || collection.length === 7) {
-    ChooseTwoCardThird(hand4function, 6, 7, handChoicesFunction4);
+    Card3(handChoices3, hand3, 4, 5);
+  } else if (handChoices4.length < 2 && drawCounter.length === 4) {
     whichAnchor();
-  } else if (collection.length === 8 || collection.length === 9) {
-    ChooseTwoCardThird(hand5function, 8, 9, handChoicesFunction5);
+    Card3(handChoices4, hand4, 6, 7);
+  } else if (handChoices5.length < 2 && drawCounter.length === 5) {
     whichAnchor();
-  } else if (collection.length === 10 || collection.length === 11) {
-    ChooseTwoCardThird(hand6function, 10, 11, handChoicesFunction6);
+    Card3(handChoices5, hand5, 8, 9);
+  } else if (handChoices6.length < 2 && drawCounter.length === 6) {
     whichAnchor();
-  } else if (collection.length === 12 || collection.length === 13) {
-    ChooseTwoCardThird(hand7function, 12, 13, handChoicesFunction7);
+    Card3(handChoices6, hand6, 10, 11);
+  } else if (handChoices7.length < 2 && drawCounter.length === 7) {
     whichAnchor();
-  } else if (collection.length === 14 || collection.length === 15) {
-    ChooseTwoCardThird(hand8function, 14, 15, handChoicesFunction8);
+    Card3(handChoices7, hand7, 12, 13);
+  } else if (handChoices8.length < 2 && drawCounter.length === 8) {
     whichAnchor();
-  } else if (collection.length === 16 || collection.length === 17) {
-    ChooseTwoCardThird(hand9function, 16, 17, handChoicesFunction9);
+    Card3(handChoices8, hand8, 14, 15);
+  } else if (handChoices9.length < 2 && drawCounter.length === 9) {
     whichAnchor();
-  } else if (collection.length === 18 || collection.length === 19) {
-    ChooseTwoCardThird(hand10function, 18, 19, handChoicesFunction10);
+    Card3(handChoices9, hand9, 16, 17);
+  } else if (handChoices10.length < 2 && drawCounter.length === 10) {
     whichAnchor();
-  } else if (collection.length === 20 || collection.length === 21) {
-    ChooseTwoCardThird(hand11function, 20, 21, handChoicesFunction11);
+    Card3(handChoices10, hand10, 18, 19);
+  } else if (handChoices11.length < 2 && drawCounter.length === 11) {
     whichAnchor();
-  } else if (collection.length === 22 || collection.length === 23) {
-    ChooseTwoCardThird(hand12function, 22, 23, handChoicesFunction12);
+    Card3(handChoices11, hand11, 20, 21);
+  } else if (handChoices12.length < 2 && drawCounter.length === 12) {
     whichAnchor();
-  } else if (collection.length === 24 || collection.length === 25) {
-    ChooseTwoCardThird(hand13function, 24, 25, handChoicesFunction13);
+    Card3(handChoices12, hand12, 22, 23);
+  } else if (handChoices13.length < 2 && drawCounter.length === 13) {
     whichAnchor();
-  } else if (collection.length === 26 || collection.length === 27) {
-    ChooseTwoCardThird(hand14function, 26, 27, handChoicesFunction14);
+    Card3(handChoices13, hand13, 24, 25);
+  } else if (handChoices14.length < 2 && drawCounter.length === 14) {
     whichAnchor();
+    Card3(handChoices14, hand14, 26, 27);
   } else {
   }
 }
 
-// Equation for just third card of each hand
-
-function ChooseTwoCardThird(hand, number, number2, set2Array) {
-  let handDup = [];
-  let hand1 = hand[2];
-  let collection1 = collection[number];
-  if (collection.length === number) {
-    handDup = handDup.concat(hand1[2]);
-    console.log("dup");
-    console.log(handDup);
-  } else {
-  }
-
-  if (set2Array.length === 2) {
+function Card3(choices, hand, number, number2) {
+  if (choices[0] === "card3") {
+    console.log("duplicate");
   } else if (collection.length === number) {
     collection.push(hand[2]);
-    set2Array.push("Check");
+    choices.push("card3");
+    console.log(choices);
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[2].suit}${hand[2].value}.png`;
     toAttach.appendChild(card1);
-    console.log("collection");
-    console.log(collection);
-  } else if (
-    collection1.suit === hand1.suit &&
-    collection1.value === hand1.value
-  ) {
-    console.log("duplicate");
+    console.log("anchor");
+    console.log(anchor);
   } else if (collection.length === number2) {
     collection.push(hand[2]);
-    set2Array.push("Check");
+    choices.push("card3");
+    console.log(choices);
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[2].suit}${hand[2].value}.png`;
     toAttach.appendChild(card1);
-    console.log("collection");
-    console.log(collection);
-    getHand();
+    console.log("anchor");
+    console.log(anchor);
   } else {
   }
 }
 
-// Master Function Fourth card of all hands
-
-function ChooseTwoClickFourth() {
-  let hand1function = hand1;
-  let hand2function = hand2;
-  let hand3function = hand3;
-  let hand4function = hand4;
-  let hand5function = hand5;
-  let hand6function = hand6;
-  let hand7function = hand7;
-  let hand8function = hand8;
-  let hand9function = hand9;
-  let hand10function = hand10;
-  let hand11function = hand11;
-  let hand12function = hand12;
-  let hand13function = hand13;
-  let hand14function = hand14;
-
-  let handChoicesFunction = handChoices;
-  let handChoicesFunction2 = handChoices2;
-  let handChoicesFunction3 = handChoices3;
-  let handChoicesFunction4 = handChoices4;
-  let handChoicesFunction5 = handChoices5;
-  let handChoicesFunction6 = handChoices6;
-  let handChoicesFunction7 = handChoices7;
-  let handChoicesFunction8 = handChoices8;
-  let handChoicesFunction9 = handChoices9;
-  let handChoicesFunction10 = handChoices10;
-  let handChoicesFunction11 = handChoices11;
-  let handChoicesFunction12 = handChoices12;
-  let handChoicesFunction13 = handChoices13;
-  let handChoicesFunction14 = handChoices14;
-
-  if (collection.length < 2) {
-    ChooseTwoCardFourth(hand1function, 0, 1, handChoicesFunction);
+function addCard4() {
+  if (handChoices.length < 2 && drawCounter.length === 1) {
     whichAnchor();
-  } else if (collection.length === 2 || collection.length === 3) {
-    ChooseTwoCardFourth(hand2function, 2, 3, handChoicesFunction2);
+    Card4(handChoices, hand1, 0, 1);
+  } else if (handChoices2.length < 2 && drawCounter.length === 2) {
     whichAnchor();
-  } else if (collection.length === 4 || collection.length === 5) {
-    ChooseTwoCardFourth(hand3function, 4, 5, handChoicesFunction3);
+    Card4(handChoices2, hand2, 2, 3);
+  } else if (handChoices3.length < 2 && drawCounter.length === 3) {
     whichAnchor();
-  } else if (collection.length === 6 || collection.length === 7) {
-    ChooseTwoCardFourth(hand4function, 6, 7, handChoicesFunction4);
+    Card4(handChoices3, hand3, 4, 5);
+  } else if (handChoices4.length < 2 && drawCounter.length === 4) {
     whichAnchor();
-  } else if (collection.length === 8 || collection.length === 9) {
-    ChooseTwoCardFourth(hand5function, 8, 9, handChoicesFunction5);
+    Card4(handChoices4, hand4, 6, 7);
+  } else if (handChoices5.length < 2 && drawCounter.length === 5) {
     whichAnchor();
-  } else if (collection.length === 10 || collection.length === 11) {
-    ChooseTwoCardFourth(hand6function, 10, 11, handChoicesFunction6);
+    Card4(handChoices5, hand5, 8, 9);
+  } else if (handChoices6.length < 2 && drawCounter.length === 6) {
     whichAnchor();
-  } else if (collection.length === 12 || collection.length === 13) {
-    ChooseTwoCardFourth(hand7function, 12, 13, handChoicesFunction7);
+    Card4(handChoices6, hand6, 10, 11);
+  } else if (handChoices7.length < 2 && drawCounter.length === 7) {
     whichAnchor();
-  } else if (collection.length === 14 || collection.length === 15) {
-    ChooseTwoCardFourth(hand8function, 14, 15, handChoicesFunction8);
+    Card4(handChoices7, hand7, 12, 13);
+  } else if (handChoices8.length < 2 && drawCounter.length === 8) {
     whichAnchor();
-  } else if (collection.length === 16 || collection.length === 17) {
-    ChooseTwoCardFourth(hand9function, 16, 17, handChoicesFunction9);
+    Card4(handChoices8, hand8, 14, 15);
+  } else if (handChoices9.length < 2 && drawCounter.length === 9) {
     whichAnchor();
-  } else if (collection.length === 18 || collection.length === 19) {
-    ChooseTwoCardFourth(hand10function, 18, 19, handChoicesFunction10);
+    Card4(handChoices9, hand9, 16, 17);
+  } else if (handChoices10.length < 2 && drawCounter.length === 10) {
     whichAnchor();
-  } else if (collection.length === 20 || collection.length === 21) {
-    ChooseTwoCardFourth(hand11function, 20, 21, handChoicesFunction11);
+    Card4(handChoices10, hand10, 18, 19);
+  } else if (handChoices11.length < 2 && drawCounter.length === 11) {
     whichAnchor();
-  } else if (collection.length === 22 || collection.length === 23) {
-    ChooseTwoCardFourth(hand12function, 22, 23, handChoicesFunction12);
+    Card4(handChoices11, hand11, 20, 21);
+  } else if (handChoices12.length < 2 && drawCounter.length === 12) {
     whichAnchor();
-  } else if (collection.length === 24 || collection.length === 25) {
-    ChooseTwoCardFourth(hand13function, 24, 25, handChoicesFunction13);
+    Card4(handChoices12, hand12, 22, 23);
+  } else if (handChoices13.length < 2 && drawCounter.length === 13) {
     whichAnchor();
-  } else if (collection.length === 26 || collection.length === 27) {
-    ChooseTwoCardFourth(hand14function, 26, 27, handChoicesFunction14);
+    Card4(handChoices13, hand13, 24, 25);
+  } else if (handChoices14.length < 2 && drawCounter.length === 14) {
     whichAnchor();
+    Card4(handChoices14, hand14, 26, 27);
   } else {
   }
 }
 
-// Equation for just fourth card of each hand
-
-function ChooseTwoCardFourth(hand, number, number2, set2Array) {
-  let handDup = [];
-  let hand1 = hand[1];
-  let collection1 = collection[number];
-  if (collection.length === number) {
-    handDup = handDup.concat(hand[3]);
-    console.log("dup");
-    console.log(handDup);
-  } else {
-  }
-
-  if (set2Array.length === 2) {
+function Card4(choices, hand, number, number2) {
+  if (choices[0] === "card4" || collection.length > number2) {
+    console.log("duplicate");
   } else if (collection.length === number) {
     collection.push(hand[3]);
-    set2Array.push("Check");
+    choices.push("card4");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[3].suit}${hand[3].value}.png`;
     toAttach.appendChild(card1);
-    handDup.push("Four");
-    console.log("collection");
-    console.log(collection);
-  } else if (
-    collection1.suit === hand1.suit &&
-    collection1.value === hand1.value
-  ) {
-    console.log("duplicate");
+    console.log("anchor");
+    console.log(anchor);
   } else if (collection.length === number2) {
     collection.push(hand[3]);
-    set2Array.push("Check");
+    choices.push("card4");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[3].suit}${hand[3].value}.png`;
     toAttach.appendChild(card1);
-    console.log("collection");
-    console.log(collection);
-    getHand();
+    console.log("anchor");
+    console.log(anchor);
   } else {
   }
 }
 
-// Master Function Fourth card of all hands
-
-function ChooseTwoClickFifth() {
-  let hand1function = hand1;
-  let hand2function = hand2;
-  let hand3function = hand3;
-  let hand4function = hand4;
-  let hand5function = hand5;
-  let hand6function = hand6;
-  let hand7function = hand7;
-  let hand8function = hand8;
-  let hand9function = hand9;
-  let hand10function = hand10;
-  let hand11function = hand11;
-  let hand12function = hand12;
-  let hand13function = hand13;
-  let hand14function = hand14;
-
-  let handChoicesFunction = handChoices;
-  let handChoicesFunction2 = handChoices2;
-  let handChoicesFunction3 = handChoices3;
-  let handChoicesFunction4 = handChoices4;
-  let handChoicesFunction5 = handChoices5;
-  let handChoicesFunction6 = handChoices6;
-  let handChoicesFunction7 = handChoices7;
-  let handChoicesFunction8 = handChoices8;
-  let handChoicesFunction9 = handChoices9;
-  let handChoicesFunction10 = handChoices10;
-  let handChoicesFunction11 = handChoices11;
-  let handChoicesFunction12 = handChoices12;
-  let handChoicesFunction13 = handChoices13;
-  let handChoicesFunction14 = handChoices14;
-
-  if (collection.length < 2) {
-    ChooseTwoCardFifth(hand1function, 0, 1, handChoicesFunction);
+function addCard5() {
+  if (handChoices.length < 2 && drawCounter.length === 1) {
     whichAnchor();
-  } else if (collection.length === 2 || collection.length === 3) {
-    ChooseTwoCardFifth(hand2function, 2, 3, handChoicesFunction2);
+    Card5(handChoices, hand1, 0, 1);
+  } else if (handChoices2.length < 2 && drawCounter.length === 2) {
     whichAnchor();
-  } else if (collection.length === 4 || collection.length === 5) {
-    ChooseTwoCardFifth(hand3function, 4, 5, handChoicesFunction3);
+    Card5(handChoices2, hand2, 2, 3);
+  } else if (handChoices3.length < 2 && drawCounter.length === 3) {
     whichAnchor();
-  } else if (collection.length === 6 || collection.length === 7) {
-    ChooseTwoCardFifth(hand4function, 6, 7, handChoicesFunction4);
+    Card5(handChoices3, hand3, 4, 5);
+  } else if (handChoices4.length < 2 && drawCounter.length === 4) {
     whichAnchor();
-  } else if (collection.length === 8 || collection.length === 9) {
-    ChooseTwoCardFifth(hand5function, 8, 9, handChoicesFunction5);
+    Card5(handChoices4, hand4, 6, 7);
+  } else if (handChoices5.length < 2 && drawCounter.length === 5) {
     whichAnchor();
-  } else if (collection.length === 10 || collection.length === 11) {
-    ChooseTwoCardFifth(hand6function, 10, 11, handChoicesFunction6);
+    Card5(handChoices5, hand5, 8, 9);
+  } else if (handChoices6.length < 2 && drawCounter.length === 6) {
     whichAnchor();
-  } else if (collection.length === 12 || collection.length === 13) {
-    ChooseTwoCardFifth(hand7function, 12, 13, handChoicesFunction7);
+    Card5(handChoices6, hand6, 10, 11);
+  } else if (handChoices7.length < 2 && drawCounter.length === 7) {
     whichAnchor();
-  } else if (collection.length === 14 || collection.length === 15) {
-    ChooseTwoCardFifth(hand8function, 14, 15, handChoicesFunction8);
+    Card5(handChoices7, hand7, 12, 13);
+  } else if (handChoices8.length < 2 && drawCounter.length === 8) {
     whichAnchor();
-  } else if (collection.length === 16 || collection.length === 17) {
-    ChooseTwoCardFifth(hand9function, 16, 17, handChoicesFunction9);
+    Card5(handChoices8, hand8, 14, 15);
+  } else if (handChoices9.length < 2 && drawCounter.length === 9) {
     whichAnchor();
-  } else if (collection.length === 18 || collection.length === 19) {
-    ChooseTwoCardFifth(hand10function, 18, 19, handChoicesFunction10);
+    Card5(handChoices9, hand9, 16, 17);
+  } else if (handChoices10.length < 2 && drawCounter.length === 10) {
     whichAnchor();
-  } else if (collection.length === 20 || collection.length === 21) {
-    ChooseTwoCardFifth(hand11function, 20, 21, handChoicesFunction11);
+    Card5(handChoices10, hand10, 18, 19);
+  } else if (handChoices11.length < 2 && drawCounter.length === 11) {
     whichAnchor();
-  } else if (collection.length === 22 || collection.length === 23) {
-    ChooseTwoCardFifth(hand12function, 22, 23, handChoicesFunction12);
+    Card5(handChoices11, hand11, 20, 21);
+  } else if (handChoices12.length < 2 && drawCounter.length === 12) {
     whichAnchor();
-  } else if (collection.length === 24 || collection.length === 25) {
-    ChooseTwoCardFifth(hand13function, 24, 25, handChoicesFunction13);
+    Card5(handChoices12, hand12, 22, 23);
+  } else if (handChoices13.length < 2 && drawCounter.length === 13) {
     whichAnchor();
-  } else if (collection.length === 26 || collection.length === 27) {
-    ChooseTwoCardFifth(hand14function, 26, 27, handChoicesFunction14);
+    Card5(handChoices13, hand13, 24, 25);
+  } else if (handChoices14.length < 2 && drawCounter.length === 14) {
     whichAnchor();
+    Card5(handChoices14, hand14, 26, 27);
   } else {
   }
 }
 
-// Equation for just fifth card of fifth hand
-
-function ChooseTwoCardFifth(hand, number, number2, set2Array) {
-  let handDup = [];
-  let hand1 = hand[1];
-  let collection1 = collection[number];
-  if (collection.length === number) {
-    handDup = handDup.concat(hand[4]);
-    console.log("dup");
-    console.log(handDup);
-  } else {
-  }
-
-  if (set2Array.length === 2) {
+function Card5(choices, hand, number, number2) {
+  if (choices[0] === "card5" || collection.length > number2) {
+    console.log("duplicate");
   } else if (collection.length === number) {
     collection.push(hand[4]);
-    set2Array.push("Check");
+    choices.push("card5");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[4].suit}${hand[4].value}.png`;
     toAttach.appendChild(card1);
-    handDup.push("Five");
-    console.log("collection");
-    console.log(collection);
-    // console.log("check");
-    // console.log(check);
-  } else if (
-    collection1.suit === hand1.suit &&
-    collection1.value === hand1.value
-  ) {
-    console.log("duplicate");
+    console.log("anchor");
+    console.log(anchor);
   } else if (collection.length === number2) {
     collection.push(hand[4]);
-    set2Array.push("Check");
+    choices.push("card5");
     let toAttach = document.getElementById(anchor);
     let card1 = document.createElement("img");
     card1.src = `cardGameImages/${hand[4].suit}${hand[4].value}.png`;
     toAttach.appendChild(card1);
-    console.log("collection");
-    console.log(collection);
-    getHand();
+    console.log("anchor");
+    console.log(anchor);
   } else {
   }
 }
 
 ////////////////////////////////////////////////
 
-/*
-function Fourteenhand14Choose2C5() {
-  if (collection6.length < 2) {
-    collection6.push(hand14[4]);
-    collection.push(hand14[4]);
-
-    document.getElementById("collectionAnchor27");
-    let ah14c5 = document.createElement("img");
-    ah14c5.src = `cardGameImages/${hand14[4].suit}${hand14[4].value}.png`;
-    collectionAnchor27.appendChild(ah14c5);
-    ah14c5.setAttribute("style", "width:180px;");
-    ah14c5.setAttribute("style", "height:240px;");
-    ah14c5.setAttribute("style", "padding:10px");
-    document
-      .getElementById("btn5")
-      .removeEventListener("click", Fourteenhand14Choose2C5);
-    let GetHideBtn14 = document.getElementById("getBtn14");
-    GetHideBtn14.style.display = "none";
-  } else if (collection6.length < 3) {
-    collection6.push(hand14[4]);
-    collection.push(hand14[4]);
-
-    document.getElementById("collectionAnchor28");
-    let ah13c5 = document.createElement("img");
-    ah13c5.src = `cardGameImages/${hand14[4].suit}${hand14[4].value}.png`;
-    collectionAnchor28.appendChild(ah13c5);
-    ah13c5.setAttribute("style", "width:180px;");
-    ah13c5.setAttribute("style", "height:240px;");
-    ah13c5.setAttribute("style", "padding:10px");
-    document
-      .getElementById("btn5")
-      .removeEventListener("click", Thirteenhand13Choose2C5);
-    let showConfirm = document.getElementById("confirmButton");
-    showConfirm.style.display = "inline-block";
-    let handTakeAway = document.getElementById("handAnchor");
-    let buttonsHandTakeAway = document.getElementById("buttonsAnchor");
-    let roundHandTakeAway = document.getElementById("round");
-
-    while (handTakeAway.firstChild) {
-      handTakeAway.removeChild(handTakeAway.firstChild);
-    }
-
-    while (buttonsHandTakeAway.firstChild) {
-      buttonsHandTakeAway.removeChild(buttonsHandTakeAway.firstChild);
-    }
-
-    while (roundHandTakeAway.firstChild) {
-      roundHandTakeAway.removeChild(roundHandTakeAway.firstChild);
-    }
-
-    let scoreShowLabel = document.getElementById("scoreLabel");
-    scoreShowLabel.style.display = "inline-block";
-
-    let scoreShow = document.getElementById("score");
-    scoreShow.style.display = "inline-block";
-
-    let hideGoToEval = document.getElementById("confirmButton");
-    hideGoToEval.style.display = "inline-block";
-  } else {
-  }
-}
 
 
 function getValue1() {
@@ -1416,10 +1070,14 @@ function getValue1() {
     valuesTest1.push("collectionAnchor1");
     valuesTest1.push("0");
     valuesTest1.push(collection[0]);
+      console.log(valuesTest1);
+
   } else if (valuesTest2.length < 2) {
     valuesTest2.push("collectionAnchor1");
     valuesTest2.push("0");
     valuesTest2.push(collection[0]);
+          console.log(valuesTest2);
+
   } else {
   }
 
@@ -1437,6 +1095,8 @@ function getValue2() {
     valuesTest1.push("collectionAnchor2");
     valuesTest1.push("1");
     valuesTest1.push(collection[1]);
+          console.log(valuesTest1);
+
 
     //document.getElementById("card1Sel").style.backgroundColor="red";
     //document.body.style.backgroundColor="red";
@@ -1446,6 +1106,8 @@ function getValue2() {
     valuesTest2.push("collectionAnchor2");
     valuesTest2.push("1");
     valuesTest2.push(collection[1]);
+          console.log(valuesTest2);
+
   } else {
   }
 
@@ -1459,6 +1121,7 @@ function getValue2() {
 }
 
 function getValue3() {
+
   if (valuesTest1.length < 2) {
     valuesTest1.push("collectionAnchor3");
     valuesTest1.push("2");
@@ -1983,6 +1646,7 @@ function getValue28() {
 }
 
 function makeSwitchCards() {
+  console.log(collection);
   takeAway();
   switchAdd();
   switchCollection();
@@ -1993,9 +1657,9 @@ function takeAway() {
   if (valuesTest1[0] === valuesTest2[0]) {
   } else {
     newSwitchA = document.getElementById(valuesTest1[0]);
-    newSwitchA.removeChild(newSwitchA.lastElementChild);
+    newSwitchA.removeChild(newSwitchA.firstChild);
     newSwitchB = document.getElementById(valuesTest2[0]);
-    newSwitchB.removeChild(newSwitchB.lastElementChild);
+    newSwitchB.removeChild(newSwitchB.firstChild);
   }
 }
 
@@ -2015,6 +1679,7 @@ function switchAdd() {
 }
 
 function switchCollection() {
+
   if (valuesTest1 === valuesTest2) {
   } else {
     let temp = collection[valuesTest2[1]];
@@ -2036,98 +1701,141 @@ function resetSwap() {
   takeAway2.style.display = "none";
 }
 
-/*function goToConfirmation(){
 
-    let handTakeAway=document.getElementById("handAnchor");
-    let buttonsHandTakeAway=document.getElementById("buttonsAnchor");
-    let roundHandTakeAway=document.getElementById("round");
-
-
-    while(handTakeAway.firstChild){
-        handTakeAway.removeChild(handTakeAway.firstChild);
-    }
-
-    while(buttonsHandTakeAway.firstChild){
-        buttonsHandTakeAway.removeChild(buttonsHandTakeAway.firstChild);
-    }
-
-    while(roundHandTakeAway.firstChild){
-        roundHandTakeAway.removeChild(roundHandTakeAway.firstChild);
-    }
-
-    let scoreShowLabel=document.getElementById("scoreLabel");
-    scoreShowLabel.style.display="inline-block";
-
-    let scoreShow=document.getElementById("score");
-    scoreShow.style.display="inline-block";
-
-    let hideGoToEval=document.getElementById("confirm");
-    hideGoToEval.style.display="inline-block";
-
-   
-
- 
-}*/
 
 function goToConfirmation() {
-  document.getElementById("click1").removeEventListener("click", getValue1);
-  document.getElementById("click2").removeEventListener("click", getValue2);
-  document.getElementById("click3").removeEventListener("click", getValue3);
-  document.getElementById("click4").removeEventListener("click", getValue4);
-  document.getElementById("click5").removeEventListener("click", getValue5);
-  document.getElementById("click6").removeEventListener("click", getValue6);
-  document.getElementById("click7").removeEventListener("click", getValue7);
-  document.getElementById("click8").removeEventListener("click", getValue8);
-  document.getElementById("click9").removeEventListener("click", getValue9);
-  document.getElementById("click10").removeEventListener("click", getValue10);
-  document.getElementById("click11").removeEventListener("click", getValue11);
-  document.getElementById("click12").removeEventListener("click", getValue12);
-  document.getElementById("click13").removeEventListener("click", getValue13);
-  document.getElementById("click14").removeEventListener("click", getValue14);
-  document.getElementById("click15").removeEventListener("click", getValue15);
-  document.getElementById("click16").removeEventListener("click", getValue16);
-  document.getElementById("click17").removeEventListener("click", getValue17);
-  document.getElementById("click18").removeEventListener("click", getValue18);
-  document.getElementById("click19").removeEventListener("click", getValue19);
-  document.getElementById("click20").removeEventListener("click", getValue20);
-  document.getElementById("click21").removeEventListener("click", getValue21);
-  document.getElementById("click22").removeEventListener("click", getValue22);
-  document.getElementById("click23").removeEventListener("click", getValue23);
-  document.getElementById("click24").removeEventListener("click", getValue24);
-  document.getElementById("click25").removeEventListener("click", getValue25);
-  document.getElementById("click26").removeEventListener("click", getValue26);
-  document.getElementById("click27").removeEventListener("click", getValue27);
-  document.getElementById("click28").removeEventListener("click", getValue28);
+   let handTakeAway = document.getElementById("handAnchor1");
+    while (handTakeAway.firstChild) {
+      handTakeAway.removeChild(handTakeAway.firstChild);
+    }
 
-  //let evalHandS=document.getElementById("handEvaluation");
-  // evalHandS.style.display="inline-block";
+     let handTakeAway2 = document.getElementById("handAnchor2");
+     while (handTakeAway2.firstChild) {
+       handTakeAway2.removeChild(handTakeAway2.firstChild);
+     }
 
-  // let evalBonusesS=document.getElementById("bonusEvaluation");
-  // evalBonusesS.style.display="inline-block";
+      let handTakeAway3 = document.getElementById("handAnchor3");
+      while (handTakeAway3.firstChild) {
+        handTakeAway3.removeChild(handTakeAway3.firstChild);
+      }
+
+      let handTakeAway4 = document.getElementById("handAnchor4");
+      while (handTakeAway4.firstChild) {
+        handTakeAway4.removeChild(handTakeAway4.firstChild);
+      }
+
+      let handTakeAway5 = document.getElementById("handAnchor5");
+      while (handTakeAway5.firstChild) {
+        handTakeAway5.removeChild(handTakeAway5.firstChild);
+      }
+   let roundHandTakeAway = document.getElementById("round");
+   while (roundHandTakeAway.firstChild) {
+     roundHandTakeAway.removeChild(roundHandTakeAway.firstChild);
+   }
+
+   let scoreShowLabel = document.getElementById("scoreLabel");
+   scoreShowLabel.style.display = "inline-block";
+
+   let scoreShow = document.getElementById("score");
+   scoreShow.style.display = "inline-block";
+
+   
+  document.getElementById("collectionAnchor1").removeEventListener("click", getValue1);
+  document
+    .getElementById("collectionAnchor2")
+    .removeEventListener("click", getValue2);
+  document
+    .getElementById("collectionAnchor3")
+    .removeEventListener("click", getValue3);
+  document
+    .getElementById("collectionAnchor4")
+    .removeEventListener("click", getValue4);
+  document
+    .getElementById("collectionAnchor5")
+    .removeEventListener("click", getValue5);
+  document
+    .getElementById("collectionAnchor6")
+    .removeEventListener("click", getValue6);
+  document
+    .getElementById("collectionAnchor7")
+    .removeEventListener("click", getValue7);
+  document
+    .getElementById("collectionAnchor8")
+    .removeEventListener("click", getValue8);
+  document
+    .getElementById("collectionAnchor9")
+    .removeEventListener("click", getValue9);
+  document
+    .getElementById("collectionAnchor10")
+    .removeEventListener("click", getValue10);
+  document
+    .getElementById("collectionAnchor11")
+    .removeEventListener("click", getValue11);
+  document
+    .getElementById("collectionAnchor12")
+    .removeEventListener("click", getValue12);
+  document
+    .getElementById("collectionAnchor13")
+    .removeEventListener("click", getValue13);
+  document
+    .getElementById("collectionAnchor14")
+    .removeEventListener("click", getValue14);
+  document
+    .getElementById("collectionAnchor15")
+    .removeEventListener("click", getValue15);
+  document
+    .getElementById("collectionAnchor16")
+    .removeEventListener("click", getValue16);
+  document
+    .getElementById("collectionAnchor17")
+    .removeEventListener("click", getValue17);
+  document
+    .getElementById("collectionAnchor18")
+    .removeEventListener("click", getValue18);
+  document
+    .getElementById("collectionAnchor19")
+    .removeEventListener("click", getValue19);
+  document
+    .getElementById("collectionAnchor20")
+    .removeEventListener("click", getValue20);
+  document
+    .getElementById("collectionAnchor21")
+    .removeEventListener("click", getValue21);
+  document
+    .getElementById("collectionAnchor22")
+    .removeEventListener("click", getValue22);
+  document
+    .getElementById("collectionAnchor23")
+    .removeEventListener("click", getValue23);
+  document
+    .getElementById("collectionAnchor24")
+    .removeEventListener("click", getValue24);
+  document
+    .getElementById("collectionAnchor25")
+    .removeEventListener("click", getValue25);
+  document
+    .getElementById("collectionAnchor26")
+    .removeEventListener("click", getValue26);
+  document
+    .getElementById("collectionAnchor27")
+    .removeEventListener("click", getValue27);
+  document
+    .getElementById("collectionAnchor28")
+    .removeEventListener("click", getValue28);
 
   let hideConfirm = document.getElementById("confirmButton");
   hideConfirm.style.display = "none";
 
-  let F1Show = document.getElementById("FinalEvaluation1");
+  let hideNext = document.getElementById("nextHand");
+    hideNext.style.display = "none";
+
+     let hideBack = document.getElementById("handBackground");
+     hideBack.style.display = "none";
+
+
+  let F1Show = document.getElementById("FinalEvaluation");
   F1Show.style.display = "inline-block";
 
-  let F2Show = document.getElementById("FinalEvaluation2");
-  F2Show.style.display = "inline-block";
-
-  let F3Show = document.getElementById("FinalEvaluation3");
-  F3Show.style.display = "inline-block";
-
-  let F4Show = document.getElementById("FinalEvaluation4");
-  F4Show.style.display = "inline-block";
-
-  let F5Show = document.getElementById("FinalEvaluation5");
-  F5Show.style.display = "inline-block";
-
-  //let threeShow=document.getElementById("3Evaluation");
-  //threeShow.style.display="inline-block";
-
-  let BonusesShow = document.getElementById("BonusEvaluation");
-  BonusesShow.style.display = "inline-block";
 
   let Add = document.getElementById("AddItUp");
   Add.style.display = "inline-block";
@@ -2167,51 +1875,55 @@ function goToConfirmation() {
   evaluateSet5.push(collection[24]);
   console.log(evaluateSet5);
 
-  end3.push(collection[25]);
-  end3.push(collection[26]);
+}
 
-  end3.push(collection[27]);
+function evaluateAllSets() {
+  OneSetEvaluate(); 
+  TwoSetEvaluate();
+  ThreeSetEvaluate();
+  FourSetEvaluate();
+  FiveSetEvaluate();
+  BonusChoices();
 }
 
 function OneSetEvaluate() {
-  //let flushSuccess=[];
-  CheckClubs = evaluateSet1.filter((item) => item.suit === "Clubs");
+  let CheckClubs = evaluateSet1.filter((item) => item.suit === "Clubs");
   if (CheckClubs.length === 5) {
     Flush1.push("Flush");
   } else {
   }
 
-  CheckDiamonds = evaluateSet1.filter((item) => item.suit === "Diamonds");
+  let CheckDiamonds = evaluateSet1.filter((item) => item.suit === "Diamonds");
   if (CheckDiamonds.length === 5) {
     Flush1.push("Flush");
   } else {
   }
 
-  CheckSpades = evaluateSet1.filter((item) => item.suit === "Spades");
+  let CheckSpades = evaluateSet1.filter((item) => item.suit === "Spades");
   if (CheckSpades.length === 5) {
     Flush1.push("Flush");
   } else {
   }
 
-  CheckHearts = evaluateSet1.filter((item) => item.suit === "Hearts");
+  let CheckHearts = evaluateSet1.filter((item) => item.suit === "Hearts");
   if (CheckHearts.length === 5) {
     Flush1.push("Flush");
   } else {
   }
 
-  CheckSwords = evaluateSet1.filter((item) => item.suit === "Swords");
+  let CheckSwords = evaluateSet1.filter((item) => item.suit === "Swords");
   if (CheckSwords.length === 5) {
     Flush1.push("Flush");
   } else {
   }
 
-  CheckSkulls = evaluateSet1.filter((item) => item.suit === "Skulls");
+  let CheckSkulls = evaluateSet1.filter((item) => item.suit === "Skulls");
   if (CheckSkulls.length === 5) {
     Flush1.push("Flush");
   } else {
   }
 
-  Check2 = evaluateSet1.filter((item) => item.value === 2);
+  let Check2 = evaluateSet1.filter((item) => item.value === 2);
   if (Check2.length === 2) {
     Pair1.push("Pair1");
   } else if (Check2.length === 3) {
@@ -2221,7 +1933,7 @@ function OneSetEvaluate() {
   } else {
   }
 
-  Check3 = evaluateSet1.filter((item) => item.value === 3);
+  let Check3 = evaluateSet1.filter((item) => item.value === 3);
   if (Check3.length === 2) {
     Pair1.push("Pair1");
   } else if (Check3.length === 3) {
@@ -2231,7 +1943,7 @@ function OneSetEvaluate() {
   } else {
   }
 
-  Check4 = evaluateSet1.filter((item) => item.value === 4);
+  let Check4 = evaluateSet1.filter((item) => item.value === 4);
   if (Check4.length === 2) {
     Pair1.push("Pair1");
   } else if (Check4.length === 3) {
@@ -2241,7 +1953,7 @@ function OneSetEvaluate() {
   } else {
   }
 
-  Check5 = evaluateSet1.filter((item) => item.value === 5);
+  let Check5 = evaluateSet1.filter((item) => item.value === 5);
   if (Check5.length === 2) {
     Pair1.push("Pair1");
   } else if (Check5.length === 3) {
@@ -2251,7 +1963,7 @@ function OneSetEvaluate() {
   } else {
   }
 
-  Check6 = evaluateSet1.filter((item) => item.value === 6);
+  let Check6 = evaluateSet1.filter((item) => item.value === 6);
   if (Check6.length === 2) {
     Pair1.push("Pair1");
   } else if (Check6.length === 3) {
@@ -2261,7 +1973,7 @@ function OneSetEvaluate() {
   } else {
   }
 
-  Check7 = evaluateSet1.filter((item) => item.value === 7);
+  let Check7 = evaluateSet1.filter((item) => item.value === 7);
   if (Check7.length === 2) {
     Pair1.push("Pair1");
   } else if (Check7.length === 3) {
@@ -2271,7 +1983,7 @@ function OneSetEvaluate() {
   } else {
   }
 
-  Check8 = evaluateSet1.filter((item) => item.value === 8);
+  let Check8 = evaluateSet1.filter((item) => item.value === 8);
   if (Check8.length === 2) {
     Pair1.push("Pair1");
   } else if (Check8.length === 3) {
@@ -2281,7 +1993,7 @@ function OneSetEvaluate() {
   } else {
   }
 
-  Check9 = evaluateSet1.filter((item) => item.value === 7);
+  let Check9 = evaluateSet1.filter((item) => item.value === 7);
   if (Check9.length === 2) {
     Pair1.push("Pair1");
   } else if (Check9.length === 3) {
@@ -2291,7 +2003,7 @@ function OneSetEvaluate() {
   } else {
   }
 
-  Check10 = evaluateSet1.filter((item) => item.value === 10);
+  let Check10 = evaluateSet1.filter((item) => item.value === 10);
   if (Check10.length === 2) {
     Pair1.push("Pair1");
   } else if (Check10.length === 3) {
@@ -2301,7 +2013,7 @@ function OneSetEvaluate() {
   } else {
   }
 
-  Check11 = evaluateSet1.filter((item) => item.value === 11);
+  let Check11 = evaluateSet1.filter((item) => item.value === 11);
   if (Check11.length === 2) {
     Pair1.push("Pair1");
   } else if (Check11.length === 3) {
@@ -2311,7 +2023,7 @@ function OneSetEvaluate() {
   } else {
   }
 
-  Check12 = evaluateSet1.filter((item) => item.value === 12);
+  let Check12 = evaluateSet1.filter((item) => item.value === 12);
   if (Check12.length === 2) {
     Pair1.push("Pair1");
   } else if (Check12.length === 3) {
@@ -3221,7 +2933,6 @@ function BonusChoices() {
     .concat(evaluateSet3)
     .concat(evaluateSet4)
     .concat(evaluateSet5)
-    .concat(end3);
   console.log("stats");
 
   let filter11 = AllNew.filter((item) => item.value === 11);
