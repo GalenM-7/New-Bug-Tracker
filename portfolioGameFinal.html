@@ -4,28 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>My Card Game</title>
-
+<!--
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+-->
     <link rel="stylesheet" href="cardGameCSS/portfolioGameFinal.css" />
 
 </head>
 
 <body>
-    <div class="container">
+
+            <div id="rulesModal" class="rulesModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                        <h5><b>The Deck</b></h5>
+                </div>
+            </div>
+
+            
+    <!--<div class="container">
         <div class="row">
             <div class="col-md-12 bg-dark banner">
                 <button type="button" class="rules bg bg-danger text-white" data-toggle="modal" data-target="#rulesModal">See Game Rules</button>
                 <button type="button" class="rules bg bg-danger text-white" data-toggle="modal" data-target="#pointsModal">See Point Values</button>
-
-                <div class="logo"><img src="cardGameImages/cardCounters.png"/></div>
-            </div>
+                </div>
         </div>
-    </div>
+            -->
+                <div class="logo"><img src="cardGameImages/cardCounters.png"/></div>
+            
 
-     
+     <!--
         <div class="modal fade" id="rulesModal" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -80,7 +90,7 @@
             </div>
         </div>
 
-
+-->
                 
       
     <div class="container">
@@ -211,9 +221,11 @@
 
 
     <script src="cardGameJavascript/portfolioGameFinal.js"></script>
+    <!--
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    -->
 </body>
 
 
