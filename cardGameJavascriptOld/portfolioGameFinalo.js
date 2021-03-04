@@ -134,11 +134,11 @@ class cardBonus {
   }
 }
 
-let bonus1 = new cardBonus("BonusM", 5);
-let bonus2 = new cardBonus("BonusM", 5);
-let bonus3 = new cardBonus("BonusM", 5);
-let bonus4 = new cardBonus("BonusM", 5);
-let bonus5 = new cardBonus("BonusM", 5);
+let bonus1 = new cardBonus("BonusM", 20);
+let bonus2 = new cardBonus("BonusM", 20);
+let bonus3 = new cardBonus("BonusL", 11);
+let bonus4 = new cardBonus("BonusL", 11);
+let bonus5 = new cardBonus("BonusL", 11);
 
 class BonusDeck {
   constructor() {
@@ -325,82 +325,46 @@ deck.createDeck(suits, values);
 ////console.log(deck);
 
 function deal() {
-  console.log("deck");
-  console.log(deck);
-  console.log("cocktail deck Negative");
-  console.log(cocktailDeckNegative);
-  console.log("cocktail deck");
-  console.log(cocktailDeck);
-  //console.log(deck.deck.length);
-  //console.log(deck.deck[5]);
-  console.log;
   deck.shuffle();
-  cocktailDeck.shuffle();
-  cocktailDeckNegative.shuffle();
-
   if (collection.length === 0) {
     deck.deal1();
-    console.log(hand1)
   } else if (collection.length === 2) {
     deck.deal2();
-        console.log(hand2);
-
   } else if (collection.length === 4) {
     deck.deal3();
-        console.log(hand3);
-
   } else if (collection.length === 6) {
     deck.deal4();
-        console.log(hand4);
-
   } else if (collection.length === 8) {
     deck.deal5();
-        console.log(hand5);
-
   } else if (collection.length === 10) {
     deck.deal6();
-        console.log(hand6);
-
   } else if (collection.length === 12) {
     deck.deal7();
-        console.log(hand7);
-
   } else if (collection.length === 14) {
     deck.deal8();
-        console.log(hand8);
-
   } else if (collection.length === 16) {
     deck.deal9();
-        console.log(hand9);
-
   } else if (collection.length === 18) {
     deck.deal10();
-        console.log(hand10);
-
   } else if (collection.length === 20) {
     deck.deal11();
-        console.log(hand11);
-
   } else if (collection.length === 22) {
     deck.deal12();
-        console.log(hand12);
-
   } else if (collection.length === 24) {
     deck.deal13();
-        console.log(hand13);
-
   } else if (collection.length === 26) {
     deck.deal14();
-        console.log(hand14);
-
   } else if (collection.length === 28) {
     deck.deal15();
-        console.log(hand15);
-
   } else {
   }
-  
+  //console.log("deal");
+  //console.log(deck);
+  //console.log(deck.deck.length);
+  //console.log(deck.deck[5]);
 
+  //////console.log("deck after deal");
+  //////console.log(deck.deck);
 }
 
 ///// Create Cocktail Deck Negative ///////////////////////////////////////////////////////////////////////////////////
@@ -419,56 +383,60 @@ class cocktailDeckClassNegative {
   }
 
   createCocktailCardsNegative() {
-    for (let i = 0; i < 35; i++) {
-      let RumCoke25NDeck = new cardCocktailNegative("RumCoke", 20, "Negative");
+    for (let i = 0; i < 25; i++) {
+      let RumCoke25NDeck = new cardCocktailNegative("RumCoke", 25, "Negative");
       this.deckCocktailNegative.push(RumCoke25NDeck);
     }
 
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 20; i++) {
       let GinTonic35NDeck = new cardCocktailNegative(
         "GinTonic",
-        40,
+        35,
         "Negative"
       );
       this.deckCocktailNegative.push(GinTonic35NDeck);
     }
 
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 12; i++) {
       let LongIsland45NDeck = new cardCocktailNegative(
         "LongIsland",
-        55,
+        45,
         "Negative"
       );
       this.deckCocktailNegative.push(LongIsland45NDeck);
     }
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 4; i++) {
       let Margarita50NDeck = new cardCocktailNegative(
         "Margarita",
-        70,
+        50,
         "Negative"
       );
       this.deckCocktailNegative.push(Margarita50NDeck);
     }
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 2; i++) {
       let Margarita60NDeck = new cardCocktailNegative(
         "Margarita",
-        80,
+        60,
         "Negative"
       );
       this.deckCocktailNegative.push(Margarita60NDeck);
     }
 
-    for (let i = 0; i < 2; i++) {
-      let Margarita90Negative = new cardCocktailNegative(
-        "Margarita",
-        100,
-        "Negative"
-      );
-      this.deckCocktailNegative.push(Margarita90Negative);
-    }
+    let Margarita90Negative = new cardCocktailNegative(
+      "Margarita",
+      90,
+      "Negative"
+    );
+    this.deckCocktailNegative.push(Margarita90Negative);
 
+    let Margarita150NDeck = new cardCocktailNegative(
+      "Margarita",
+      150,
+      "Negative"
+    );
+    this.deckCocktailNegative.push(Margarita150NDeck);
   }
 
   shuffle() {
@@ -509,50 +477,50 @@ class cocktailDeckClass {
   }
 
   createCocktailCards() {
-    for (let i = 0; i < 15; i++) {
-      let RumCoke15N = new cardCocktail("RumCoke", 20, "Negative");
+    for (let i = 0; i < 8; i++) {
+      let RumCoke15N = new cardCocktail("RumCoke", 15, "Negative");
       this.deckCocktail.push(RumCoke15N);
     }
 
-    for (let i = 0; i < 30; i++) {
-      let RumCoke15P = new cardCocktail("RumCoke", 20, "Positive");
+    for (let i = 0; i < 18; i++) {
+      let RumCoke15P = new cardCocktail("RumCoke", 15, "Positive");
       this.deckCocktail.push(RumCoke15P);
     }
 
-    for (let i = 0; i < 10; i++) {
-      let GinTonic25N = new cardCocktail("GinTonic", 40, "Negative");
+    for (let i = 0; i < 5; i++) {
+      let GinTonic25N = new cardCocktail("GinTonic", 25, "Negative");
       this.deckCocktail.push(GinTonic25N);
     }
 
-    for (let i = 0; i < 20; i++) {
-      let GinTonic25P = new cardCocktail("GinTonic", 40, "Positive");
+    for (let i = 0; i < 10; i++) {
+      let GinTonic25P = new cardCocktail("GinTonic", 25, "Positive");
       this.deckCocktail.push(GinTonic25P);
     }
 
-    for (let i = 0; i < 5; i++) {
-      let LongIsland35N = new cardCocktail("LongIsland", 55, "Negative");
+    for (let i = 0; i < 4; i++) {
+      let LongIsland35N = new cardCocktail("LongIsland", 35, "Negative");
       this.deckCocktail.push(LongIsland35N);
     }
-    for (let i = 0; i < 10; i++) {
-      let LongIsland35P = new cardCocktail("LongIsland", 55, "Positive");
+    for (let i = 0; i < 8; i++) {
+      let LongIsland35P = new cardCocktail("LongIsland", 35, "Positive");
       this.deckCocktail.push(LongIsland35P);
     }
-    for (let i = 0; i < 2; i++) {
-      let Margarita40N = new cardCocktail("Margarita", 70, "Negative");
+    for (let i = 0; i < 3; i++) {
+      let Margarita40N = new cardCocktail("Margarita", 40, "Negative");
       this.deckCocktail.push(Margarita40N);
     }
-    for (let i = 0; i < 5; i++) {
-      let Margarita40P = new cardCocktail("Margarita", 70, "Positive");
+    for (let i = 0; i < 4; i++) {
+      let Margarita40P = new cardCocktail("Margarita", 40, "Positive");
       this.deckCocktail.push(Margarita40P);
     }
 
     for (let i = 0; i < 1; i++) {
-      let Margarita50N = new cardCocktail("Margarita", 80, "Negative");
+      let Margarita50N = new cardCocktail("Margarita", 50, "Negative");
       this.deckCocktail.push(Margarita50N);
     }
 
     for (let i = 0; i < 2; i++) {
-      let Margarita50P = new cardCocktail("Margarita", 80, "Positive");
+      let Margarita50P = new cardCocktail("Margarita", 50, "Positive");
       this.deckCocktail.push(Margarita50P);
     }
   }
@@ -582,16 +550,11 @@ cocktailDeck.shuffle();
 ///// Create Functions Sending Points Bonus/Cocktail, Shuffling New Cards back into deck  //////////////////////////////////
 
 function send3Deck(options) {
- 
-  bonusDeckObject.shuffle();
-
   if (options[0].suit === "BonusM") {
     deck.deck.push(cocktailDeck.deckCocktail.pop());
     deck.deck.push(cocktailDeck.deckCocktail.pop());
     deck.deck.push(cocktailDeck.deckCocktail.pop());
-    deck.deck.push(cocktailDeck.deckCocktail.pop());
-
-    bonusScore.push(5);
+    bonusScore.push(20);
     deck.shuffle();
     //console.log("Deck Length");
     //console.log(deck.deck.length);
@@ -599,38 +562,34 @@ function send3Deck(options) {
     //console.log(deck.deck[5]);
     //console.log("Bonus Score");
     //console.log(bonusScore);
- } else if (options[1].suit === "BonusM") {
-   deck.deck.push(cocktailDeck.deckCocktail.pop());
+  } else if (options[1].suit === "BonusM") {
     deck.deck.push(cocktailDeck.deckCocktail.pop());
-   deck.deck.push(cocktailDeck.deckCocktail.pop());
-  deck.deck.push(cocktailDeck.deckCocktail.pop());
-
-   bonusScore.push(5);
-   deck.shuffle();
+    deck.deck.push(cocktailDeck.deckCocktail.pop());
+    deck.deck.push(cocktailDeck.deckCocktail.pop());
+    bonusScore.push(20);
+    deck.shuffle();
     //console.log("Deck Length");
     //console.log(deck.deck.length);
     //console.log("Card 5");
     //console.log(deck.deck[5]);
     //console.log("Bonus Score");
     //console.log(bonusScore);
-  //} else if (options[0].suit === "BonusL") {
-   // deck.deck.push(cocktailDeck.deckCocktail.pop());
-   // deck.deck.push(cocktailDeck.deckCocktail.pop());
-   // deck.deck.push(cocktailDeck.deckCocktail.pop());
-   // bonusScore.push(5);
-   // deck.shuffle();
+  } else if (options[0].suit === "BonusL") {
+    deck.deck.push(cocktailDeck.deckCocktail.pop());
+    deck.deck.push(cocktailDeck.deckCocktail.pop());
+    bonusScore.push(11);
+    deck.shuffle();
     //console.log("Deck Length");
     //console.log(deck.deck.length);
     //console.log("Card 5");
     //console.log(deck.deck[5]);
     //console.log("Bonus Score");
     //console.log(bonusScore);
-  //} else if (options[1].suit === "BonusL") {
-   // deck.deck.push(cocktailDeck.deckCocktail.pop());
-   // deck.deck.push(cocktailDeck.deckCocktail.pop());
-    //deck.deck.push(cocktailDeck.deckCocktail.pop());
-   // bonusScore.push(5);
-  //  deck.shuffle();
+  } else if (options[1].suit === "BonusL") {
+    deck.deck.push(cocktailDeck.deckCocktail.pop());
+    deck.deck.push(cocktailDeck.deckCocktail.pop());
+    bonusScore.push(11);
+    deck.shuffle();
     //console.log("Deck Length");
     //console.log(deck.deck.length);
     //console.log("Card 5");
@@ -646,8 +605,7 @@ function isItACocktail(options) {
     cocktailPositiveScore.push(options[0].value);
     console.log("cocktailScore");
     console.log(options[0]);
-    console.log("cocktailPositiveScore");
-    console.log(cocktailPositiveScore);
+    console.log("cocktailPositiveScoreeeeeeeeeeeeeeeeeee");
     console.log(cocktailPositiveScore.length - 3);
   } else {
 
@@ -656,8 +614,7 @@ function isItACocktail(options) {
     cocktailPositiveScore.push(options[1].value);
     console.log("cocktailScore");
     console.log(options[1]);
-    console.log("cocktailPositiveScore");
-    console.log(cocktailPositiveScore);
+    console.log("cocktailPositiveScoreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
     console.log(cocktailPositiveScore.length - 3);
   } else {
   }
@@ -666,8 +623,7 @@ function isItACocktail(options) {
     cocktailNegativeScore.push(options[0].value);
     console.log("cocktailScore");
     console.log(options[0]);
-    console.log("cocktailNegativeScore");
-    console.log(cocktailNegativeScore)
+    console.log("cocktailNegativeScoreeeeeeeeeeeeeeeeeeeeeeeeeeeee");
     console.log(cocktailNegativeScore.length - 3);
   } else {
   }
@@ -676,8 +632,7 @@ function isItACocktail(options) {
     cocktailNegativeScore.push(options[1].value);
     console.log("cocktailScore");
     console.log(options[1]);
-    console.log("cocktailNegativeScore");
-    console.log(cocktailNegativeScore)
+    console.log("cocktailNegativeScoreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
     console.log(cocktailNegativeScore.length-3);
   } else {
   }
@@ -687,13 +642,14 @@ function sendNegativeDeckCards(options) {
   if (options[0].suit === "RumCoke") {
     //console.log(cocktailDeck.deckCocktail[5]);
     //console.log("shuffle proof");
-    cocktailDeck.deckCocktail.push(cocktailDeckNegative.deckCocktailNegative.pop());
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
 
-       
-    console.log("deckCocktailNegative length");
-    console.log(cocktailDeckNegative.deckCocktailNegative.length);
     cocktailDeck.shuffle();
-    deck.shuffle();
     //console.log("choice");
     //console.log(options[0]);
     //console.log("cocktail deck length Neg cards");
@@ -703,114 +659,128 @@ function sendNegativeDeckCards(options) {
   }
 
   if (options[1].suit === "RumCoke") {
-    cocktailDeck.deckCocktail.push(cocktailDeckNegative.deckCocktailNegative.pop());
+    //console.log(cocktailDeck.deckCocktail[5]);
+    //console.log("shuffle proof");
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
 
-
-    console.log("deckCocktailNegative length");
-    console.log(cocktailDeckNegative.deckCocktailNegative.length);
     cocktailDeck.shuffle();
-    deck.shuffle();
+    //console.log("choice");
+    //console.log(options[0]);
+    //console.log("cocktail deck length Neg cards");
+    //console.log(cocktailDeck.deckCocktail.length);
+    //console.log(cocktailDeck.deckCocktail[5]);
   } else {
   }
 
   if (options[0].suit === "GinTonic") {
-   cocktailDeck.deckCocktail.push(
-     cocktailDeckNegative.deckCocktailNegative.pop()
-   );
-   
-   deck.deck.push(cocktailDeck.deckCocktail.pop());
+    //console.log(cocktailDeck.deckCocktail[5]);
+    //console.log("shuffle proof");
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
 
-
-
-   console.log("deckCocktailNegative length");
-   console.log(cocktailDeckNegative.deckCocktailNegative.length);
-   cocktailDeck.shuffle();
-   deck.shuffle();
+    cocktailDeck.shuffle();
+    //console.log("choice");
+    //console.log(options[0]);
+    //console.log("cocktail deck length Neg cards");
+    //console.log(cocktailDeck.deckCocktail.length);
+    //console.log(cocktailDeck.deckCocktail[5]);
   } else {
   }
 
   if (options[1].suit === "GinTonic") {
-      cocktailDeck.deckCocktail.push(
-        cocktailDeckNegative.deckCocktailNegative.pop()
-      );
-       
-      deck.deck.push(cocktailDeck.deckCocktail.pop());
+    //console.log(cocktailDeck.deckCocktail[5]);
+    //console.log("shuffle proof");
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
 
-
-      console.log("deckCocktailNegative length");
-      console.log(cocktailDeckNegative.deckCocktailNegative.length);
-      cocktailDeck.shuffle();
-      deck.shuffle();
+    cocktailDeck.shuffle();
+    //console.log("choice");
+    //console.log(options[0]);
+    //console.log("cocktail deck length Neg cards");
+    //console.log(cocktailDeck.deckCocktail.length);
+    //console.log(cocktailDeck.deckCocktail[5]);
   } else {
   }
 
   if (options[0].suit === "LongIsland") {
-     cocktailDeck.deckCocktail.push(
-       cocktailDeckNegative.deckCocktailNegative.pop()
-     );
-     cocktailDeck.deckCocktail.push(
-       cocktailDeckNegative.deckCocktailNegative.pop()
-     );
-     
-     deck.deck.push(cocktailDeck.deckCocktail.pop());
-     deck.deck.push(cocktailDeck.deckCocktail.pop());
-
-      
-
-
-     console.log("deckCocktailNegative length");
-     console.log(cocktailDeckNegative.deckCocktailNegative.length);
-     cocktailDeck.shuffle();
-     deck.shuffle();
+    //console.log(cocktailDeck.deckCocktail[5]);
+    //console.log("shuffle proof");
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.shuffle();
+    //console.log("choice");
+    //console.log(options[0]);
+    //console.log("cocktail deck length Neg cards");
+    //console.log(cocktailDeck.deckCocktail.length);
+    //console.log(cocktailDeck.deckCocktail[5]);
   } else {
   }
 
   if (options[1].suit === "LongIsland") {
-   cocktailDeck.deckCocktail.push(
-     cocktailDeckNegative.deckCocktailNegative.pop()
-   );
-   cocktailDeck.deckCocktail.push(
-     cocktailDeckNegative.deckCocktailNegative.pop()
-   );
-   
-   deck.deck.push(cocktailDeck.deckCocktail.pop());
-   deck.deck.push(cocktailDeck.deckCocktail.pop());
-
-
-   console.log("deckCocktailNegative length");
-   console.log(cocktailDeckNegative.deckCocktailNegative.length);
-   cocktailDeck.shuffle();
-   deck.shuffle();
+    //console.log(cocktailDeck.deckCocktail[5]);
+    //console.log("shuffle proof");
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.shuffle();
+    //console.log("choice");
+    //console.log(options[0]);
+    //console.log("cocktail deck length Neg cards");
+    //console.log(cocktailDeck.deckCocktail.length);
+    //console.log(cocktailDeck.deckCocktail[5]);
   } else {
   }
 
   if (options[0].suit === "Margarita") {
-   cocktailDeck.deckCocktail.push(
-     cocktailDeckNegative.deckCocktailNegative.pop()
-   );
-   cocktailDeck.deckCocktail.push(
-     cocktailDeckNegative.deckCocktailNegative.pop()
-   );
-   cocktailDeck.deckCocktail.push(
-     cocktailDeckNegative.deckCocktailNegative.pop()
-   );
-   
-
-   deck.deck.push(cocktailDeck.deckCocktail.pop());
-   deck.deck.push(cocktailDeck.deckCocktail.pop());
-       deck.deck.push(cocktailDeck.deckCocktail.pop());
-     
-
-   
-
-   console.log("deckCocktailNegative length");
-   console.log(cocktailDeckNegative.deckCocktailNegative.length);
-   cocktailDeck.shuffle();
-   deck.shuffle();
+    //console.log(cocktailDeck.deckCocktail[5]);
+    //console.log("shuffle proof");
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.deckCocktail.push(
+      cocktailDeckNegative.deckCocktailNegative.pop()
+    );
+    cocktailDeck.shuffle();
+    //console.log("choice");
+    //console.log(options[0]);
+    //console.log("cocktail deck length Neg cards");
+    //console.log(cocktailDeck.deckCocktail.length);
+    //console.log(cocktailDeck.deckCocktail[5]);
   } else {
   }
 
   if (options[1].suit === "Margarita") {
+    //console.log(cocktailDeck.deckCocktail[5]);
+    //console.log("shuffle proof");
     cocktailDeck.deckCocktail.push(
       cocktailDeckNegative.deckCocktailNegative.pop()
     );
@@ -820,20 +790,12 @@ function sendNegativeDeckCards(options) {
     cocktailDeck.deckCocktail.push(
       cocktailDeckNegative.deckCocktailNegative.pop()
     );
-   
-
-
-    deck.deck.push(cocktailDeck.deckCocktail.pop());
-    deck.deck.push(cocktailDeck.deckCocktail.pop());
-        deck.deck.push(cocktailDeck.deckCocktail.pop());
-
-
-   
-
-    console.log("deckCocktailNegative length");
-    console.log(cocktailDeckNegative.deckCocktailNegative.length);
     cocktailDeck.shuffle();
-    deck.shuffle();
+    //console.log("choice");
+    //console.log(options[0]);
+    //console.log("cocktail deck length Neg cards");
+    //console.log(cocktailDeck.deckCocktail.length);
+    //console.log(cocktailDeck.deckCocktail[5]);
   } else {
   }
 }
@@ -4160,7 +4122,6 @@ function EvaluateHands() {
   //console.log(cocktailPositiveScore);
   //console.log("cocktailNegativeScore333333333333333333333333");
   //console.log(cocktailNegativeScore);
-  //upload this
 
   let finalBonus = bonusScore.reduce((a, c) => a + c);
   let finalNegative = cocktailNegativeScore.reduce((a, c) => a + c);
@@ -4168,26 +4129,13 @@ function EvaluateHands() {
 
   console.log("finalBonus");
   console.log(finalBonus);
-  console.log(bonusScore);
 
+  console.log(bonusScore);
   console.log("cocktailNegativeScoreadded");
   console.log(finalNegative);
 
   console.log("cocktailPositiveScoreadded");
   console.log(finalPositive);
-
-  console.log("fianl deck length");
-  console.log(deck.deck.length);
-
-   console.log("cocktail deck length");
-   console.log(cocktailDeck.deckCocktail.length);
-
-    console.log("negative cocktail deck length");
-    console.log(cocktailDeckNegative.deckCocktailNegative.length);
-
-
-
-
 
   finalScore.push(
     score1[0] +
