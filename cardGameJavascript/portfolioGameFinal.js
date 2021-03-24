@@ -4595,7 +4595,7 @@ function EvaluateHands() {
         if (wagerDifference[0] > userWager[0]) {
         } else if (wagerDifference[0] === userWager[0]) {
         } else if (wagerDifference[0] < userWager[0]) {
-          wagerResultPositive.splice(userWager[0]-wagerDifference[0]);
+          wagerResultPositive.splice(0, 1, userWager[0] - wagerDifference[0]);
         } else {
         }
       } else {
@@ -4655,11 +4655,39 @@ function EvaluateHands() {
   );
   window.alert("Your Final Score is " + finalScore + " points");
 
+console.log("score1");
+console.log(score1[0])
+
+console.log("score2");
+console.log(score2[0]);
+
+console.log("score3");
+console.log(score3[0]);
+
+console.log("score4");
+console.log(score4[0]);
+
+console.log("score5");
+console.log(score5[0]);
+
+console.log("score6");
+console.log(score6[0]);
+
+console.log("finalBonus");
+console.log(finalBonus);
+
+console.log("finalPositive");
+console.log(finalPositive[0]);
+
+console.log("finalNegative");
+console.log(finalNegative[0]);
+
 console.log("wagerResultPositive");
-console.log(wagerResultPositive)
+console.log(wagerResultPositive[0]);
 
 console.log("wagerResultNegative");
-console.log(wagerResultNegative);
+console.log(wagerResultNegative[0]);
+
 
 
   document.getElementById("scoreLabel");
