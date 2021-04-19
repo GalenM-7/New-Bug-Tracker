@@ -43,7 +43,7 @@ let score4 = [];
 let score5 = [];
 let score6 = [];
 
-let bonusScore = [];
+let bonusScore = [0,0];
 let cocktailNegativeScore = [0, 0, 0];
 let cocktailPositiveScore = [0, 0, 0];
 
@@ -202,38 +202,7 @@ let collectionAnalysisCocktail = [
   "No",
   "No",
 ];
-let collectionAnalysisCocktailPolarity = [
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-  "NA",
-];
+
 
 let collectionFinal = [];
 
@@ -246,10 +215,12 @@ let cocktailCardsDifference = [0];
 let wagerResultPositive = [0];
 let wagerResultNegative = [0];
 let wagerDifference = [0];
+let wagerResultDifference = [0];
 let userWager = [];
 let wager = [];
 let finalNegative = [];
 let finalPositive = [];
+let cocktailCheck = [];
 
 
 
@@ -761,6 +732,7 @@ function send3Deck(options) {
 function isItACocktail(options) {
   if (options[0].polarity === "Positive") {
     cocktailPositiveScore.push(options[0].value);
+    cocktailCheck.push("success");
     console.log("cocktailScore");
     console.log(options[0]);
     console.log("cocktailPositiveScore");
@@ -770,6 +742,7 @@ function isItACocktail(options) {
   }
   if (options[1].polarity === "Positive") {
     cocktailPositiveScore.push(options[1].value);
+    cocktailCheck.push("success");
     console.log("cocktailScore");
     console.log(options[1]);
     console.log("cocktailPositiveScore");
@@ -780,6 +753,7 @@ function isItACocktail(options) {
 
   if (options[0].polarity === "Negative") {
     cocktailNegativeScore.push(options[0].value);
+    cocktailCheck.push("success");
     console.log("cocktailScore");
     console.log(options[0]);
     console.log("cocktailNegativeScore");
@@ -790,6 +764,7 @@ function isItACocktail(options) {
 
   if (options[1].polarity === "Negative") {
     cocktailNegativeScore.push(options[1].value);
+    cocktailCheck.push("success");
     console.log("cocktailScore");
     console.log(options[1]);
     console.log("cocktailNegativeScore");
@@ -803,9 +778,7 @@ function sendNegativeDeckCards(options) {
   if (options[0].suit === "RumCoke") {
     //console.log(cocktailDeck.deckCocktail[5]);
     //console.log("shuffle proof");
-    //cocktailDeck.deckCocktail.push(
-     // cocktailDeckNegative.deckCocktailNegative.pop()
-    //);
+    cocktailDeck.deckCocktail.push(cocktailDeckNegative.deckCocktailNegative.pop());
 
     deck.deck.push(cocktailDeck.deckCocktail.pop());
 
@@ -1013,6 +986,9 @@ function hideall() {
 
   let makeWager = document.getElementById("wager");
   makeWager.style.display = "none"
+
+  let hideConfirm = document.getElementById("confirmButton");
+  hideConfirm.style.display = "none";
 
   document
     .getElementById("collectionAnchor1")
@@ -1718,6 +1694,12 @@ function Card1(choices, hand, number, number2, duplicate) {
     ////console.log("anchor");
     ////console.log(anchor);
     makeRedBorder("handAnchor1");
+      if (collection.length === 30) {
+        let showConfirm = document.getElementById("confirmButton");
+        showConfirm.style.display = "inline-block";
+      } else {
+
+      }
   } else if (collection.length === number2) {
     collection.push(hand[0]);
     choices.push(hand[0]);
@@ -1731,6 +1713,11 @@ function Card1(choices, hand, number, number2, duplicate) {
     changeColorGetHandR();
     changeColorGetConfirmR();
     makeRedBorder("handAnchor1");
+        if (collection.length === 30) {
+          let showConfirm = document.getElementById("confirmButton");
+          showConfirm.style.display = "inline-block";
+        } else {
+        }
   } else {
   }
 }
@@ -1802,6 +1789,11 @@ function Card2(choices, hand, number, number2, duplicate) {
     ////console.log("anchor");
     ////console.log(anchor);
     makeRedBorder("handAnchor2");
+        if (collection.length === 30) {
+          let showConfirm = document.getElementById("confirmButton");
+          showConfirm.style.display = "inline-block";
+        } else {
+        }
   } else if (collection.length === number2) {
     collection.push(hand[1]);
     choices.push(hand[1]);
@@ -1815,6 +1807,11 @@ function Card2(choices, hand, number, number2, duplicate) {
     changeColorGetHandR();
     changeColorGetConfirmR();
     makeRedBorder("handAnchor2");
+        if (collection.length === 30) {
+          let showConfirm = document.getElementById("confirmButton");
+          showConfirm.style.display = "inline-block";
+        } else {
+        }
   } else {
   }
 }
@@ -1886,6 +1883,11 @@ function Card3(choices, hand, number, number2, duplicate) {
     ////console.log("anchor");
     ////console.log(anchor);
     makeRedBorder("handAnchor3");
+        if (collection.length === 30) {
+          let showConfirm = document.getElementById("confirmButton");
+          showConfirm.style.display = "inline-block";
+        } else {
+        }
   } else if (collection.length === number2) {
     collection.push(hand[2]);
     choices.push(hand[2]);
@@ -1899,6 +1901,11 @@ function Card3(choices, hand, number, number2, duplicate) {
     changeColorGetHandR();
     changeColorGetConfirmR();
     makeRedBorder("handAnchor3");
+        if (collection.length === 30) {
+          let showConfirm = document.getElementById("confirmButton");
+          showConfirm.style.display = "inline-block";
+        } else {
+        }
   } else {
   }
 }
@@ -1969,6 +1976,11 @@ function Card4(choices, hand, number, number2, duplicate) {
     ////console.log("anchor");
     ////console.log(anchor);
     makeRedBorder("handAnchor4");
+        if (collection.length === 30) {
+          let showConfirm = document.getElementById("confirmButton");
+          showConfirm.style.display = "inline-block";
+        } else {
+        }
   } else if (collection.length === number2) {
     collection.push(hand[3]);
     choices.push(hand[3]);
@@ -1981,6 +1993,11 @@ function Card4(choices, hand, number, number2, duplicate) {
     changeColorGetHandR();
     changeColorGetConfirmR();
     makeRedBorder("handAnchor4");
+        if (collection.length === 30) {
+          let showConfirm = document.getElementById("confirmButton");
+          showConfirm.style.display = "inline-block";
+        } else {
+        }
   } else {
   }
 }
@@ -2052,6 +2069,11 @@ function Card5(choices, hand, number, number2, duplicate) {
     ////console.log("anchor");
     ////console.log(anchor);
     makeRedBorder("handAnchor5");
+        if (collection.length === 30) {
+          let showConfirm = document.getElementById("confirmButton");
+          showConfirm.style.display = "inline-block";
+        } else {
+        }
   } else if (collection.length === number2) {
     collection.push(hand[4]);
     choices.push(hand[4]);
@@ -2064,6 +2086,11 @@ function Card5(choices, hand, number, number2, duplicate) {
     changeColorGetHandR();
     changeColorGetConfirmR();
     makeRedBorder("handAnchor5");
+        if (collection.length === 30) {
+          let showConfirm = document.getElementById("confirmButton");
+          showConfirm.style.display = "inline-block";
+        } else {
+        }
   } else {
   }
 }
@@ -2864,9 +2891,15 @@ function goToConfirmation() {
 
   let F1Show = document.getElementById("FinalEvaluation");
   F1Show.style.display = "inline-block";
+  
+  if ( cocktailCheck.length > 0 ) {
+    let makeWagerS = document.getElementById("wager");
+    makeWagerS.style.display = "inline-block";
+  } else {
 
-  let makeWagerS = document.getElementById("wager");
-  makeWagerS.style.display = "inline-block";
+  }
+  
+  
 
   let Add = document.getElementById("AddItUp");
   Add.style.display = "inline-block";
@@ -2944,7 +2977,7 @@ function makeWager () {
         
     } else {
           console.log("false");
-        window.alert("Your wager was not a valid entry. Your wager can't be a negative number or contain a decimal.")
+        window.alert("Your wager was not a valid entry. Your wager has to be a number and can't contain a decimal.")
     }
   } else {
   }
@@ -4431,7 +4464,7 @@ function getCardPoints(index, anchor) {
 function EvaluateHands() {
   ////console.log("scores");
 
-  if (Royal1.length === 1 && Flush1.length === 1) {
+  if (Royal1.length === 1 && Flush1.length === 1 && Straight1.length === 1) {
     score1.push(90);
   } else if (Straight1.length === 1 && Flush1.length == 1) {
     score1.push(60);
@@ -4453,7 +4486,7 @@ function EvaluateHands() {
     score1.push(0);
   }
 
-  if (Royal2.length === 1 && Flush2.length === 1) {
+  if (Royal2.length === 1 && Flush2.length === 1 && Straight2.length === 1) {
     score2.push(90);
   } else if (Straight2.length === 1 && Flush2.length == 1) {
     score2.push(60);
@@ -4475,7 +4508,7 @@ function EvaluateHands() {
     score2.push(0);
   }
 
-  if (Royal3.length === 1 && Flush3.length === 1) {
+  if (Royal3.length === 1 && Flush3.length === 1 && Straight3.length === 1) {
     score3.push(90);
   } else if (Straight3.length === 1 && Flush3.length == 1) {
     score3.push(60);
@@ -4497,7 +4530,7 @@ function EvaluateHands() {
     score3.push(0);
   }
 
-  if (Royal4.length === 1 && Flush4.length === 1) {
+  if (Royal4.length === 1 && Flush4.length === 1 && Straight4.length === 1) {
     score4.push(90);
   } else if (Straight4.length === 1 && Flush4.length == 1) {
     score4.push(60);
@@ -4519,7 +4552,7 @@ function EvaluateHands() {
     score4.push(0);
   }
 
-  if (Royal5.length === 1 && Flush5.length === 1) {
+  if (Royal5.length === 1 && Flush5.length === 1 && Straight5.length === 1) {
     score5.push(90);
   } else if (Straight5.length === 1 && Flush5.length == 1) {
     score5.push(60);
@@ -4541,7 +4574,7 @@ function EvaluateHands() {
     score5.push(0);
   }
 
-  if (Royal6.length === 1 && Flush6.length === 1) {
+  if (Royal6.length === 1 && Flush6.length === 1 && Straight6.length === 1) {
     score6.push(90);
   } else if (Straight6.length === 1 && Flush6.length == 1) {
     score6.push(60);
@@ -4582,8 +4615,7 @@ function EvaluateHands() {
    if (wagerCheck.length < 1) {
 
      hideWagerButton();
-     wagerResultPositive = [0];
-     wagerResultNegative = [0];
+     
 
    } else {
      
@@ -4601,8 +4633,11 @@ function EvaluateHands() {
       } else {
       }
 
-      
-      showWagerResult();
+      if(wager.length === 1) {
+          showWagerResult();
+      } else {
+
+      }
    }
 
 
@@ -4621,6 +4656,9 @@ function EvaluateHands() {
   console.log("finalBonus");
   console.log(finalBonus);
   console.log(bonusScore);
+
+      console.log("score1");
+    console.log(score1);
 
   console.log("cocktailNegativeScoreadded");
   console.log(finalNegative);
@@ -4655,39 +4693,11 @@ function EvaluateHands() {
   );
   window.alert("Your Final Score is " + finalScore + " points");
 
-console.log("score1");
-console.log(score1[0])
-
-console.log("score2");
-console.log(score2[0]);
-
-console.log("score3");
-console.log(score3[0]);
-
-console.log("score4");
-console.log(score4[0]);
-
-console.log("score5");
-console.log(score5[0]);
-
-console.log("score6");
-console.log(score6[0]);
-
-console.log("finalBonus");
-console.log(finalBonus);
-
-console.log("finalPositive");
-console.log(finalPositive[0]);
-
-console.log("finalNegative");
-console.log(finalNegative[0]);
-
 console.log("wagerResultPositive");
-console.log(wagerResultPositive[0]);
+console.log(wagerResultPositive)
 
 console.log("wagerResultNegative");
-console.log(wagerResultNegative[0]);
-
+console.log(wagerResultNegative);
 
 
   document.getElementById("scoreLabel");
@@ -4696,12 +4706,17 @@ console.log(wagerResultNegative[0]);
   finalScoreOnScreen.innerHTML = finalScore;
   finalScoreOnScreen.className += "scoreFinal";
 
+if ( cocktailCheck.length > 0) {
   document.getElementById("clickCardsAnchor");
   let clickCardsMessage = document.createElement("p");
   clickCardsAnchor.appendChild(clickCardsMessage);
   clickCardsMessage.innerHTML =
     "Click on a Cocktail Card to see it's point value. Click again to return to the card image.";
   clickCardsMessage.className += "message";
+} else {
+  
+}
+  
 
   let hideGetScore = document.getElementById("AddItUp");
   hideGetScore.style.display = "none";
